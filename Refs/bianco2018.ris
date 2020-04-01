@@ -1,0 +1,27 @@
+TY  - JOUR
+AU  - Bianco, Simona
+AU  - Lupiáñez, Darío G.
+AU  - Chiariello, Andrea M.
+AU  - Annunziatella, Carlo
+AU  - Kraft, Katerina
+AU  - Schöpflin, Robert
+AU  - Wittler, Lars
+AU  - Andrey, Guillaume
+AU  - Vingron, Martin
+AU  - Pombo, Ana
+AU  - Mundlos, Stefan
+AU  - Nicodemi, Mario
+PY  - 2018
+DA  - 2018/05/01
+TI  - Polymer physics predicts the effects of structural variants on chromatin architecture
+JO  - Nature Genetics
+SP  - 662
+EP  - 667
+VL  - 50
+IS  - 5
+AB  - Structural variants (SVs) can result in changes in gene expression due to abnormal chromatin folding and cause disease. However, the prediction of such effects remains a challenge. Here we present a polymer-physics-based approach (PRISMR) to model 3D chromatin folding and to predict enhancer–promoter contacts. PRISMR predicts higher-order chromatin structure from genome-wide chromosome conformation capture (Hi-C) data. Using the EPHA4 locus as a model, the effects of pathogenic SVs are predicted in silico and compared to Hi-C data generated from mouse limb buds and patient-derived fibroblasts. PRISMR deconvolves the folding complexity of the EPHA4 locus and identifies SV-induced ectopic contacts and alterations of 3D genome organization in homozygous or heterozygous states. We show that SVs can reconfigure topologically associating domains, thereby producing extensive rewiring of regulatory interactions and causing disease by gene misexpression. PRISMR can be used to predict interactions in silico, thereby providing a tool for analyzing the disease-causing potential of SVs.
+SN  - 1546-1718
+UR  - https://doi.org/10.1038/s41588-018-0098-8
+DO  - 10.1038/s41588-018-0098-8
+ID  - Bianco2018
+ER  - 

@@ -1,0 +1,60 @@
+%!TEX encoding = UTF-8 Unicode
+\documentclass[a4paper,12pt]{article}
+%\input{definitions}
+\usepackage{graphicx}
+\usepackage[top=3cm,right=2.5cm,bottom=3cm,left=2.5cm]{geometry}  
+\usepackage{fancyhdr}
+\usepackage{amssymb} %for complicated latex symbols
+\usepackage{amsmath}
+\pagestyle{plain}
+\usepackage[colorlinks,linkcolor=blue,citecolor=blue,pagebackref=false]{hyperref}
+\usepackage{xepersian}
+\settextfont[Scale=1]{XB Niloofar}
+\setlatintextfont[Scale=1]{Times New Roman}
+\setdigitfont[Scale=1]{XB Niloofar}
+
+\lhead{\thepage}
+\chead{}
+\cfoot{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancypagestyle{fpstyle}{%
+\fancyhead{} % get rid of headers
+\renewcommand{\headrulewidth}{0pt} % and the line
+}
+\setlatintextfont[Scale=.9]{Linux Libertine}
+\graphicspath{{Figs/}}
+
+\input{jeld-info}
+\usepackage{perpage} %the perpage package
+\MakePerPage{footnote} %the perpage package command
+
+
+
+\begin{document}
+
+\cleardoublepage
+\pagenumbering{roman} 
+
+\include{cover-fa}
+\include{besm}
+\include{abstract-fa}
+
+
+
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+%\listoftables
+\include{chap1}
+
+
+%\renewcommand{\contentsname}{whatever}
+%\renewcommand{\refname}{whatever}
+%\renewcommand\refname{مراجع}
+
+%\printbibliography[title={Reference}]
+
+\end{document}

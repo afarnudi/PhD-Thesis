@@ -1,0 +1,24 @@
+TY  - JOUR
+AU  - Mezger, Anja
+AU  - Klemm, Sandy
+AU  - Mann, Ishminder
+AU  - Brower, Kara
+AU  - Mir, Alain
+AU  - Bostick, Magnolia
+AU  - Farmer, Andrew
+AU  - Fordyce, Polly
+AU  - Linnarsson, Sten
+AU  - Greenleaf, William
+PY  - 2018
+DA  - 2018/09/07
+TI  - High-throughput chromatin accessibility profiling at single-cell resolution
+JO  - Nature Communications
+SP  - 3647
+VL  - 9
+IS  - 1
+AB  - Here we develop a high-throughput single-cell ATAC-seq (assay for transposition of accessible chromatin) method to measure physical access to DNA in whole cells. Our approach integrates fluorescence imaging and addressable reagent deposition across a massively parallel (5184) nano-well array, yielding a nearly 20-fold improvement in throughput (up to ~1800 cells/chip, 4–5 h on-chip processing time) and library preparation cost (~81¢ per cell) compared to prior microfluidic implementations. We apply this method to measure regulatory variation in peripheral blood mononuclear cells (PBMCs) and show robust, de novo clustering of single cells by hematopoietic cell type.
+SN  - 2041-1723
+UR  - https://doi.org/10.1038/s41467-018-05887-x
+DO  - 10.1038/s41467-018-05887-x
+ID  - Mezger2018
+ER  - 
