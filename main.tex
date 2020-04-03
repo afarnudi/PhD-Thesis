@@ -1,5 +1,5 @@
 %!TEX encoding = UTF-8 Unicode
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,12pt]{book}
 %\input{definitions}
 \usepackage{graphicx}
 \usepackage[top=3cm,right=2.5cm,bottom=3cm,left=2.5cm]{geometry}  
@@ -28,6 +28,7 @@
 
 \input{jeld-info}
 \usepackage{perpage} %the perpage package
+\usepackage{amsmath}
 \MakePerPage{footnote} %the perpage package command
 
 
@@ -48,7 +49,10 @@
 \listoffigures
 \clearpage
 %\listoftables
+\chapter{فصل ۱}
 \include{chap1}
+\clearpage
+\chapter{فصل ۲}
 \include{chap2}
 
 \bibliography{reference} 
