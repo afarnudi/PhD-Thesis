@@ -37,7 +37,7 @@ $u_i(\boldsymbol{x})$
 $f(\boldsymbol{x})$
 در دستگاه مختصات
 $\boldsymbol{x}=(x_1,x_2)$
-موازی سطح تعریف می‌‌شود. ما فرض می‌کنیم که تمام غشای مورد بررسی دارای خواص کشسانی یکسان در همه جای سطح است در نتیجه می‌توانیم تاثیر ۱۲ نقطه نقصی که به ناچار بر روی سطح کره‌ی مثلث بندی شده ایجاد می‌شود را ناچیز در نظر بگیریم.
+موازی سطح تعریف می‌‌شود. ما فرض می‌کنیم که تمام غشای مورد بررسی دارای خواص کشسانی هماهنگ در همه جای سطح است در نتیجه می‌توانیم تاثیر ۱۲ نقطه نقصی که به ناچار بر روی سطح کره‌ی مثلث بندی شده ایجاد می‌شود را ناچیز در نظر بگیریم.
 \subsection{میدان و تنش در نظریه پوسته‌ی کم عمق}
 در این قسمت ما طبق روش کویتر
 \LTRfootnote{Koiter}
@@ -173,25 +173,229 @@ W=-p\int dSf
 \label{eq:nelsonS8}
 \end{equation}
 
-و در نهایت با توجه به تقریب نظریه عنصر سطح به شکل زیر تعریف می‌شود،
-\cite{Helfrich1973}.
+و در نهایت  عنصر سطح به شکل زیر تعریف می‌شود،
 \begin{equation}
 dS=dx_1dx_2/\sqrt{1-(x_1^2+x_2^2)/R^2}\approx dx_1dx_2
 \label{eq:nelsonS8.1}
 \end{equation}
+در نهایت با جمع کردن جملات انرژی کششی، خمشی، و فشار انرژی کشسانی سیستم به شکل زیر تغریف می‌شود:
+\begin{equation}
+G = G_s + G_b. + W =\int d^2x\left[\frac{\kappa}{2}(\nabla^2f)^2+\mu u_{ij}^2+\lambda u_{kk}^2-pf\right]
+\label{eq:nelsonS8.2}
+\end{equation}
+همانطور که از نام این نظریه پیداست مدل بالا برای محاسبه‌ی انرژی لازم برای تغییر شکل‌ها کم عمق و کوچک است. مقیاس ما از اندازه‌ی کره شعاع آن
+$R$
+است. حد اندازه‌ی یک تغییر شکل کوچک را می‌توانیم با مقایسه‌ی انرژی کششی و خمشی محاسبه کنیم. انرژی کششی و خمشی برای قسمتی به اندازه‌ی
+$\ell$
+را با 
+$G_s\sim Y(f/R)^2$
+، که در اینجا $Y$ یک ثابت کششی‌ متداول است، و 
+$G_b\sim\kappa f^2/\ell^4$
+می‌توان تقریب زد. برابر قرار دادن این دو جمله، مقیاس طولی فوپل فون کارمان
+\LTRfootnote{Föpplٓ-von Kármán}
+را به ما می‌دهد
+\begin{equation}
+\ell^*=\frac{R}{\gamma^{1/4}}
+\label{eq:nelsonS9}
+\end{equation}
+که در بالا عدد فوپل فون کارمان 
+$\gamma=YR^2/\kappa$
+است
+\cite{nelsonPRE2003}
+. با کمی محاسبه‌ی بیشتر می‌توان نشان داد که ثابت کششی که استفاده کردیم مدول ۲ بعدی یانگ است که برابر است با 
+\begin{equation}
+Y= \frac{4\mu(\mu+\lambda)}{2\mu+\lambda}
+\label{eq:nelsonS9.1}
+\end{equation}
+با فرض داشتن یک پوسته‌ی کشسان با ضخامت $h$ و جایگذاری $\kappa$ و $Y$ با مدول ۳ بعدی یانگ برای یک ماده جامد همسان کشسان در نظریه پوسته‌ی کم عمق $\gamma\approx10(R/h)^2$ بدست می‌آید 
+\cite{landau}
+برای اینکه این نظریه پیشبینی درستی از مسئله داشته باشد نیاز است که $\ell^*\ll R$. پس این نظریه تنها زمانی که $\gamma\gg1$ یا $r\gg h$ باشد صادق است که این حد دقیقا متناظر با پوسته‌های نازکی است که می‌توانند تحت تاثیر بسیار زیاد افت و خیز ترمودینامیکی قرار بگیرند. کویتر
+\LTRfootnote{Koiter}
+در مطالعاتی نیز در مورد صحت پاسخ نظریه‌ی پوسته‌های کم عمق در مقایسه با نظریه‌های عمومی‌تر که می‌توان بر تمامی یک پوسته‌ی کشسان اعمال کرد را در حالتی که از دو نقطه‌ی قطبی به یک پوسته فشار وارد می‌شود بحث کرده است
+\cite{koiter1963}
+ . همچنین توسط هاتچینسون
+\LTRfootnote{Hutchinson}
+برای مطالعه‌ی پایداری پوسته‌های تحت فشار مطالعه شده‌است
+\cite{Hutchinson1967}
+. در هر دو مطالعه نشان داده شده که این نظریه در مقیاسی که در بالا محاسبه کردیم رفتار درستی از سیستم را نشان می‌دهد. از آنجایی که افت و خیز گرمایی روی پوسته‌هایی که شعاع آنها بسیار بزرگ‌تر از زخامتشان است تاثیر زیادی‌ می‌گذارد، این نظریه را می‌توان به عنوان نقطه‌ شروع توصیف این سیستم‌ها استفاده کرد.
+\subsection{
+از میان رفتن مُدهای فنونی درون صفحه‌ای و انقباض هماهنگ کروی بوسیله‌ی انتگرال گاووسی
+}
+\LTRfootnote{Elimination of in-Plane Phonon Modes and Uniform Spherical Contrac- tion by Gaussian Integration}
+یک پوسته‌ی کروی تحت فشار هماهنگ خارجی که از حد مچاله شدن کره
+\LTRfootnote{buckling}
+کمتر است باعث می‌شود که کره در تمام نقاط به صورت هماهنگ به اندازه‌ی $f_0$ منقبض شود. در نتیجه‌ تغییر شکل‌های خارج از صفحه‌ای را می‌توان به صورت مجموع قسمت‌های هماهنگ و غیر هماهنگ نوشت،
+\begin{equation}
+f(\boldsymbol x)=f_0+f'(\boldsymbol x) = f_0+\sum_{\boldsymbol . q\neq0}f_{\boldsymbol q}e^{-i\boldsymbol q.\boldsymbol x}
+\label{eq:nelsonS10}
+\end{equation}
+در اینجا $f'(\boldsymbol x)$ 
+نماینده‌ی سهم میدان از مد‌های غیر صفر مولفه‌های فوریه‌ی آن است. در این بخش برای ساده سازی از نرمال کردن 
+$f_{\boldsymbol q} \equiv \frac{1}{A}\int d^2xf(\boldsymbol x) e^{i\boldsymbol q.\boldsymbol x}$
+استفاده شده که $A$ مساحت انتگرال گیری شده روی صفحه‌ی $(x_1,x_2)$ است. همچنین تبدیل واروون را نیز به شکل 
+$f(\boldsymbol x) = \sum_{\boldsymbol q}f_{\boldsymbol q}e^{-i\boldsymbol q.\boldsymbol x}$
+در این صورت 
+$\int d^2xf'(\boldsymbol x)=0$
+است و در نتیجه تنها جمله‌‌ی $f_0$ در محاسبه‌ی کار فشار باقی می‌ماند. از آنجایی که جمله‌ی $f'$ تنها در قسمت غیر خطی تانسور کرنش ظاهر می‌شود، پس انرژی کشسانی که در معادله‌ی \ref{eq:nelsonS8.2} تعریف شد در حالت انقباض تحت فشار هماهنگ $f_0$ و همچنین تحت جابجایی مُدهای درون صفحه‌ای $u_1(\boldsymbol x)$ و $u_2(\boldsymbol x)$ به شکل همسان
+\LTRfootnote{harmonic}
+ عمل می‌کند. برای بررسی رفتارهای غیر همسان بهتر است که این میدان‌ها را تقریب بزنیم و از انرژی آزاد مؤثر تعریف کنیم.
+ \begin{equation}
+G_{eff}=-k_BT\ln\left\{\int\mathcal D\vec u(x_1,x_2)\int df_0e^{-G[f',f_0,u_1,u_2]/k_BT}\right\}
+\label{eq:nelsonS11}
+\end{equation}
+برای اینکه انتگرال تابعی را در معادله‌ی بالا را برای تعداد مشخصی میدان جابجایی خارج از صفحه‌ای $f'(\boldsymbol x)$ بتوانیم انجام دهیم باید جملات $\boldsymbol q = 0$ و $\boldsymbol q \neq 0$ تانسور کرنش $u_{ij}$ 
+را نیز از هم جدا کنیم،
 
-
-
-
-
-
+ \begin{equation}
+u_{ij}=\tilde u_{ij}^0+\sum_{\boldsymbol q \neq 0}\left[\frac{i}{2}\left(q_iu_j(\boldsymbol q)+q_ju_i(\boldsymbol(q)\right)+A_{ij}(\boldsymbol q)-\delta{ij}\frac{f_{\boldsymbol q}}{R}\right]e^{-i\boldsymbol q.\boldsymbol x}
+\label{eq:nelsonS12}
+\end{equation}
+که در بالا 
+ \begin{equation}
+A_{ij}(\boldsymbol q)=\frac{1}{2A}\int d^2x\partial_if'\partial_jf'e^{i\boldsymbol q.\boldsymbol x}
+\label{eq:nelsonS13}
+\end{equation}
+قسمت هماهنگ تانسور کرنش از اجزای زیر تشکیل شده
+\begin{equation}
+\begin{aligned}
+&\tilde u_{11}^0=u_{11}^0+A_{11}(\boldsymbol 0)-\frac{f_0}{R}, \\
+&\tilde u_{22}^0=u_{22}^0+A_{22}(\boldsymbol 0)-\frac{f_0}{R}, \\
+&\tilde u_{12}^0=u_{12}^0+A_{12}(\boldsymbol 0)
+\label{eq:nelsonS14}
+\end{aligned}
+\end{equation}
+در بالا $u_{ij}^0$ جملات کرنشی هماهنگ درون صفحه‌ای مستقل از $f_0$. این محدودیت باعث می‌شود که $u_{11}^0+u_{22}^0=0$ باشد زیرا اگر تغییر شکل هم علامت در راستای $x_1$ و $x_2$ در پوسته وجود داشته باشد به این معناست که شعاع پوسته در حال تغییر کردن است که تغییرات این چنین در  جمله‌ی $f_0$ در نظر گرفته شده است. در نتیجه علاوه بر $f_0$
+و $u_{12}^0$
+تنها یک درجه‌ی آزادی مستقل دیگر وجود دارد که در تانسور کرنش تاثیر هماهنگ دارد و آن $\Delta u^0 = u_{11}^0-u_{22}^0$ است.
+در نهایت لازم است که انتگرال تابعی در معادله \ref{eq:nelsonS11} را روی میدان‌های فنونی $u_i$ 
+و ۳ درجه‌ی آزادی مستقل که سهم جملات هماهنگ در تانسور کرنش دارند، 
+$f_0$، $\tilde u_{12}^0$، و$\Delta u^0$
+را حساب کنیم. پس از حذف جملاتی که به صورت عدد ثابل ظاهر می‌شوند انرژی آزاد مؤثر شکل زیر را به خود می‌‌گیرد،
+ٓ\begin{equation}
+G_{eff}=\int d^2x\left[\frac{\kappa}{2}(\nabla^2f')^2+\frac{Y}{2}\left(\frac{1}{2}P_{ij}^T\partial_if'\partial_jf'-\frac{f'}{R}\right)\right]-A\frac{pR}{2}[A_{11}(\boldsymbol 0)+A_{22}(\boldsymbol 0)]
+\label{eq:nelsonS15}
+\end{equation}
+که در بالا $P_{ij}^T=\delta_{ij}-\partial_i\partial_j/\nabla^2$ عملگر تصویری عرضی‌ است
+\LTRfootnote{transverse projection operator}
+. توجه کنید که در نتیجه‌ی انتگرال گیری، مؤلفه‌های لامه $\mu$ و $\lambda$ فقط از طریق مدول ۲ بعدی یانگ وارد می‌شوند. در آخر با جایگذاری
+\begin{equation}
+A_{11}(\boldsymbol 0)+A_{22}(\boldsymbol 0)=\frac{1}{2A}\int d^2x\left[ (\partial_1f')^2+(\partial_2f')^2\right] = \frac{1}{2A}\int d^2x| \nabla f'|^2
+\label{eq:nelsonS16}
+\end{equation}
+در معادله‌‌ی \ref{eq:nelsonS15} 
+انرژی آزاد مؤثر $G_{eff}$ دو بخش هماهنگ $G_0$ 
+و غیر هماهنگ $G_1$
+خواهد داشت،
+\begin{equation}
+\begin{aligned}
+&G_0=\frac{1}{2}\int d^2x\left[\kappa(\nabla^2f')^2-\frac{pR}{2}|\nabla f'|^2+\frac{Y}{R^2}f'^2\right], \\
+&G_1=\frac{Y}{2}\int d^2x\left[\left(\frac{1}{2}P_{ij}^T\partial_if'\partial_jf'\right)^2-\frac{f'}{R}P_{ij}^T\partial_if'\partial_jf'\right],
+\label{eq:nelsonS16.1}
+\end{aligned}
+\end{equation}
+در معادله‌ی بالا $Y=4\mu(\mu+\lambda)/(2\mu+\lambda)$ مدول یانگ در ۲ بعد است. جمله‌ی «جرم» $Y(f'/R)^2$ در تابعی انرژی هماهنگ میزان جفت شدگی بین تغییر شکل خارج از صفحه و کشیدگیی که درون صفحه ایجاد می‌شود را مشخص می‌کند. این جمله در نظریه‌ی صفحات یا غشاهای تخت ظاهر نمی‌شود. همچنین برهمکنشی با ضریب $-Y/2R$ نیز جمله‌ایست که مخصوص غشاهای خمیده‌است و به علت وجود تقارن در غشاهای تخت دیده نمی‌شود. نکته جالب راجع به این جملات این است که در آنها پارامترهای وابسته به اندازه سیستم در آنها وجود دارد. توجه داشته باشید که برای فشارهای رو به داخل $p>0$ در قسمت هماهنگ معادله شبیه کشش سطحی منفی و وابسته به شعاع رفتار می‌کند. در حد $R\rightarrow \infty$ و $p=0$ انرژی غشای تخت بدست می‌آید. از آنجایی که $f_0$ 
+پس از انتگرال گیری ظاهر نمی‌شود و از این پس به جای 
+$f'$ از 
+$f$ 
+استفاده خواهیم کرد. اگر تنها اثر جملات هماهنگ را درنظر بگیریم، نتایج بر اساس اصل همپاری برای مؤلفه‌های فوریه ناشی از گرما برای موج ۲ بعدی
 
 \begin{equation}
 \begin{aligned}
-\sigma=\sigma(t_1)+\sigma(t_2) \\
-\gamma=\gamma(t_1)+\gamma(t_2)
+&f_{\boldsymbol q} = \int d^2xf(\boldsymbol x)e^{i\boldsymbol q.\boldsymbol x}, \\
+&\left\langle f_{\boldsymbol q}f_{\boldsymbol {q'}}\right\rangle_0 = \frac{Ak_BT\delta_{\boldsymbol q, \boldsymbol{-q'}}}{\kappa q^4-\frac{pR}{2}q^2+\frac{Y}{R^2}},
+\label{eq:nelsonS17}
 \end{aligned}
 \end{equation}
+که در بالا $A$
+مساحت قسمت انتگرال گیری است. 
+بزرگی طول موج‌ها بلند به علت اندازه محدود کره به $q\gtrsim 1/R$
+محدود می‌شوند. برخلاف غشاهای تخت که طول موج‌های بلند $q\rightarrow 0$
+با اهنگ $k_BT/(\kappa q^4)$
+به بینهایت میل می‌کند، در غشاهای خمیده جفت شدگی میان خمیدگی خارج از صفحه و درون صفحه، طول موج افت و خیزها با سقف مشخصه‌ی طول سیستم محدود می‌شوند، 
+\begin{equation}
+q^*=(\ell^*)^{-1}=\left(\frac{Y}{\kappa R^2}\right)^{1/4}\equiv\frac{\gamma^{1/4}}{R}
+\label{eq:nelsonS17.1}
+\end{equation}
+که ما در اینجا حالت‌های $\gamma\gg1$
+که در نتیجه $\ell^*\ll R$
+را بررسی می‌کنیم. در حالی که $p$
+به $p_c\equiv4\sqrt{\kappa Y}/R^2$
+نزدیک می‌شود،. طول موج‌های $q=q^*$ 
+ناپایدار شده و اندازه‌ی آنها به بی‌نهایت می‌رود. در نتیجه این حالت معادل با مچاله شدن پوسته‌ی کروی تحت فشارهای خارجی بالاتر از حد تحمل سیستم است. برای فشارهای بیشتر از $p_c$
+نمی‌توانیم از این نظریه استفاده کنیم زیرا که تغییرات در شکل کره فراتر از تغییرات کم عمق خواهد بود.
+
+معادله‌ی \ref{eq:nelsonS17}
+ رفتار هماهنگ پوسته‌ی کروی را بیان می‌کند، برای بررسی رفتار ناهماهنگ پوسته نیاز است که به این معادله جمله‌های تصحیح کننده اضافه کنیم.
+ \subsection{محاسبه‌ی سهم تک حلقه در خود انرژی}
+ \begin{figure}[h]
+\begin{center}
+\includegraphics[width=4in]{nelsonS2}
+\caption{
+غشا با هندسه‌ی کروی.
+}
+\label{fig:nelsonS2}
+\end{center}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=4in]{nelsonS3}
+\caption{
+غشا با هندسه‌ی کروی.
+}
+\label{fig:nelsonS3}
+\end{center}
+\end{figure}
+X
+ قوانین فاینمن برای برگرفته شده از معادله‌ی \ref{eq:nelsonS15} 
+ در شکل \ref{fig:nelsonS2}
+ خلاصه شده است. از این پس مؤلفه‌های تبدیل فوریه به شکل
+ $f_{\boldsymbol q}=\int d^2xf(\boldsymbol x)\exp(i\boldsymbol q.\boldsymbol x)$
+ تعریف می‌شود. تبدیل فوریه‌ی وارون تغییر شکل‌های خارج از صفحه نیز به صورت
+\begin{equation}
+f(\boldsymbol x)=\frac{1}{A}\sum_{\boldsymbol q\neq 0}f_{\boldsymbol q}e^{-i\boldsymbol q.\boldsymbol x}
+\label{eq:nelsonSٓ18}
+\end{equation}
+تعریف می‌شود و جمع روی تمام طول موج‌های مجاز است. خود انرژی ناشی از جمله‌ی ناهماهنگ ۳ نقطه‌ای و ۴ نقطه‌ای در شکل \ref{fig:nelsonS3}
+الف خلاصه شده‌اند و این جملات برای توصیف غشای تخت نیز لازم هستند و به شکل 
+\begin{equation}
+-Y\int\frac{d^2k}{(2\pi)^2}\frac{\left[P_{ij}^Tq_iq_j\right]^2}{\kappa|\boldsymbol q + \boldsymbol k|^4-\frac{pR}{2}|\boldsymbol q + \boldsymbol k|^2+\frac{Y}{R^2}}
+\label{eq:nelsonS19}
+\end{equation}
+ مجموع جملات خود انرژی ناشی از نمودارهای \ref{fig:nelsonS3}
+ ب،
+
+\begin{equation}
+\begin{aligned}
+&\frac{Y^2}{R^2} \int\frac{d^2k}{(2\pi)^2} \frac{1}{ 
+\left( \kappa|\boldsymbol q + \boldsymbol k|^4 - \frac{pR}{2} |\boldsymbol q + \boldsymbol k|^2 + \frac{Y}{R^2} \right)
+\left( \kappa k^4 - \frac{pR}{2}k^2 + \frac{Y}{R^2} \right) 
+} \\
+&\times\left\{ 
+\frac{1}{2} \left[ P_{ij}^T(\boldsymbol q)k_ik_j\right]^2 + 
+\left[P_{ij}^T(\boldsymbol k)q_iq_j\right]^2 + 
+\left[P_{ij}^T(\boldsymbol k)q_iq_j\right] 
+\left[P_{lm}^T(\boldsymbol{k+ q})q_lq_m\right] \right.\\
+& \left.+ 2\left[P_{ij}^T(\boldsymbol k)q_iq_j\right]
+\left[P_{lm}^T(\boldsymbol{q})k_lk_m\right]
+\right\}
+\label{eq:nelsonS17}
+\end{aligned}
+\end{equation}
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
 
 %\renewcommand{\refname}{whatever}
 %\bibliography{reference} 
