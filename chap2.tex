@@ -447,13 +447,22 @@ p_R\approx p+\frac{1}{24}\frac{k_BT}{\kappa}p_c\sqrt\gamma\left(1+\frac{63\pi}{1
 \LTRfootnote{curl free}
 و بخش بدون واگرایی
 \LTRfootnote{divergence free}
-نوشت، $\boldsymbol u\equiv\nabla\boldsymbol\Psi+\boldsymbol v$ که تابع اسکالر $\boldsymbol\Psi$ قسمت. غیرچرخش
+نوشت، $\boldsymbol u\equiv\nabla\boldsymbol\Psi+\boldsymbol v$ که تابع اسکالر $\boldsymbol\Psi$ قسمت غیرچرخش
 \LTRfootnote{irrotational}
  را تولید می‌کند و $\boldsymbol v$ بخش مارپیچی
  \LTRfootnote{solenoidal}
- است. هنگام بسط دادن بر حسب هماهنگ‌ها کروی به شکل $f\equiv\sum_{l,m}A_{lm}RY_l^m$
- و $\boldsymbol\Psi\equiv\sum_{l,m}B_{lm}R^2Y_l^m$
- تابع هماهنگ‌های کروی $Y_l^m(\theta,\phi)$ 
+ است. در بخش شعاعی مختصات شعاعی نود $i$ 
+ در مختصات زاویه‌ای $(\theta,\phi)$ را می‌توانیم به شکل $r_i(\theta,\phi)=R_0+f(\theta,\phi)$
+ نوشت و $R_0$ در اینجا شعاع متوسط کره‌ی در حال افت و خیز است.
+ هنگام بسط دادن بر حسب هماهنگ‌ها کروی حقیقی به شکل
+\begin{equation}
+\begin{aligned}
+&f(\theta,\phi)=R\sum_{l=0}^{l_M}\sum_{m=-l}^{m=l}A_{lm}Y_{lm}(\theta,\phi)\\
+&\boldsymbol\Psi(\theta,\phi)=R^2\sum_{l=0}^{l_M}\sum_{m=-l}^{m=l}B_{lm}Y_l^m(\theta,\phi)
+\label{eq:nelsonS28.1}
+\end{aligned}
+\end{equation} 
+
 خواهند بود و انرژی کشسانی تغییر شکل آن تا مرتبه‌ی دوم تحت این میدان‌ها طبق معادله‌ی زیر خواهد بود \cite{krollPRE1993}
 
 \begin{equation}
@@ -496,7 +505,22 @@ p_R\approx p+\frac{1}{24}\frac{k_BT}{\kappa}p_c\sqrt\gamma\left(1+\frac{63\pi}{1
 \cite{gomppernelson2012}
 برای انرژی کشسانی گسسته‌سازی شده $\mu=3Y/8$
 محاسبه شده. اگر فرض کنیم که تصحیحات گرمایی ناشی از مرتبه‌ی تک حلقه ناچیز است می‌توانیم فرض کنیم که $Y_R\approx Y$ 
-است. 
+است. با جایگذاری در معدله‌ی \ref{eq:nelsonS31} به همراه پارمتر‌های مؤثر دیگر به شکل نهایی زیر می‌رسیم،
+\begin{equation}
+\begin{aligned}
+&k_BT\left\langle|A_{lm}|^2\right\rangle^{-1}\\
+&\approx\kappa_R(l+2)^2(l-1)^2-p_RR^3\left[1+\frac{l(l+1)}{2}\right]+Y_RR^2\left[\frac{3(l^2+l-2)}{3(l^2+l)-2}\right]
+\label{eq:nelsonS32}
+\end{aligned}
+\end{equation} 
+حتی اگر تصحیحات گرمایی وارد بر $\mu$
+و $Y$
+از مرتبه‌ی $O(k_BT)$ 
+باشد می‌توان اختلاف خطای اضافه شده هنگامی که فرض کردیم $\mu_R\approx3Y_R/8$
+حد بالای 
+$4[3(l^2+l-2)+4]$
+نسبت به تغییرات ناهماهنگ دارد و در نتیجه هنگامی که $l>1$
+یک مرتبه‌ی بزرگی کوچکتر خواهد بود.
 
 
 %\renewcommand{\refname}{whatever}
