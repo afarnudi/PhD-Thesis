@@ -38,13 +38,198 @@ $f(\boldsymbol{x})$
 در دستگاه مختصات
 $\boldsymbol{x}=(x_1,x_2)$
 موازی سطح تعریف می‌‌شود. ما فرض می‌کنیم که تمام غشای مورد بررسی دارای خواص کشسانی هماهنگ در همه جای سطح است در نتیجه می‌توانیم تاثیر ۱۲ نقطه نقصی که به ناچار بر روی سطح کره‌ی مثلث بندی شده ایجاد می‌شود را ناچیز در نظر بگیریم.
+
+\subsection{محاسبه‌ی اندازه افت و خیز روی کره}
+در این بخش نحوه‌ی اندازه‌ی دامنه‌ی افت و خیزهایی که بر روی سطح کره اینجاد می‌شود را اندازه‌گیری می‌کنیم. 
+\cite{safran1983}
+فرض می‌کنیم که انرژی خمش کُره به شکل زیر تعریف می‌شود
+\begin{equation}
+E_{b}=4K\int dS\left(H-H_0\right)^2
+\end{equation}
+ که در اینجا 
+ $K$
+ سختی خمش و
+ $H$
+و 
+$H_0$
+به ترتیب خمش و خمش ذاتی سطح کروی است. خمش ذاتی به شکل 
+$H_0=2/r_s$
+و خمش سطح به شکل
+\begin{equation}
+H=\left(\frac{1}{r_1}+\frac{1}{r_2}\right)=\frac{\nabla\cdot\hat n}{2}
+\end{equation}
+تعریف می‌شود. در معادلات بالا 
+$r_s$
+شعاع خمش ذاتی و 
+$r_1$ و $r_2$
+شعاع‌های پایه‌ای خمش
+\LTRfootnote{princople curvature radii}
+و $\hat n$ بردار عمود بر سطح است. در نتیجه انرژی خمش را به شکل زیر باز نویسی می‌کنیم
+\begin{equation}
+E_{b}=K\int dS\left(\nabla\cdot\hat n-\frac{2}{r_s}\right)^2
+\label{eq:ebforsubstitution}
+\end{equation}
+سطح تقریبا کروی که مرکز آن در مبدا مختصات وجود دارد را به شکل زیر تعریف می‌کنیم
+\begin{equation}
+R(r)= r-r_0\left[1+g(\theta,\phi)\right]=0
+\label{eq:radiusdef}
+\end{equation}
+. در این معادله $r_0$ شعاع متوسط کره است که $g$
+\begin{equation}
+g(\theta,\phi)=\sum_{\ell,m}u_{\ell m}Y_{\ell m} (\theta,\phi)
+\label{eq:gdef}
+\end{equation}
+اختلاف شعاع هر نقطه از شعاع متوسط است که با هماهنگ‌های کروی، $Y_{\ell m}$، نشان داده شده. بردار عمود در هر نقطه از سطح کره را می‌توانیم به شکل زیر محاسبه کنیم
+\begin{equation}
+\hat n = \frac{\nabla R(r)}{|\nabla R(r)|}= \frac{\hat r-\frac{r_0}{r}g_\theta \hat\theta-\frac{r_0}{r\sin\theta}g_\phi\hat\phi }{\sqrt{1+\left(\frac{r_0}{r}g_\theta\right)^2+\left(\frac{r_0}{r\sin\theta}g_\phi\right)^2 }}
+\end{equation}
+که در اینجا برای ساده سازی از
+$g_\theta=\partial/\partial\theta g$
+و
+$g_\phi=\partial/\partial\phi g$
+استفاده شده‌است و محاسبات در دستگاه مختصات کروی انجام شده‌است.
+جهت یادآوری،
+\begin{equation}
+\begin{aligned}
+&\nabla f =\frac{\partial}{\partial r}f\hat r + \frac{1}{r} \frac{\partial}{\partial\theta}f\hat\theta+ \frac{1}{r\sin\theta} \frac{\partial}{\partial\phi}f\hat\phi\\
+&\nabla\cdot \vec A =\frac{1}{r^2}\frac{\partial}{\partial r}(r^2A_r)+ \frac{1}{r\sin\theta} \frac{\partial}{\partial\theta}(A_\theta\sin\theta)+ \frac{1}{r\sin\theta} \frac{\partial}{\partial\phi}A_\phi\\
+&\nabla^2f =\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}f\right)+ \frac{1}{r^2\sin\theta} \frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}f\right)+ \frac{1}{r^2\sin^2\theta} \frac{\partial^2}{\partial\phi^2}f
+\end{aligned}
+\end{equation}
+از این پس محاسبات را تنها تا مرتبه‌ی دوم نسبت به $g$ 
+انجام خواهیم داد. در نتیجه بردار عمود بر سطح را به این شکل بازنویسی می‌کنیم،
+\begin{equation}
+\hat n \simeq\left\{1-\frac{1}{2}\left[\left(\frac{r_0}{r}g_\theta\right)^2+\left(\frac{r_0}{r\sin\theta}g_\phi\right)^2 \right]\right\}\left( \hat r-\frac{r_0}{r}g_\theta \hat\theta-\frac{r_0}{r\sin\theta}g_\phi\hat\phi \right)
+\end{equation}
+حالا می‌توان دیورژانس را به ترتیب زیر محاسبه کرد،
+\begin{equation}
+\begin{aligned}
+&\nabla\cdot\hat n \simeq \frac{2}{r}+\frac{1}{r\sin\theta}\frac{\partial}{\partial\theta}\left(-\frac{r_0}{r}g_\theta\sin\theta\right)+\frac{1}{r\sin\theta}\left(-\frac{r_0}{r\sin\theta}g_\phi\right)\\
+&=\frac{2}{r}\left[1-\frac{r_0}{2r}\left(\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}g_\theta\sin\theta+\frac{1}{\sin^2\theta}g_{\phi\phi}\right)\right]
+\label{eq:divn}
+\end{aligned}
+\end{equation}
+با در نظر گرفتن تعریف عملگر اندازه حرکت زاویه‌ای 
+\begin{equation}
+L^2=-\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)-\frac{1}{\sin^2\theta}\left(\frac{\partial^2}{\partial\phi^2}\right)
+\end{equation}
+می‌توانیم معادله‌ی
+\ref{eq:divn}
+را به شکل زیر بازنویسی کنیم،
+\begin{equation}
+\nabla\cdot\hat n =\frac{2}{r}\left[1+\frac{r_0}{2r}L^2g\right]
+\label{eq:divnL2}
+\end{equation}
+همچنین انتگرال عنصر سطحی را نیز می‌توان به ترتیب زیر تعریف کرد و تا حد تقریب مرتبه‌ی دوم رد $g$ جلو رفتچ
+\begin{equation}
+dS=r^2d\Omega\left[1+\frac{r_0^2}{2r^2}\left(g_\theta^2+\frac{g_\phi^2}{\sin^2\theta}\right)\right]=r^2d\Omega\left(1+\frac{r_0^2}{2r^2}gL^2g\right)
+\label{eq:dsL2}
+\end{equation}
+حال کافی است که جملات بالا را در معادله‌ی \ref{eq:ebforsubstitution} جایگذاری کنیم،
+\begin{equation}
+E_b=K\int r^2d\Omega\left(1+\frac{r_0^2}{2r^2}gL^2g\right)\left[\frac{2}{r}\left(1+\frac{r_0}{2r}L^2g\right)-\frac{2}{r_s}\right]^2
+\label{eq:ebcalc1}
+\end{equation}
+ $2/r$ را از جملات داخل کروشه فاکتور گرفته سپس جملات 
+ \ref{eq:ebsubs}
+ را در معادله‌ی
+ \ref{eq:ebcalc1}
+ جایگذاری می‌کنیم‌. در نتیجه انرژی به شکل زیر تعریف می‌شود،
+\begin{equation}
+\begin{aligned}
+&\tilde{g}=\frac{1}{2}L^g\\
+&r=r_0(1+g)\\
+&\frac{r_0}{r}\simeq 1-g
+\label{eq:ebsubs}
+\end{aligned}
+\end{equation}
+
+
+\begin{equation}
+E_b=4K\int d\Omega\left[1+\tilde gg(1-g)^2\right]\left[1+\tilde g(1-g)-\frac{r_0}{r_s}(1+g)\right]^2
+\end{equation}
+پس از انجام عملیات جبری و حفظ جملات تا مرتبه‌ی دوم نسبت به $g$
+معادله‌ی انرژی به شکل زیر در می‌آید
+\begin{equation}
+\begin{aligned}
+&E_b=4K\int d\Omega\left[1-2\frac{r_0}{r_s}+\left(\frac{r_0}{r_s}\right)^2+\tilde gg -2\frac{r_0}{r_s}\tilde gg+\left(\frac{r_0}{r_s}\right)^2\tilde gg\right.\\
+&\left.+\tilde g^2-2\tilde gg +\left(\frac{r_0}{r_s}\right)^2g^2+2\left(\frac{r_0}{r_s}\right)^2g+2\tilde g-2\frac{r_0}{r_s}g-2\frac{r_0}{r_s}\tilde g\right]
+\end{aligned}
+\end{equation}
+پس از فاکتورگیری و مرتب سازی شکل در می‌آید
+\begin{equation}
+E_b=4K\int d\Omega\left[\left(1-\frac{r_0}{r_s}\right)^2(1+\tilde gg)+\tilde g(\tilde g-2g)+\left(\frac{r_0}{r_s}\right)^2g^2\right]
+\label{eq:ebfinal}
+\end{equation}
+از آنجایی که در معادله‌ی
+\ref{eq:radiusdef}
+افت و خیز شعاع را نسبت به شعاع متوسط تعریف کردیم، انتگرال جملات مرتبه‌ی اول $g$ روی سطح کره برابر با صفر خواهد شد، این جملات از معادله‌ی 
+\ref{eq:ebfinal}
+حذف شده‌اند. فرض کنیم که سطح مورد بررسی ترجیه خمش نداد و حالت کمینه انرژی آن زمانی است که سطح تخت باشد، در این صورت با $r_s\rightarrow\infty$ انرژی به شکل زیر تغییر خواهد کرد:
+\begin{equation}
+E_b=4K\int d\Omega\left(1-g\tilde g+\tilde g^2\right)
+\label{eq:ebfinalnors}
+\end{equation}
+حال با جایگذاری معادله‌ی
+\ref{eq:gdef}
+و $\tilde g=(1/2)L^2g$ در معادله‌ی بالا انرژی را محاسبه می‌کنیم.
+\begin{equation}
+\begin{aligned}
+&E_b=4K\int d\Omega\left[1-g\frac{1}{2}L^2g+\frac{1}{4}\left(L^2g\right)^2\right]\\
+&=4K\int d\Omega\left[1-\frac{1}{2}\sum_{\ell',m'}u_{\ell' m'}Y_{\ell' m'} (\theta,\phi)\sum_{\ell,m}u_{\ell m}L^2Y_{\ell m} (\theta,\phi)+\frac{1}{4}\left(\sum_{\ell,m}u_{\ell m}L^2Y_{\ell m} (\theta,\phi)\right)^2\right]\\
+&=16\pi K+K\sum_{\ell,m}|u_{\ell m}|^2\left[\ell^2(1+\ell)^2-2\ell(1+\ell)\right]\\
+&=16\pi\kappa+K\sum_{\ell,m}|u_{\ell m}|^2\ell(\ell+1)(\ell-1)(\ell+2)
+\end{aligned}
+\end{equation}
+با توجه به اصل همپاری انرژی می‌توانیم انرژی داریم،
+
+\begin{equation}
+\left\langle|u_{\ell m}|^2\right\rangle\sim\frac{k_BT}{K\ell(\ell+1)(\ell-1)(\ell+2)}
+\end{equation}
+
+
+
+
+
+
+
+
+\subsection{محاسبه‌ی مدول یانگ و سختی خمشی در مش مثلثی}
+فرض می‌کنیم که شبکه‌ای را بررسی می‌کنیم که فاصله‌ی متوسط بین تمام نقاط به اندازه‌ی $a$ باشد. هر گونه تغییر شکل در شبکه یک نقطه از شبکه را از $r_a$ به $r_a'$ جابجا خواهد کرد. در نتیجه می‌توان انرژی کشش را به شکل زیر تعریف کرد (شکل
+\ref{fig:mesh_def}
+).
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=6in]{mesh_def.pages.pdf}
+\caption{
+تغییر شکل مش
+}
+\label{fig:mesh_def}
+\end{center}
+\end{figure}
+
+\begin{equation}
+E_s^{discrete}=\frac{1}{2}\epsilon_s\sum_{\langle a,b\rangle}\left(|r_a'-r_b'|-a\right)^2
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{میدان و تنش در نظریه پوسته‌ی کم عمق}
 در این قسمت ما طبق روش کویتر
 \LTRfootnote{Koiter}
 و
 \LTRfootnote{Heijden}
 هیدن
-
 پیش می‌‌رویم
 \cite{Heijden2008WTK}
 . بخشی از کره که دچار فرورفتگی کوچکی شده را در نظر می‌گیریم و دستگاه مختصات دکارتی 
@@ -79,7 +264,9 @@ Z(x_1,x_2) = R\left(1-\sqrt{1-\frac{x_1^2}{R^2}-\frac{x_2^2}{R^2}}\right)
 
 که در اینجا 
 $z=Z()z_1,x_2)$
-نقاط روی کره در حالت بدون اختلال را مشخص می‌کند. در نظریه پوسته‌ی کم عمق فرض می‌شود که محل بررسی به اندازه‌ای کوچک است که شیب‌های 
+نقاط روی کره در حالت بدون اختلال را مشخص می‌کند. در نظریه پوسته‌ی کم عمق
+\cite{nelsonJPhysFrance1987}
+ فرض می‌شود که محل بررسی به اندازه‌ای کوچک است که شیب‌های 
 $\partial_1Z\sim x_1/R$
 و 
 $\partial_2Z\sim x_2/R$
@@ -202,7 +389,9 @@ $G_b\sim\kappa f^2/\ell^4$
 $\gamma=YR^2/\kappa$
 است
 \cite{nelsonPRE2003}
-. با کمی محاسبه‌ی بیشتر می‌توان نشان داد که ثابت کششی که استفاده کردیم مدول ۲ بعدی یانگ است که برابر است با 
+. با کمی محاسبه‌ی بیشتر می‌توان نشان داد که ثابت کششی که استفاده کردیم مدول ۲ بعدی یانگ است که برابر است با
+\cite{nelsonPRA1988}
+باید محاسبات دقیق رو از این مرجع بیارم و برای شبکه‌ی مثلث بندی با ۶ همسایه‌گی محاسبات رو بیارم.
 \begin{equation}
 Y= \frac{4\mu(\mu+\lambda)}{2\mu+\lambda}
 \label{eq:nelsonS9.1}
@@ -422,7 +611,7 @@ Y_R\approx Y\left[1-\frac{3}{256}\frac{k_BT}{\kappa}\sqrt\gamma\left(1+\frac{4}{
 \end{equation}
 
 \begin{equation}
-p_R\approx p+\frac{1}{24}\frac{k_BT}{\kappa}p_c\sqrt\gamma\left(1+\frac{63\pi}{128}\frac{p}{p_c}\right)
+p_R\approx p+\frac{1}{24\pi}\frac{k_BT}{\kappa}p_c\sqrt\gamma\left(1+\frac{63\pi}{128}\frac{p}{p_c}\right)
 \label{eq:nelsonS26}
 \end{equation}
 
