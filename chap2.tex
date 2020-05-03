@@ -8,12 +8,25 @@
 
 
 \section{
-بررسی مدل‌ها شبیه‌سازی غشای سلولی.
-}
-\subsection{
 بیولوژی غشا و ساختار آن
 }
-\subsection{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{
 بررسی مدل گومپر-کرول
 }
 همانند بخش‌های دیگر فیزیک مانند دینامیک شاره‌ها و نظریه‌ی رسانایی در فلزات، نظریه‌ی پوسته‌های نازک می‌خواهد فیزیک اختلال‌های کُند را بر حسب چند پارامتر ماکروسکوپیک بیان کند. البته که بارها نشان داده شده که چنین نظریه‌هایی به شکل‌ جالبی فروپاشی می‌کنند. مانند با توجه به نظریه جفت شدن مُود‌ها و نظریه باز به هنجارش، افت و خیز‌ها گرمایی باعث می‌شوند که وشکسانی برشی
@@ -39,7 +52,22 @@ $f(\boldsymbol{x})$
 $\boldsymbol{x}=(x_1,x_2)$
 موازی سطح تعریف می‌‌شود. ما فرض می‌کنیم که تمام غشای مورد بررسی دارای خواص کشسانی هماهنگ در همه جای سطح است در نتیجه می‌توانیم تاثیر ۱۲ نقطه نقصی که به ناچار بر روی سطح کره‌ی مثلث بندی شده ایجاد می‌شود را ناچیز در نظر بگیریم.
 
-\subsection{محاسبه‌ی اندازه افت و خیز روی کره}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{محاسبه‌ی اندازه افت و خیز روی کره}
 در این بخش نحوه‌ی اندازه‌ی دامنه‌ی افت و خیزهایی که بر روی سطح کره اینجاد می‌شود را اندازه‌گیری می‌کنیم. 
 \cite{safran1983}
 فرض می‌کنیم که انرژی خمش کُره به شکل زیر تعریف می‌شود
@@ -183,8 +211,180 @@ E_b=4K\int d\Omega\left(1-g\tilde g+\tilde g^2\right)
 \end{equation}
 با توجه به اصل همپاری انرژی می‌توانیم انرژی داریم،
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{محاسبه‌ی مدول یانگ و سختی خمشی در مش مثلثی}
+در نظریه‌ی الاستیک سطح هر تغییر شکل با یک میدان بردار جابجایی 
+$u(r)=(u_1,u_2)$
+نشان داده می‌شود نقطه‌ی 
+$r(x,y)$
+را به نقطه‌ی 
+$r+u$
+نگاشت می‌کند. اگر در شبکه نقص وجود نداشته باشد این نگاشت یک به یک خواهد بود. در صورتی که در شبکه دررفتگی
+\LTRfootnote{dislocation}
+یا نقص وجود داشته باشد هر انتگرال بسته پاد ساعتگرد که محل نقص داخل آن قرار گیرد با بردار ثابت برگر
+\LTRfootnote{Burger}
+برابر خواهد بود.
+\cite{mitchell1961}
+از آنجایی هم که بردار برگر همیشه با یکی از بردارهای شبکه برابر است، یک به یک نبودن نگاشت در حضور نقص مشکلی در فیزیک مسئله ایجاد نخواهد کرد. این بحث به زبان ریاضی شکل زیر را به خود می‌گیرد،
 \begin{equation}
-\left\langle|u_{\ell m}|^2\right\rangle\sim\frac{k_BT}{K\ell(\ell+1)(\ell-1)(\ell+2)}
+\begin{aligned}
+&\oint_Ldu_k=\oint_L\partial_iu_kdx_i=b_k\\
+&\epsilon_{li}\partial_l\partial_iu_j=b_j\delta(r-r_0)
+\end{aligned}
+\end{equation}
+که در بالا 
+$r_0$
+محل نقص، و 
+$b$
+ بردار برگر است. در رفتگی  بر حسب میدان زاویه‌ی بین پیوندهای شبکه مشخص می‌شود، که جهت گیری در پیرامون هر اتم را مشخص می‌کند. صراحت هر نقص،
+ $s$
+ حول هر مسیر بسته دور نقص تعریف می‌شود. در شبکه‌ای که تقارن $n$
+ تایی داشته باشد، 
+ $s$ حتما ضریبی از 
+ $2\pi/n$ خواهد بود.
+ در این بخش شبکه‌های شش ضلعی با تقارن 
+ $n=6$
+و لغزش‌های کوچک
+$s=\pm2\pi/6$
+مورد توجه ماست. به زبان ریاضی می‌توان این جملات را به این شکل نشان داد،
+
+ \begin{equation}
+\begin{aligned}
+&\oint_Ld\theta=\oint_L\partial_i\theta dx_i=s\\
+&\epsilon_{ij}\partial_i\partial_i\theta=s\delta(r-r_0)
+\label{eq:thetauij}
+\end{aligned}
+\end{equation}
+با جایگذاری
+\begin{equation}
+\theta=\frac{1}{2}\epsilon_{ij}\partial_iu_j
+\end{equation}
+در معادله‌ی
+\ref{eq:thetauij}
+می‌ةوان برای جابجایی‌های کوچک این معادله را تبدیل به معادله‌ای بر حسب جابجایی نوشت.
+
+می‌توان انرژی را به شکل توان دوم تانسور کرنش نوشت،
+\begin{equation}
+E_s=\frac{1}{2}\int d^2r(2\mu u_{ij}^2+\lambda u_{kk}^2)
+\label{eq:energylame}
+\end{equation}
+که در اینجا $\lambda$
+و $\mu$
+ثابت‌های لم
+\LTRfootnote{Lamé Coefficients}
+است. ما می‌دانیم که تانسور کرنش به شکل زیر تعریف می‌شود،
+\begin{equation}
+u_{ij}=\frac{1}{2}(\partial_i u_j+\partial_j u_i+\partial_i u_k\partial_j u_k)
+\end{equation}
+اما برای جابجایی کوچک از جمله‌ی غیر خطی صرف نظر می‌کنیم و تانسور کرنش را به این شکل تعریف می‌کنیم.
+\begin{equation}
+u_{ij}=\frac{1}{2}(\partial_i u_j+\partial_j u_i)
+\end{equation}
+می‌توانیم  از انرژی کششی گرادیان بگیریم و مقدار کمینه‌ی آن را بررسی کنیم، در نتیجه
+\begin{equation}
+\begin{aligned}
+&\partial_i\sigma_{ij}=0\\
+&\sigma_{ij}=2\mu u_{ij}+\lambda u_{kk}\delta_{ij}
+\label{eq:stress}
+\end{aligned}
+\end{equation}
+که در این معادله 
+$\sigma_{ij}$
+تانسور تنش است. معادله‌ی 
+\ref{eq:stress}
+را به تنهایی می‌توان حل کرد ولی از آنجایی که دیورژانس تنش صفر است معمول است که این معادله را به شکل یک پتانسیل اسکالر بنویسیم،
+\begin{equation}
+\sigma_{xx}=\frac{\partial^2\chi}{\partial y^2},\quad\sigma_{yy}=\frac{\partial^2\chi}{\partial x^2},\quad\sigma_{xy}=\frac{\partial^2\chi}{\partial_x\partial_y} 
+\end{equation}
+انتخاب‌های خیلی زیادی می‌توانند معادله‌ی بالا را ارضاء خواهد کرد، ولی جواب‌هایی که به لحاظ فیزیک قابل قبول هستند باید بتوانند رابطه‌ی بین میدان جابجایی و 
+$\chi$
+را رعایت کنند،
+\begin{equation}
+\begin{aligned}
+\frac{1}{2}(\partial_iu_j+\partial_ju_i)&=u_{ij}\\
+&=\frac{1+\nu}{Y}\sigma_{ij}-\frac{\nu}{Y}\sigma_{ll}\sigma_{ij}\\
+&=\frac{1+\nu}{Y}\epsilon_{im}\epsilon_{jn}\partial_{m}\partial_{n}\chi-\frac{\nu}{Y}\nabla^2\chi\delta_{ij}
+\label{eq:constraint}
+\end{aligned}
+\end{equation}
+در اینجا $Y$
+و $\nu$
+به ترتیب مدول ۲ بعدی یانگ
+\LTRfootnote{2D Young Modulus}
+ و نسبت پواسون
+\LTRfootnote{Poisson ratio}
+است که بر حسب ضرایب لم به شکل زیر بیان می‌شوند،
+\begin{equation}
+\begin{aligned}
+Y&=\frac{4\mu(\mu+\lambda)}{2\mu+\lambda}\\
+\nu&=\frac{\lambda}{2\mu+\lambda}
+\label{eq:younglame}
+\end{aligned}
+\end{equation}
+حال می‌خواهیم شرایط معادله‌ی 
+\ref{eq:constraint}
+را به صورت قید برای $\chi$
+تعریف کنیم تا تضمین کند که همیشه می‌توانیم $\chi$
+را به صورت جابجایی‌ها بنویسیم. برای اینکار طرفین معادله‌ی 
+\ref{eq:constraint}
+را در 
+$\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l$
+ضرب می‌کنیم که نتیجه‌ی آن،
+\begin{equation}
+\frac{1}{Y}\nabla^4\chi=\epsilon_{ik}\epsilon_{jl}\partial_k\partial_lu_{ij}=\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l\frac{1}{2}(\partial_iu_j+\partial_ju_i)
+\label{eq:incompatibility}
+\end{equation}
+در صورتی که سمت راست معادله‌ی فوق برابر با صفر شود، می‌توان گفت که $u_{ij}$ 
+سازگار است و تنها یک جواب برای میدان جابجایی وجود دارد که جواب معادله‌ی 
+\ref{eq:constraint}
+است. در غیر این صورت معدله‌ی 
+\ref{eq:constraint}
+بیش از یک جواب دارد. در نتیجه رایج است که به نام سمت راست معادله‌ی
+\ref{eq:incompatibility}
+را ناسازگاری
+\LTRfootnote{incompatibility}
+و $\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l$
+را عملگر ناسازگاری بنامند. می‌توانیم محاسبات معادله‌ی 
+\ref{eq:incompatibility}
+را به این شکل ادامه دهیم،
+
+\begin{equation}
+\begin{aligned}
+\frac{1}{Y}\nabla^4\chi&=\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l\frac{1}{2}(\partial_iu_j-\partial_ju_i)+\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l\partial_ju_i\\
+&=\epsilon_{kl}\partial_k\partial_l\theta+ \epsilon_{ik}\partial_k(\epsilon_{jl}\partial_l\partial_ju_i)\\
+&=\sum_{\alpha}s_\alpha\delta(r-r_\alpha)+\sum_\beta b_i^\beta\epsilon_{ik}\partial_k\delta(r-r_\beta)
+\label{eq:disclination}
+\end{aligned}
+\end{equation}
+که $s_\alpha$
+بار نقص در محل $r_\alpha$
+و $b^\beta$
+بردار برگر لغزش در محل $r_\beta$
+را مشخص می‌کند. خط آخر معادله‌ی 
+\ref{eq:disclinationX}
+چگالی نقصان
+$s(r)$
+ را در شبکه مشخص می‌کند. در نتیجه نظریه کشسانی ۲ بعدی به معادله‌ی زیر خلاصه می‌شود،
+\begin{equation}
+\frac{1}{Y}\nabla^4\chi=s(r)
 \end{equation}
 
 
@@ -194,7 +394,25 @@ E_b=4K\int d\Omega\left(1-g\tilde g+\tilde g^2\right)
 
 
 
-\subsection{محاسبه‌ی مدول یانگ و سختی خمشی در مش مثلثی}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{شبیه‌سازی عددی غشاهای تخت}
+
 فرض می‌کنیم که شبکه‌ای را بررسی می‌کنیم که فاصله‌ی متوسط بین تمام نقاط به اندازه‌ی $a$ باشد. هر گونه تغییر شکل در شبکه یک نقطه از شبکه را از $r_a$ به $r_a'$ جابجا خواهد کرد. در نتیجه می‌توان انرژی کشش را به شکل زیر تعریف کرد (شکل
 \ref{fig:mesh_def}
 ).
@@ -211,6 +429,76 @@ E_b=4K\int d\Omega\left(1-g\tilde g+\tilde g^2\right)
 \begin{equation}
 E_s^{discrete}=\frac{1}{2}\epsilon_s\sum_{\langle a,b\rangle}\left(|r_a'-r_b'|-a\right)^2
 \end{equation}
+که جمع روی تمام جفت‌های $a$ و $b$ است که شامل تغییر شکل شده‌اند.  همچنین می‌توان جمع بالا را به شکل چگالی موضعی انرژی حول نقاط شبکه و جمع روی همسایگی‌ آن نقاط تعریف کرد،
+
+\begin{equation}
+\begin{aligned}
+&E_s^{discrete}=\frac{1}{2}\epsilon_s\sum_aU_a\\
+&U_a=\frac{1}{2}\sum_b\left(|r_a'-r_b'|-a\right)^2
+\end{aligned}
+\end{equation}
+برای محاسبه‌ی حد پیوستگی فرض می‌کنیم که نقشه‌‌ی تغییر شکل پیوسته‌ای وجود دارد که نقاط 
+$r\rightarrow r'$
+که معادل نقشه‌ی گسسته‌ی شبکه‌ی ماست
+$r_a\rightarrow r_a'=r_a+u_a(r_a)$
+. اگر متریک تانسور این تغییر شکل به شکل زیر تعریف شده باشد،
+\begin{equation}
+g_{ij}=\partial_i r'\cdot\partial_jr'
+\end{equation}
+در نتیجه می‌توانیم تغییر شکل گسسته را به شکل زیر تخمین بزنیم،
+
+\begin{equation}
+\begin{aligned}
+|r_a'-r_b'|&\approx \left[g_{ij}(r_a)r_{ab}^ir_{ab}^j\right]^{1/2}\\
+&= \left[g_{ij}(r_a)r_{ab}^ir_{ab}^j\right]^{1/2}\\
+&= \left\{\left[\delta_{ij}+2u_{ij}(r_a)\right]r_{ab}^ir_{ab}^j\right\}^{1/2}\\
+&= a\left[1+2u_{ij}(r_a)\frac{r_{ab}^ir_{ab}^j}{a^2}\right]^\frac{1}{2}\\
+&\approx a\left[1+u_{ij}(r_a)\frac{r_{ab}^ir_{ab}^j}{a^2}\right]
+\label{eq:gstrain1}
+\end{aligned}
+\end{equation}
+که در رابطه‌ی بالا متریک تانسور را با تانسوز تنش جاگذاری کردیم،
+$g_{ij}=\delta_{ij}+2u_{ij}$
+از آنجایی که اندیس $b$ بین تمامی همسایه‌ی $a$ تعریف می‌شود و همچنین بردار فاصله‌
+$r_{ab}=r_a-r_b$
+روی بردار‌های
+$d_\beta$
+ شبکه‌ی شش ضلعی تعریف می‌شود می‌توانیم انرژی موضعی را به این ترتیب محاسبه‌ کنیم،
+
+\begin{equation}
+\begin{aligned}
+U_a&=\frac{1}{2}\sum_{\beta=1}^6(u_{ij}\frac{d_\beta^id_\beta^j}{a})^2\\
+&=\frac{1}{2a^2}\sum_{\beta=1}^6u_{ij}u_{kl}d_\beta^id_\beta^jd_\beta^kd_\beta^l\\
+&=\frac{1}{2a^2}a^2u_{ij}u_{kl}(\delta{ij}\delta{kl}+\delta{ik}\delta{jl}+\delta{il}\delta{jk})\cos^2(\pi/3)\\
+&=\frac{3}{8}(2u_{ij}^2+u_{kk}^2)
+\label{eq:gstrain1}
+\end{aligned}
+\end{equation}
+در نتیجه‌ حد پیوسته انرژی کشسانی را می‌توان به شکل زیر نوشت
+\begin{equation}
+\begin{aligned}
+E_s^{discrete}=\frac{1}{2}\epsilon_s\sum_\alpha U_a&\approx\frac{1}{\sqrt3}\epsilon\int d^2rU(r)\\
+&\approx\frac{\sqrt3}{8}\epsilon_s\int d^2r(2u_{ij}^2+u_{kk}^2)
+\end{aligned}
+\end{equation}
+با مقایسه با معادله‌ی 
+\ref{eq:energylame}
+می‌توانیم ضرایب لم را بخوانیم
+\begin{equation}
+\lambda=\mu=\frac{\sqrt3}{4}\epsilon_s
+\end{equation}
+با داشتن ضرایب لم می‌توانیم با توجه به معادله‌ی 
+\ref{eq:younglame}
+مدول ۲ بعدی یانگ و ضریب پواسون را برای این شبکه محاسبه کنیم،
+\begin{equation}
+\begin{aligned}
+Y&=\frac{4\mu(\mu+\lambda)}{2\mu+\lambda}=\frac{2}{\sqrt3}\epsilon_s\\
+\nu&=\frac{\lambda}{2\mu+\lambda}=\frac{1}{3}
+\end{aligned}
+\end{equation}
+همانطور که می‌بینیم برای مش‌های مثلثی ۶ ضلعی، مدول یانگ و نسبت پواسون به اندازه‌ی مش بستگی ندارد. محاسبات عددی
+\cite{springnetworkPRE2011}
+نیز این نتایج را تایید می‌کنند.
 
 
 
@@ -224,7 +512,14 @@ E_s^{discrete}=\frac{1}{2}\epsilon_s\sum_{\langle a,b\rangle}\left(|r_a'-r_b'|-a
 
 
 
-\subsection{میدان و تنش در نظریه پوسته‌ی کم عمق}
+
+
+
+
+
+
+
+\section{میدان و تنش در نظریه پوسته‌ی کم عمق}
 در این قسمت ما طبق روش کویتر
 \LTRfootnote{Koiter}
 و
@@ -407,7 +702,7 @@ Y= \frac{4\mu(\mu+\lambda)}{2\mu+\lambda}
 برای مطالعه‌ی پایداری پوسته‌های تحت فشار مطالعه شده‌است
 \cite{Hutchinson1967}
 . در هر دو مطالعه نشان داده شده که این نظریه در مقیاسی که در بالا محاسبه کردیم رفتار درستی از سیستم را نشان می‌دهد. از آنجایی که افت و خیز گرمایی روی پوسته‌هایی که شعاع آنها بسیار بزرگ‌تر از زخامتشان است تاثیر زیادی‌ می‌گذارد، این نظریه را می‌توان به عنوان نقطه‌ شروع توصیف این سیستم‌ها استفاده کرد.
-\subsection{
+\section{
 از میان رفتن مُدهای فنونی درون صفحه‌ای و انقباض هماهنگ کروی بوسیله‌ی انتگرال گاووسی
 }
 \LTRfootnote{Elimination of in-Plane Phonon Modes and Uniform Spherical Contrac- tion by Gaussian Integration}
@@ -490,8 +785,8 @@ $f$
 
 \begin{equation}
 \begin{aligned}
-&f_{\boldsymbol q} = \int d^2xf(\boldsymbol x)e^{i\boldsymbol q.\boldsymbol x}, \\
-&\left\langle f_{\boldsymbol q}f_{\boldsymbol {q'}}\right\rangle_0 = \frac{Ak_BT\delta_{\boldsymbol q, \boldsymbol{-q'}}}{\kappa q^4-\frac{pR}{2}q^2+\frac{Y}{R^2}},
+f_{\boldsymbol q} &= \int d^2xf(\boldsymbol x)e^{i\boldsymbol q.\boldsymbol x}, \\
+\left\langle f_{\boldsymbol q}f_{\boldsymbol {q'}}\right\rangle_0 &= \frac{Ak_BT\delta_{\boldsymbol q, \boldsymbol{-q'}}}{\kappa q^4-\frac{pR}{2}q^2+\frac{Y}{R^2}},
 \label{eq:nelsonS17}
 \end{aligned}
 \end{equation}
@@ -515,7 +810,7 @@ q^*=(\ell^*)^{-1}=\left(\frac{Y}{\kappa R^2}\right)^{1/4}\equiv\frac{\gamma^{1/4
 
 معادله‌ی \ref{eq:nelsonS17}
  رفتار هماهنگ پوسته‌ی کروی را بیان می‌کند، برای بررسی رفتار ناهماهنگ پوسته نیاز است که به این معادله جمله‌های تصحیح کننده اضافه کنیم.
- \subsection{محاسبه‌ی سهم تک حلقه در خود انرژی}
+ \section{محاسبه‌ی سهم تک حلقه در خود انرژی}
  \begin{figure}[h]
 \begin{center}
 \includegraphics[width=4in]{nelsonS2}
@@ -556,7 +851,7 @@ f(\boldsymbol x)=\frac{1}{A}\sum_{\boldsymbol q\neq 0}f_{\boldsymbol q}e^{-i\bol
 
 \begin{equation}
 \begin{aligned}
-&\frac{Y^2}{R^2} \int\frac{d^2k}{(2\pi)^2} \frac{1}{ 
+\frac{Y^2}{R^2} &\int\frac{d^2k}{(2\pi)^2} \frac{1}{ 
 \left( \kappa|\boldsymbol q + \boldsymbol k|^4 - \frac{pR}{2} |\boldsymbol q + \boldsymbol k|^2 + \frac{Y}{R^2} \right)
 \left( \kappa k^4 - \frac{pR}{2}k^2 + \frac{Y}{R^2} \right) 
 } \\
@@ -588,7 +883,7 @@ Y_R=Y\left[1-\frac{3}{128\pi}\frac{k_BT}{\kappa}\frac{\sqrt\gamma}{(1-\eta^2)^{3
 
 \begin{equation}
 \begin{aligned}
-&\kappa_R=\kappa\left[1+\frac{1}{30720\pi}\frac{k_BT}{\kappa}\frac{\sqrt\gamma}{(1-\eta^2)^{7/2}}\right.\\
+\kappa_R&=\kappa\left[1+\frac{1}{30720\pi}\frac{k_BT}{\kappa}\frac{\sqrt\gamma}{(1-\eta^2)^{7/2}}\right.\\
 &\left.\left[\times\eta\sqrt{1-\eta^2}(-1699+3758\eta^2-2104\eta^4) \right.\right.\\
 & \left.\left. +15(61-288\eta^2+416\eta^4-192\eta^6)(\pi-\cos^{-1}\eta)\right]\right]
 \label{eq:nelsonS23}
@@ -597,7 +892,7 @@ Y_R=Y\left[1-\frac{3}{128\pi}\frac{k_BT}{\kappa}\frac{\sqrt\gamma}{(1-\eta^2)^{3
 
 \begin{equation}
 \begin{aligned}
-&\eta_R=\eta+\frac{1}{1536\pi}\frac{k_BT}{\kappa}\frac{\sqrt\gamma}{(1-\eta^2)^{5/2}}\\
+\eta_R&=\eta+\frac{1}{1536\pi}\frac{k_BT}{\kappa}\frac{\sqrt\gamma}{(1-\eta^2)^{5/2}}\\
 &\times\left[\sqrt{1-\eta^2}(64-67\eta^2)+3(21\eta-22\eta^3)(\pi-\cos^{-1}\eta)\right]
 \label{eq:nelsonS24}
 \end{aligned}
@@ -627,7 +922,7 @@ p_R\approx p+\frac{1}{24\pi}\frac{k_BT}{\kappa}p_c\sqrt\gamma\left(1+\frac{63\pi
 
 
 کشش سطحی ناشی از افت و خیز گرمایی و تابعیت قوی آن با فشار خارجی، همچنین تابعید ثابت کشسانی سیستم با اندازه‌ی سیستم مشخصات مختص غشاهای کروی است و در غشا‌های تخت دیده نمی‌شود. 
-\subsection{بررسی با استفاده از هماهنگ‌های کروی}
+\section{بررسی با استفاده از هماهنگ‌های کروی}
 یک پوسته‌ی کروی با شعاع $R$، سختی خمش $\kappa$ و مؤلفه‌های لامه $\mu$ و $\lambda$ 
 در نظر بگیرید که تحت یک میدان مماسی $\boldsymbol u(u_x,u_y)$
 و میدان جابجایی شعاعی $f$
@@ -656,7 +951,7 @@ p_R\approx p+\frac{1}{24\pi}\frac{k_BT}{\kappa}p_c\sqrt\gamma\left(1+\frac{63\pi
 
 \begin{equation}
 \begin{aligned}
-&G=R^2\sum_{l,m}\left\{\left[\frac{\kappa}{2}\frac{(l+2)^2(l-1)^2}{R^2}+2K\right]A_{lm}^2-2Kl(l+1)A_{lm}B_lm\right.\\
+G&=R^2\sum_{l,m}\left\{\left[\frac{\kappa}{2}\frac{(l+2)^2(l-1)^2}{R^2}+2K\right]A_{lm}^2-2Kl(l+1)A_{lm}B_lm\right.\\
 &\left.+\frac{1}{2}l(l+1)[(K+\mu)l(l+1)-2\mu]B_{lm}^2\right\}+G_{sol}(\boldsymbol v)
 \label{eq:nelsonS28}
 \end{aligned}
@@ -673,7 +968,7 @@ p_R\approx p+\frac{1}{24\pi}\frac{k_BT}{\kappa}p_c\sqrt\gamma\left(1+\frac{63\pi
 همانند تقریب انرژی کشسانی پوسته‌های کم عمق اینجا نیز روی جملات مرتبه‌ی دوم $B_{lm}$ و $\boldsymbol v$ انتگرال می‌گیریم و انرژی آزاد مؤثر سیستم را بر حسب جابجایی شعاعی می‌نوسیم،
 \begin{equation}
 \begin{aligned}
-&G_{eff}=\frac{R^2}{2}\sum_{l>1,m}\left\{\frac{\kappa(l+2)^2(l-1)^2}{R^2}-pR\left[1+\frac{l(l+1)}{2}\right]\right.\\
+&G_{eff}&=\frac{R^2}{2}\sum_{l>1,m}\left\{\frac{\kappa(l+2)^2(l-1)^2}{R^2}-pR\left[1+\frac{l(l+1)}{2}\right]\right.\\
 &\left.+\frac{4\mu(\mu+\lambda)(l^2+l-2)}{(2\mu+\lambda)(l^2+l)-2\mu}\right\}A_{lm}^2
 \label{eq:nelsonS30}
 \end{aligned}
@@ -681,8 +976,8 @@ p_R\approx p+\frac{1}{24\pi}\frac{k_BT}{\kappa}p_c\sqrt\gamma\left(1+\frac{63\pi
  با توجه به نظریه هم پاری انرژی،
 \begin{equation}
 \begin{aligned}
-&k_BT\left\langle|A_{lm}|^2\right\rangle_0^{-1}\\
-&=\kappa(l+2)^2(l-1)^2-pR^3\left[1+\frac{l(l+1)}{2}\right]+\frac{4\mu(\mu+\lambda)(l^2+l+2)}{(2\mu+\lambda)(l^2+l)-2\mu}R^2\\
+k_BT\left\langle|A_{lm}|^2\right\rangle_0^{-1}&=\\
+&\kappa(l+2)^2(l-1)^2-pR^3\left[1+\frac{l(l+1)}{2}\right]+\frac{4\mu(\mu+\lambda)(l^2+l+2)}{(2\mu+\lambda)(l^2+l)-2\mu}R^2\\
 &=\kappa(l+2)^2(l-1)^2-pR^3\left[1+\frac{l(l+1)}{2}\right]+\frac{Y}{1+\frac{Y}{2\mu(l^2+l-2)}}R^2
 \label{eq:nelsonS31}
 \end{aligned}
@@ -697,8 +992,8 @@ p_R\approx p+\frac{1}{24\pi}\frac{k_BT}{\kappa}p_c\sqrt\gamma\left(1+\frac{63\pi
 است. با جایگذاری در معدله‌ی \ref{eq:nelsonS31} به همراه پارمتر‌های مؤثر دیگر به شکل نهایی زیر می‌رسیم،
 \begin{equation}
 \begin{aligned}
-&k_BT\left\langle|A_{lm}|^2\right\rangle^{-1}\\
-&\approx\kappa_R(l+2)^2(l-1)^2-p_RR^3\left[1+\frac{l(l+1)}{2}\right]+Y_RR^2\left[\frac{3(l^2+l-2)}{3(l^2+l)-2}\right]
+k_BT\left\langle|A_{lm}|^2\right\rangle^{-1}&\approx\\
+&\kappa_R(l+2)^2(l-1)^2-p_RR^3\left[1+\frac{l(l+1)}{2}\right]+Y_RR^2\left[\frac{3(l^2+l-2)}{3(l^2+l)-2}\right]
 \label{eq:nelsonS32}
 \end{aligned}
 \end{equation} 
