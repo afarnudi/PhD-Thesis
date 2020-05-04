@@ -297,6 +297,7 @@ u_{ij}=\frac{1}{2}(\partial_i u_j+\partial_j u_i+\partial_i u_k\partial_j u_k)
 اما برای جابجایی کوچک از جمله‌ی غیر خطی صرف نظر می‌کنیم و تانسور کرنش را به این شکل تعریف می‌کنیم.
 \begin{equation}
 u_{ij}=\frac{1}{2}(\partial_i u_j+\partial_j u_i)
+\label{eq:simplestrain}
 \end{equation}
 می‌توانیم  از انرژی کششی گرادیان بگیریم و مقدار کمینه‌ی آن را بررسی کنیم، در نتیجه
 \begin{equation}
@@ -411,7 +412,7 @@ $s(r)$
 
 
 
-\section{شبیه‌سازی عددی غشاهای تخت}
+\section{بررسی تغییرات حاصل از جابجایی درون صفحه‌ای}
 
 فرض می‌کنیم که شبکه‌ای را بررسی می‌کنیم که فاصله‌ی متوسط بین تمام نقاط به اندازه‌ی $a$ باشد. هر گونه تغییر شکل در شبکه یک نقطه از شبکه را از $r_a$ به $r_a'$ جابجا خواهد کرد. در نتیجه می‌توان انرژی کشش را به شکل زیر تعریف کرد (شکل
 \ref{fig:mesh_def}
@@ -500,6 +501,111 @@ Y&=\frac{4\mu(\mu+\lambda)}{2\mu+\lambda}=\frac{2}{\sqrt3}\epsilon_s\\
 \cite{springnetworkPRE2011}
 نیز این نتایج را تایید می‌کنند.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{بررسی تغییرات حاصل از جابجایی خارج صفحه‌ای}
+برای اینکه جابجایی خارج از صفحه را توصیف کنیم علاوه بر میدان جابجایی 
+$u(r)=(u_1,u_2)$
+درون صفحه نیاز به تابع جدید 
+$f(r)$
+داریم که تغییرات نقطه‌ی 
+$(x_1,x_2,0)$
+را به نقطه‌ی 
+$(x_1+u_1,x_2+u_2,f)$
+نگاشت می‌کند. در نتیجه انرژي کل سیستم حاصل جمع انرژی کشسانی و انرژي خمشی خواهد بود. انرژی کشسانی همچنان طبق معادله‌ی
+\ref{eq:energylame}
+با این تفاوت که به جای تعریف کرنش در معادله‌ی 
+\ref{eq:simplestrain}
+از رابطه‌ی زیر استفاده می‌کنیم
+\begin{equation}
+u_{ij}=\frac{1}{2}(\partial_iu_j+\partial_ju_i+\partial_if\partial_jf)
+\label{eq:nonlinearstrain}
+\end{equation}
+در اینجا نیز همانند بخش قبلی از جملات مرتبه‌ی ۲ به بالای جابجایی صرف نظر کرده‌ایم. معمولا هنگام  مدل‌سازی صفحات تخت در حالت تغییر شکل کوچک همچنان استفاده از معدله‌ی 
+\ref{eq:simplestrain}
+رایج است که حاصل آن یک نظریه‌ی کاملا خطی است. در اینجا ما قصد داریم تغییر شکل‌هایی را بررسی کنیم که در آن $f$ مهم است و کمترین مرتبه‌ای که $f$ 
+تاثیر خود را نشان می‌دهد مرتبه‌ی دوم است، در نتیحه کرنش را به شکل  معادله‌ی 
+\ref{eq:nonlinearstrain}
+قابل قبول است. انرژی خمش را طبق نظریه‌ی هلفریش
+\cite{Helfrich1973}
+با خمش سطح $H$
+و خمش گاووسی $K$
+تعریف می‌کنیم، 
+\begin{equation}
+F_b=\int dS\left(\frac{1}{2}\kappa H^2+\kappa_GK\right)
+\end{equation}
+که در اینجا $\kappa$
+سختی خمش، $\kappa_G$
+سختی گاووسی، و $dS$
+عنصر سطح است. خم‌ها بر حسب $f$ به شکل زیر محاسبه می‌شوند،
+\begin{equation}
+\begin{aligned}
+H&=\nabla\cdot\left[\frac{\nabla f}{\sqrt{1+|\nabla f|^2}}\right],\\
+K&=\frac{\det(\partial_i\partial_jf)}{\left(1+|\nabla f|^2\right)^2}
+\end{aligned}
+\end{equation}
+برای تغییر شکل‌های کوچک می‌توانی از تقریب زیر استفاده کنیم،
+\begin{equation}
+\begin{aligned}
+H&\approx\nabla^2f\\
+K&\approx \det(\partial_i\partial_jf)=-\frac{1}{2}\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l(\partial_if\partial_jf)
+\end{aligned}
+\end{equation}
+با جایگذاری روابط بالا می‌توانیم انرژي خمش را بازنویسی کنیم،
+\begin{equation}
+F_b\approx\frac{1}{2}\kappa\int d^2r(\nabla^2 f)^2+\frac{1}{2}\kappa_G\int d^2r\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l(\partial_if\partial_jf)
+\end{equation}
+حالا با مشتق‌گیری نسبت به $u$ و $f$
+می‌توانیم مانند بخش قبل معادلاتی که به تعریف تنش می‌انجامد را تعریف کنیم
+\begin{equation}
+\begin{aligned}
+\kappa\nabla^4f&=\partial_i(\sigma_{ij}\partial_jf)\\
+\partial_i\sigma_{ij}&=0
+\end{aligned}
+\end{equation}
+که در بالا رابطه‌ی بین تانسور تنش و تانسور غیر خطی کرنی مشابه معادله‌ی 
+\ref{eq:stress}
+تعریف شده است. حالا مشابه مراحلی که منجر به معادله‌ی 
+\ref{eq:disclination}
+شد عمل کرده و به رابطه‌ی زیر می‌رسیم،
+
+\begin{equation}
+\frac{1}{Y}\nabla^4\chi-\frac{1}{2}\epsilon_{ik}\epsilon_{jl}=\sum_\alpha s_\alpha\delta(r-r_\alpha)+\sum_\beta b_i^\beta\epsilon_{ik}\partial_k\delta(r-r_\beta)
+\end{equation}
+و در نهایت می‌توانیم یک سیستم معادلا کامل بنویسیم،
+\begin{equation}
+\begin{aligned}
+&\kappa\nabla^4f+\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l(\partial_i\chi\partial_jf)=0\\
+&\frac{1}{Y}\nabla^4\chi=s(r)-K(r)
+\end{aligned}
+\end{equation}
+و همانند قسمت قبل $s(r)$ چگالی نقص و 
+$k(r)$
+خمش گاووسی است. نقش خمش گاووسی به صورت کم کردن تنش در اینجا ظاهر می‌شود. از آنجایی که انتگرال خمش گاووسی به انتگرال روی محیط می‌تواند کاهش پیدا کند بر روی فیزیک روی سطح مسئله تاثیر نمی‌گذارد بلکه تاثیر خود را روی شرایط مرزی نشان می‌دهد. پس به قیود 
+$\sigma_{rr},\sigma_{r\phi}=0$
+باید قیود زیر را نیز اضافه کنیم،
+\begin{equation}
+\begin{aligned}
+&\frac{\kappa}{\kappa_G}\nabla^2f+\left[\frac{1}{r}\frac{\partial f}{\partial r}+\frac{1}{r^2}\frac{\partial^2 f}{\partial\phi^2}\right]=0\\
+&\frac{\kappa}{\kappa_G}\frac{\partial}{\partial r}\nabla^2f-\frac{1}{r}\frac{\partial}{\partial r}\frac{1}{r}\frac{\partial^2 f}{\partial\phi^2}=0
+\end{aligned}
+\end{equation}
 
 
 
