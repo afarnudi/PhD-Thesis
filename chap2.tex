@@ -11,7 +11,22 @@
 بیولوژی غشا و ساختار آن
 }
 
+\section{
+اطلاعاتی که باید اضافه بشه
+}
+در این بخش مقاله‌هایی  که استفاده کردم و هنوز اضافه نشده را می‌ذارم.
 
+این مقاله همه جا رفرنس داده شده که نشون دادن که ساختار ایکوسهیدرال و نواقص چه روابط ریاضی دارن.
+\cite{CasparKlug1962}
+نلسون در اینجا با جزئیات زیاد شکل ویروس و گاما را بررسی می‌کند.
+\cite{nelsonPRE2003}
+در این مقاله نحوه‌ی تاثیر گاما بر شکل وسیکل بررسی شده است. این مقاله بر اساس کارهای نلسون در این زمینه‌ است.
+\cite{gammaPRE2005}
+
+در این مقاله نلسون کلوئید در قطره‌های کروی آب قرار می‌دهد و توزیع نقص روی سطح را بررسی می‌کند.
+\cite{NelsonScience2003}
+و  تئوری آن نیز در این مقاله‌ محاسبه ‌شده
+\cite{NelsonPRB2000}
 
 
 
@@ -386,14 +401,76 @@ $s(r)$
  را در شبکه مشخص می‌کند. در نتیجه نظریه کشسانی ۲ بعدی به معادله‌ی زیر خلاصه می‌شود،
 \begin{equation}
 \frac{1}{Y}\nabla^4\chi=s(r)
+\label{eq:masterstretch}
 \end{equation}
-
-
-
-
-
-
-
+بدون در نظر گرفتن شرایط مرزی معادله‌ی فوق جواب یکه نخواهد داشت. فرض کنیم که یک غشای دایروی را بررسی می‌کنیم که در مرز‌ها آزاد است. در نتیجه جمع نیرو‌ها روی مرز باید صفر باشد، یعنی 
+$\sigma_{rr},\sigma_{r\phi}=0$
+. اگر فرض کنیم که لغزش در مرکز مختصات است، معادله‌ی 
+\ref{eq:masterstretch}
+به شکل زیر در می‌آید،
+\begin{equation}
+\frac{1}{Y}\nabla^4\chi=b_i\epsilon_{ij}\partial_j\delta(r)
+\end{equation}
+که به پاسخ
+\begin{equation}
+\chi=\frac{Y}{4\pi}b_i\epsilon_{ij}r_j\ln r
+\label{eq:masterstretchsol}
+\end{equation}
+منجر می‌شود. البته که اگر قرار بود معدله‌ی 
+\ref{eq:masterstretch}
+را برای شرایط مرزی محدود حل کنیم،‌ باید جملات دیگری نیز به پاسخ 
+\ref{eq:masterstretchsol}
+اضافه می‌کردیم، ولی از آنجایی که این جملات در حد 
+$r\rightarrow\infty$
+صفر می‌شوند با این پاسخ مسئله‌ را جلو می‌بریم. حالا معادله‌ی 
+\ref{eq:stress}
+را بر حسب تنش می‌نویسیم،
+\begin{equation}
+F_s=\frac{1}{2Y}\int d^r(\nabla^2\chi)^2-\frac{1+\nu}{2Y}\int d^r\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l(\partial_i\chi\partial_j\chi)
+%\label{eq:masterstretchsol}
+\end{equation}
+با جایگذاری $\chi$ از معادله‌ی
+\ref{eq:masterstretchsol}
+و انتگرال گیری خواهیم داشت،
+\begin{equation}
+F_s=\frac{Yb^2}{8\pi}\ln\left[\frac{R}{a}\right]
+%\label{eq:masterstretchsol}
+\end{equation}
+که انرژی حاصل از لغزش در محدوده‌ی 
+$a\leq r\leq R$
+در یک غشا با اندازه‌ی محدود را مشخص می‌کند. حالا معادله‌ی 
+\ref{eq:masterstretch}
+را برای وجود نقص در  مرکز  شبکه جلو می‌بریم.
+\begin{equation}
+\begin{aligned}
+&\frac{1}{Y}\nabla^4\chi=s\delta(r)\\
+&\chi=\frac{Ys}{8\pi}(Ar^2+r^2\ln r)
+%\label{eq:disclination}
+\end{aligned}
+\end{equation}
+بدون وجود جمله‌ی $Ar^2$
+حاصل معادله کرنش بی‌نهایت در مرز خواهد بود که با آهنگ $\ln R$ بزرگ می‌شود. از آنجایی که تمام تقریب‌هایی که تا به الان استفاده شد هارمونیک بودند، این رفتار غیر قابل قبول خواهد بود زیرا که در این صورت ماده به علت کرنش زیاد از هم گسسته خواهد شد. به علت تقارن چرخش در مسئله نیز مؤلفه‌ی تنش زاویه‌دار نیز صفر  خواهد بود
+\begin{equation}
+\sigma_{r\phi}=-\frac{\partial}{\partial r}\left[\frac{1}{r}\frac{\partial\chi}{\partial\phi}\right]
+\end{equation}
+در این صورت نیاز است که در مرز مؤلفه‌ی تنش،
+\begin{equation}
+\sigma_{rr}=\frac{1}{r}\frac{\partial\chi}{\partial r}+\frac{1}{r^2}\frac{\partial^2\chi}{\partial \phi^2}
+\end{equation}
+یعنی هنگامی که $r=R$ جمله‌ی بالا صفر شود که حاصل آن تعیین کمیت $A$
+است،
+\begin{equation}
+A=-\frac{1}{2}-\ln R
+\end{equation}
+حالا می‌توانیم تعریف مناسبی از تنش و انرژي سیستم را بنویسیم،
+\begin{equation}
+\begin{aligned}
+&\chi=\frac{Ys}{8\pi}r^2\left[\ln \left(\frac{r}{R}\right)-\frac{1}{2}\right]\\
+&E_s=\frac{Ys^2}{32\pi}R^2
+%\label{eq:disclination}
+\end{aligned}
+\end{equation}
+نتیجه‌گیری می‌مونه که از پیپر منتقل بشه
 
 
 
@@ -429,6 +506,7 @@ $s(r)$
 
 \begin{equation}
 E_s^{discrete}=\frac{1}{2}\epsilon_s\sum_{\langle a,b\rangle}\left(|r_a'-r_b'|-a\right)^2
+\label{eq:stretchdiscrete}
 \end{equation}
 که جمع روی تمام جفت‌های $a$ و $b$ است که شامل تغییر شکل شده‌اند.  همچنین می‌توان جمع بالا را به شکل چگالی موضعی انرژی حول نقاط شبکه و جمع روی همسایگی‌ آن نقاط تعریف کرد،
 
@@ -442,7 +520,7 @@ E_s^{discrete}=\frac{1}{2}\epsilon_s\sum_{\langle a,b\rangle}\left(|r_a'-r_b'|-a
 $r\rightarrow r'$
 که معادل نقشه‌ی گسسته‌ی شبکه‌ی ماست
 $r_a\rightarrow r_a'=r_a+u_a(r_a)$
-. اگر متریک تانسور این تغییر شکل به شکل زیر تعریف شده باشد،
+. اگر تانسور متریک این تغییر شکل به شکل زیر تعریف شده باشد،
 \begin{equation}
 g_{ij}=\partial_i r'\cdot\partial_jr'
 \end{equation}
@@ -458,7 +536,7 @@ g_{ij}=\partial_i r'\cdot\partial_jr'
 \label{eq:gstrain1}
 \end{aligned}
 \end{equation}
-که در رابطه‌ی بالا متریک تانسور را با تانسوز تنش جاگذاری کردیم،
+که در رابطه‌ی بالا تانسور متریک را با تانسور تنش جاگذاری کردیم،
 $g_{ij}=\delta_{ij}+2u_{ij}$
 از آنجایی که اندیس $b$ بین تمامی همسایه‌ی $a$ تعریف می‌شود و همچنین بردار فاصله‌
 $r_{ab}=r_a-r_b$
@@ -470,7 +548,7 @@ $d_\beta$
 \begin{aligned}
 U_a&=\frac{1}{2}\sum_{\beta=1}^6(u_{ij}\frac{d_\beta^id_\beta^j}{a})^2\\
 &=\frac{1}{2a^2}\sum_{\beta=1}^6u_{ij}u_{kl}d_\beta^id_\beta^jd_\beta^kd_\beta^l\\
-&=\frac{1}{2a^2}a^2u_{ij}u_{kl}(\delta{ij}\delta{kl}+\delta{ik}\delta{jl}+\delta{il}\delta{jk})\cos^2(\pi/3)\\
+&=\frac{1}{2a^2}a^2u_{ij}u_{kl}(\delta_{ij}\delta_{kl}+\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk})\cos^2(\pi/3)\\
 &=\frac{3}{8}(2u_{ij}^2+u_{kk}^2)
 \label{eq:gstrain1}
 \end{aligned}
@@ -604,6 +682,88 @@ $\sigma_{rr},\sigma_{r\phi}=0$
 \begin{aligned}
 &\frac{\kappa}{\kappa_G}\nabla^2f+\left[\frac{1}{r}\frac{\partial f}{\partial r}+\frac{1}{r^2}\frac{\partial^2 f}{\partial\phi^2}\right]=0\\
 &\frac{\kappa}{\kappa_G}\frac{\partial}{\partial r}\nabla^2f-\frac{1}{r}\frac{\partial}{\partial r}\frac{1}{r}\frac{\partial^2 f}{\partial\phi^2}=0
+\end{aligned}
+\end{equation}
+که بر روی مرز دایروی ارضاء می‌شوند.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{خمش}
+در اینجا همان شبکه‌ی ۲ بعدی که برای محاسبه‌ی تنش استفاده کردیم را در نظر می‌گیریم با این تفاوت که حالا اجازه می‌دهیم که صفحه خم شود. در نتیجه انرژي کل صفحه 
+$E=E_s^{discree}+E_b^{discree}$
+که $E_s^{discree}$
+طبق رابطه‌ی 
+\ref{eq:stretchdiscrete}
+محاسبه می‌شود و انرژی خمش بر حسب بردار عمود بر هر مثلث تعریف می‌شود،
+\begin{equation}
+E_b^{discrete}=\frac{1}{2}\epsilon_b\sum_{\langle\alpha,\beta\rangle}|n_\alpha-n_\beta|^2=\epsilon_b\sum_{\langle\alpha,\beta\rangle}\left(1-n_\alpha\cdot n_\beta\right)
+\label{eq:bending}
+\end{equation}
+در اینجا جمع روی تمام جفت‌های 
+$n_\alpha$
+و 
+$n_\beta$ 
+است که همسایه‌ی یکدیگر هستند. برای بدست‌ آوردن حد پیوسته‌ فرض می‌کنیم که سطح غشا با پارامتر 
+$x(\sigma_i)$
+نگاشت شده و محورهای مختصات به صورت 
+$e_i=\partial_ix$
+تعریف شده که در نتیجه منجر به تعریف متریک و ساختار بنیادی دوم
+\LTRfootnote{second fundamental form}
+ به ترتیب به صورت 
+$g_{ij}=e_i\cdot e_j$
+و
+$\Omega_{ij}=e_i\cdot\partial_jn$
+تعریف می‌شود. در حد پیوسته اختلاف برداری 
+$n_\alpha-n_\beta$
+را به صورت گرادیان میدان برداری نوشته می‌شود
+\begin{equation}
+E_b=\frac{1}{2}\epsilon_b\int dSg^{ij}\partial_in\cdot\partial_jn
+%\label{eq:bending}
+\end{equation}
+با جایگذاری 
+$\partial_in\Omega_i^ke_k$
+می‌توانیم انرژی خمش را بر حسب 
+$\Omega_{ij}$
+تعریف کنیم
+\begin{equation}
+E_b=\frac{1}{2}\epsilon_b\int dSg^{ij}g^{kl}\Omega_{ik}\Omega_{jl}
+%\label{eq:bending}
+\end{equation}
+با استفاده از دو رابطه‌ی 
+\begin{equation}
+\begin{aligned}
+&\epsilon^{il}\epsilon_{jk}=\delta_j^i\delta_k^l-\delta_k^i\delta_j^l\\
+&g^{ij}g^{kl}=g^{ik}g^{jl}+\epsilon^{il}\epsilon_{mn}g^{mj}g^{nk}
+\end{aligned}
+\end{equation}
+انتگرالده را به شکل زیر بازنویسی می‌کنیم،
+\begin{equation}
+\begin{aligned}
+g^{ij}g^{kl}\Omega_{ik}\Omega_{jl}&=(g^{ik}\Omega_{ik})^2+\epsilon^{il}\epsilon_{mn}g^{mj}\Omega_{jl}g^{nk}\Omega_{ik}\\
+&=(\Omega_i^i)^2+\epsilon^{il}\epsilon_{mn}\Omega_l^m\Omega_i^n=H-2K
 \end{aligned}
 \end{equation}
 
