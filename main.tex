@@ -24,7 +24,7 @@
 \renewcommand{\headrulewidth}{0pt} % and the line
 }
 \setlatintextfont[Scale=.9]{Times New Roman}
-\graphicspath{{Figs/}}
+%\graphicspath{{Figs/}}
 
 \input{jeld-info}
 \usepackage{perpage} %the perpage package
@@ -47,6 +47,11 @@
 \tableofcontents
 \clearpage
 \listoffigures
+
+%path variables:
+\def \Mempath {Chapters/Membrane}
+
+
 \clearpage
 %\listoftables
 \chapter{فصل ۱}
@@ -56,8 +61,13 @@
 مدل‌سازی غشا، مدل‌های پیوسته و گسسته
 }
 
-\include{chap2}
+\include{Chapters/Membrane/Chapterhead_old}
+\clearpage
+\chapter{
+ غشا
+}
 
+\include{\Mempath/MembraneBio}
 \unsetRL
 \bibliography{reference} 
 
