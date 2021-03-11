@@ -51,8 +51,30 @@
 %path variables:
 \def \Mempath {Chapters/Membrane}
 
+\clearpage
 
 \clearpage
+\pagenumbering{arabic} 
+\chapter{
+\centering{
+غشای زیستی
+}
+}
+\include{\Mempath/MembraneBio}
+\chapter{
+\centering{
+مدل غشا
+}
+}
+\include{\Mempath/MembraneModel}
+\chapter{
+\centering{
+افت و خیز روی سطح کره
+}
+}
+\include{\Mempath/MembraneFluc}
+
+\include{Chapters/Membrane/Chapterhead_old}
 %\listoftables
 \chapter{فصل ۱}
 \include{chap1}
@@ -61,13 +83,9 @@
 مدل‌سازی غشا، مدل‌های پیوسته و گسسته
 }
 
-\include{Chapters/Membrane/Chapterhead_old}
-\clearpage
-\chapter{
- غشا
-}
 
-\include{\Mempath/MembraneBio}
+
+
 \unsetRL
 \bibliography{reference} 
 

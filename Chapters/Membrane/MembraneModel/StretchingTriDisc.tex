@@ -1,0 +1,188 @@
+\setRL
+%\pagenumbering{arabic} 
+
+
+\subsection{
+تغییر انرژی کششی
+}
+در نظریه‌ی الاستیک سطح هر تغییر شکل با یک میدان بردار جابجایی 
+$u(r)=(u_1,u_2)$
+نشان داده می‌شود نقطه‌ی 
+$r(x,y)$
+را به نقطه‌ی 
+$r+u$
+نگاشت می‌کند. اگر در شبکه نقص وجود نداشته باشد این نگاشت یک به یک خواهد بود. در صورتی که در شبکه دررفتگی
+\LTRfootnote{dislocation}
+یا نقص وجود داشته باشد هر انتگرال بسته پاد ساعتگرد که محل نقص داخل آن قرار گیرد با بردار ثابت برگر
+\LTRfootnote{Burger}
+برابر خواهد بود.
+\cite{mitchell1961}
+از آنجایی هم که بردار برگر همیشه با یکی از بردارهای شبکه برابر است، یک به یک نبودن نگاشت در حضور نقص مشکلی در فیزیک مسئله ایجاد نخواهد کرد. این بحث به زبان ریاضی شکل زیر را به خود می‌گیرد،
+\begin{equation}
+\begin{aligned}
+&\oint_Ldu_k=\oint_L\partial_iu_kdx_i=b_k\\
+&\epsilon_{li}\partial_l\partial_iu_j=b_j\delta(r-r_0)
+\end{aligned}
+\end{equation}
+که در بالا 
+$r_0$
+محل نقص، و 
+$b$
+ بردار برگر است. در رفتگی  بر حسب میدان زاویه‌ی بین پیوندهای شبکه مشخص می‌شود، که جهت گیری در پیرامون هر اتم را مشخص می‌کند. صراحت هر نقص،
+ $s$
+ حول هر مسیر بسته دور نقص تعریف می‌شود. در شبکه‌ای که تقارن $n$
+ تایی داشته باشد، 
+ $s$ حتما ضریبی از 
+ $2\pi/n$ خواهد بود.
+ در این بخش شبکه‌های شش ضلعی با تقارن 
+ $n=6$
+و لغزش‌های کوچک
+$s=\pm2\pi/6$
+مورد توجه ماست. به زبان ریاضی می‌توان این جملات را به این شکل نشان داد،
+
+ \begin{equation}
+\begin{aligned}
+&\oint_Ld\theta=\oint_L\partial_i\theta dx_i=s\\
+&\epsilon_{ij}\partial_i\partial_i\theta=s\delta(r-r_0)
+\label{eq:thetauij}
+\end{aligned}
+\end{equation}
+با جایگذاری
+\begin{equation}
+\theta=\frac{1}{2}\epsilon_{ij}\partial_iu_j
+\end{equation}
+حال می‌خواهیم شرایط معادله‌ی 
+\ref{eq:constraint}
+را به صورت قید برای $\chi$
+تعریف کنیم تا تضمین کند که همیشه می‌توانیم $\chi$
+را به صورت جابجایی‌ها بنویسیم. برای اینکار طرفین معادله‌ی 
+\ref{eq:constraint}
+را در 
+$\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l$
+ضرب می‌کنیم که نتیجه‌ی آن،
+\begin{equation}
+\frac{1}{Y}\nabla^4\chi=\epsilon_{ik}\epsilon_{jl}\partial_k\partial_lu_{ij}=\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l\frac{1}{2}(\partial_iu_j+\partial_ju_i)
+\label{eq:incompatibility}
+\end{equation}
+در صورتی که سمت راست معادله‌ی فوق برابر با صفر شود، می‌توان گفت که $u_{ij}$ 
+سازگار است و تنها یک جواب برای میدان جابجایی وجود دارد که جواب معادله‌ی 
+\ref{eq:constraint}
+است. در غیر این صورت معدله‌ی 
+\ref{eq:constraint}
+بیش از یک جواب دارد. در نتیجه رایج است که به نام سمت راست معادله‌ی
+\ref{eq:incompatibility}
+را ناسازگاری
+\LTRfootnote{incompatibility}
+و $\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l$
+را عملگر ناسازگاری بنامند. می‌توانیم محاسبات معادله‌ی 
+\ref{eq:incompatibility}
+را به این شکل ادامه دهیم،
+
+\begin{equation}
+\begin{aligned}
+\frac{1}{Y}\nabla^4\chi&=\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l\frac{1}{2}(\partial_iu_j-\partial_ju_i)+\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l\partial_ju_i\\
+&=\epsilon_{kl}\partial_k\partial_l\theta+ \epsilon_{ik}\partial_k(\epsilon_{jl}\partial_l\partial_ju_i)\\
+&=\sum_{\alpha}s_\alpha\delta(r-r_\alpha)+\sum_\beta b_i^\beta\epsilon_{ik}\partial_k\delta(r-r_\beta)
+\label{eq:disclination}
+\end{aligned}
+\end{equation}
+که $s_\alpha$
+بار نقص در محل $r_\alpha$
+و $b^\beta$
+بردار برگر لغزش در محل $r_\beta$
+را مشخص می‌کند. خط آخر معادله‌ی 
+\ref{eq:disclinationX}
+چگالی نقصان
+$s(r)$
+ را در شبکه مشخص می‌کند. در نتیجه نظریه کشسانی ۲ بعدی به معادله‌ی زیر خلاصه می‌شود،
+\begin{equation}
+\frac{1}{Y}\nabla^4\chi=s(r)
+\label{eq:masterstretch}
+\end{equation}
+بدون در نظر گرفتن شرایط مرزی معادله‌ی فوق جواب یکه نخواهد داشت. فرض کنیم که یک غشای دایروی را بررسی می‌کنیم که در مرز‌ها آزاد است. در نتیجه جمع نیرو‌ها روی مرز باید صفر باشد، یعنی 
+$\sigma_{rr},\sigma_{r\phi}=0$
+. اگر فرض کنیم که لغزش در مرکز مختصات است، معادله‌ی 
+\ref{eq:masterstretch}
+به شکل زیر در می‌آید،
+\begin{equation}
+\frac{1}{Y}\nabla^4\chi=b_i\epsilon_{ij}\partial_j\delta(r)
+\end{equation}
+که به پاسخ
+\begin{equation}
+\chi=\frac{Y}{4\pi}b_i\epsilon_{ij}r_j\ln r
+\label{eq:masterstretchsol}
+\end{equation}
+منجر می‌شود. البته که اگر قرار بود معدله‌ی 
+\ref{eq:masterstretch}
+را برای شرایط مرزی محدود حل کنیم،‌ باید جملات دیگری نیز به پاسخ 
+\ref{eq:masterstretchsol}
+اضافه می‌کردیم، ولی از آنجایی که این جملات در حد 
+$r\rightarrow\infty$
+صفر می‌شوند با این پاسخ مسئله‌ را جلو می‌بریم. حالا معادله‌ی 
+\ref{eq:stress}
+را بر حسب تنش می‌نویسیم،
+\begin{equation}
+F_s=\frac{1}{2Y}\int d^r(\nabla^2\chi)^2-\frac{1+\nu}{2Y}\int d^r\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l(\partial_i\chi\partial_j\chi)
+%\label{eq:masterstretchsol}
+\end{equation}
+با جایگذاری $\chi$ از معادله‌ی
+\ref{eq:masterstretchsol}
+و انتگرال گیری خواهیم داشت،
+\begin{equation}
+F_s=\frac{Yb^2}{8\pi}\ln\left[\frac{R}{a}\right]
+%\label{eq:masterstretchsol}
+\end{equation}
+که انرژی حاصل از لغزش در محدوده‌ی 
+$a\leq r\leq R$
+در یک غشا با اندازه‌ی محدود را مشخص می‌کند. حالا معادله‌ی 
+\ref{eq:masterstretch}
+را برای وجود نقص در  مرکز  شبکه جلو می‌بریم.
+\begin{equation}
+\begin{aligned}
+&\frac{1}{Y}\nabla^4\chi=s\delta(r)\\
+&\chi=\frac{Ys}{8\pi}(Ar^2+r^2\ln r)
+%\label{eq:disclination}
+\end{aligned}
+\end{equation}
+بدون وجود جمله‌ی $Ar^2$
+حاصل معادله کرنش بی‌نهایت در مرز خواهد بود که با آهنگ $\ln R$ بزرگ می‌شود. از آنجایی که تمام تقریب‌هایی که تا به الان استفاده شد هارمونیک بودند، این رفتار غیر قابل قبول خواهد بود زیرا که در این صورت ماده به علت کرنش زیاد از هم گسسته خواهد شد. به علت تقارن چرخش در مسئله نیز مؤلفه‌ی تنش زاویه‌دار نیز صفر  خواهد بود
+\begin{equation}
+\sigma_{r\phi}=-\frac{\partial}{\partial r}\left[\frac{1}{r}\frac{\partial\chi}{\partial\phi}\right]
+\end{equation}
+در این صورت نیاز است که در مرز مؤلفه‌ی تنش،
+\begin{equation}
+\sigma_{rr}=\frac{1}{r}\frac{\partial\chi}{\partial r}+\frac{1}{r^2}\frac{\partial^2\chi}{\partial \phi^2}
+\end{equation}
+یعنی هنگامی که $r=R$ جمله‌ی بالا صفر شود که حاصل آن تعیین کمیت $A$
+است،
+\begin{equation}
+A=-\frac{1}{2}-\ln R
+\end{equation}
+حالا می‌توانیم تعریف مناسبی از تنش و انرژي سیستم را بنویسیم،
+\begin{equation}
+\begin{aligned}
+&\chi=\frac{Ys}{8\pi}r^2\left[\ln \left(\frac{r}{R}\right)-\frac{1}{2}\right]\\
+&E_s=\frac{Ys^2}{32\pi}R^2
+%\label{eq:disclination}
+\end{aligned}
+\end{equation}
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
