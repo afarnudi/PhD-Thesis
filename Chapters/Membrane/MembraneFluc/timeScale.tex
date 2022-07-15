@@ -1,58 +1,79 @@
 
-در این بخش به محاسبه‌ی زمان دوره‌ی تناوبی بسامد نوسان‌‌های هماهنگ‌های کروی برای یک غشای سیال‌گون می‌پردازیم.
+در این بخش به محاسبه‌ی زمان دوره‌ی تناوبی بسامد نوسان‌‌های هماهنگ‌های کروی برای یک غشای سیال‌گون می‌پردازیم. 
+در بخش 
+\ref{sec:bendingFluctuations}
+انرژی انحنای یک غشای بر اساس مُدهای نرمال آن (هماهنگ‌های کُروی) محاسبه شد. معادله‌ی لاگرانژ، دینامیک درجه‌های آزادی را به تغییرات انرژی درجات آزادی، 
+$q$
+مرتبط می‌کند،
 
- کُره‌ بر اساس تعریف آن حجم کاهیده‌ی 
- $\nu=1$
- دارد. غشا با حجم کاهیده‌ی واحد نمی‌تواند افت و خیز کند، زیراکه برای افت و خیز مساحت آن باید کمی بیشتر از مساحت کُره با همان حجم باشد. می‌توانیم مساحت شکلی که با انرژی خمش هلفریش افت و خیز می‌کند را به شکل زیر محاسبه کنیم. از بخش قبل می‌دانیم که
 \begin{equation}
-dA=r_{0}^2(1+g^2+\frac{1}{2}g\mathcal{L}^2g)d\Omega
-\label{eq:areaPatchDifferential}
+\frac{d}{dt}\left(\frac{\partial K}{\partial \dot q}\right)=-\frac{\partial U}{\partial q}.
+\label{eq:LagrangeEquation}
 \end{equation}
- و با انتگرال گیری روی تمام زوایای فضایی،
- \begin{equation}
-\begin{aligned}
-A&=\int dA=r_{0}^2\int(1+g^2+\frac{1}{2}g\mathcal{L}^2g)d\Omega\\
-&=r_{0}^2(4\pi+\sum_{\ell}|u_{\ell,m}|^2[1+\frac{1}{2}\ell(\ell+1)])
-\label{eq:AreaGL}
-\end{aligned}
-\end{equation}
- حجم غشای در حال افت و خیز نیز به همین ترتیب قابل محاسبه‌است. ابتدا عنصر حجمی را تعریف کرده،
- \begin{equation}
-\begin{aligned}
-dV&=\frac{1}{3}(r\hat r\cdot\hat n)dA\\
-&\approx\frac{1}{3}\frac{r_{0}(1+g)}{\sqrt{1+\frac{1}{2}g\mathcal{L}^2g}}r_{0}^2(1+g^2+\frac{1}{2}g\mathcal{L}^2g)d\Omega\\
-&\approx\frac{1}{3}r_{0}^3(1+g^2)d\Omega
-\label{eq:volumeDifferential}
-\end{aligned}
-\end{equation}
- که در معادله‌ی بالا بردار عمود بر سطح (مطابق بخش قبل)به شکل
- \begin{equation}
-\vec n =\left(1+g\mathcal{L}^2g\right)^{-\frac{1}{2}}(\hat r-\frac{r_0}{r}\frac{\partial}{\partial\theta}g\hat\theta-\frac{r_{eq}}{r}\frac{1}{\sin\theta}\frac{\partial}{\partial\phi}\hat\phi)
-\label{eq:surfaceNormal}
-\end{equation}
-تعریف شده است. حال می‌توانیم با انتگرال گیر بر روی تمام زوایای فضای حجم غشا را محاسبه کنیم،
+در معادله‌ی فوق
+$K$
+انرژی جنبشی،
+$U$
+انرژی پتانسیل سیستم مورد مطالعه‌است. این معادله مستقل از شکل معادله‌ی دینامیک سیستم بر قرار است. در صورتی که غشا در محیط خلا در حال نوسان باشد، معادله‌ی حرکت سیستم توسط معادله‌ی نیوتن تعیین می‌شود. در صورتی که غشا در محیط سیال در حال نوسان باشد، معادله‌ی حرکت با حل معادله‌ی ناویر-استوکس
+\LTRfootnote{Navier-Stokes }
+تعیین می‌شود. برای غشایی که در خلا حرکت می‌کند، انرژی جنبشی آن به سادگی با جمع روی انرژی جنبشی تکه‌های جرمی کوچک برای سطح آن محاسبه می‌شود،
 \begin{equation}
 \begin{aligned}
-V&=\int dV=\frac{1}{3}r_{eq}^3\int(1+g^2)d\Omega\\
-&=\frac{1}{3}r_{0}^3(4\pi+\sum_{\ell}|u_{\ell,m}|^2)
-\label{eq:VolumeGL}
+K&=\frac{1}{2}\rho_m\int\d\Omega~\dot r^2(\theta,\phi) dm=\frac{1}{2} \left\{\frac{\partial}{\partial t}\left[r_0(1+\sum_{\ell,m}u_{\ell,m}Y_{\ell,m})\right\}\right)^2\\
+&=\frac{1}{2} \rho_mr_0^2\int d\Omega\left[\sum_{\ell,m}\frac{\partial}{\partial t}u_{\ell,m}Y_{\ell,m}\right]^2\\
+&=\frac{1}{2} \rho_mr_0^2\sum_{\ell,m}\dot u_{\ell,m}^2
 \end{aligned}
+\label{eq:kineticEnergyNewton}
 \end{equation}
-حالا با استفاده از معادلات
-\ref{eq:AreaGL}
+در محاسبات فوق فرض شده که غشایی به جرم 
+$M$
+با چگالی یکنواخت در تمام جهت فضا 
+$\rho_m=M/4\pi$
+در حال حرکت است. حالا می‌توانیم معادله‌ی لاگرانژ را برای یک غشای در حال نوسان در خلا محاسبه کنیم،
+\begin{equation}
+\begin{aligned}
+\frac{d}{dt}\left(\frac{\partial}{\partial \dot u_{\ell,m}}\frac{1}{2}\frac{Mr_0^2}{4\pi}\sum_{\ell',m'}\dot u_{\ell',m'}^2\right)&=-\frac{\partial}{\partial u_{\ell,m}}\left[ 8\pi\kappa +\frac{1}{2}\kappa\sum_{\ell',m'}|u_{\ell',m'}|^2(\ell'+2)(\ell'+1)\ell'(\ell'-1)\right]\\
+\frac{Mr_0^2}{4\pi}\ddot u_{\ell,m}&=-\kappa u_{\ell,m}(\ell+2)(\ell+1)\ell(\ell-1)\\
+\ddot u_{\ell,m}&=-\frac{4\pi\kappa}{Mr_0^2}(\ell+2)(\ell+1)\ell(\ell-1)~u_{\ell,m}
+\end{aligned}
+\label{eq:LagrangeNewton}
+\end{equation}
+که شکل معادله‌ی نوسانگر هارمونیک را دارد. در نتیجه بسامد زاویه‌ای هر مُد برابر با،
+\begin{equation}
+\omega_{\ell,m}^2=\frac{4\pi\kappa}{Mr_0^2}(\ell+2)(\ell+1)\ell(\ell-1)
+\label{eq:Omegalm}
+\end{equation}
+است. در نتیجه مقیاس زمانی برای نوسان هر مُد مشخص شده‌است. رابطه‌ی 
+$\omega_{\ell,m}$
 و
-\ref{eq:VolumeGL}
-و جایگذاری در معادله‌ی
-\ref{eq:reducedVolume}
-حجم کاهیده لازم را محاسبه می‌کنیم،
+$\ell$
+یک رابطه‌ی مستقیم است، یعنی مُدهای بالا بسامد بزرگتری خواهند داشت. با توجه به اینکه 
 \begin{equation}
-\begin{aligned}
-\nu=\frac{\sqrt{4\pi}(4\pi+\sum|u_{\ell,m}|^2)}{(4\pi+\sum|u_{\ell,m}|^2[1+\frac{1}{2}\ell(\ell+1)])^{3/2}}
-\label{eq:nuUndulated}
-\end{aligned}
+T=\frac{2\pi}{\omega}
 \end{equation}
-با فرض اینکه ضریب سختی خمش یک غشا حدود
-$\kappa=20k_BT$
-است، با جمع روی مُدها می‌توان حجم کاهیده‌ی لازم را حدود
-$\nu\approx0.9626$
-تخمین زد.
+
+کوچکترین مُد سیستم که تغییر شکل ایجاد می‌کند،
+$\ell=2$
+طولانی ترین دوره‌ی تناوب را دارد و هر جه مُد بالاتر باشد، دوره‌ی تنواب سریع‌تری خواهد داشت.
+\begin{equation}
+T_{\ell,m}=\sqrt{\frac{M\pi r_0^2}{\kappa}\frac{1}{(\ell+2)(\ell+1)\ell(\ell-1)}}
+\end{equation}
+این نکته‌ی کلیدی در انتخاب قدم زمانی مناسب برای پیاده‌سازی محاسبات دینامیک ملکولی است.
+
+جهت تکمیل کردن بحث، انرژی جنبشی سطح غشا بین دو سیال تراکم ناپذیر با چگالی 
+$\rho_1$
+(سیال داخل غشا) و 
+$\rho_2$
+شکل زیر را خواهد داشت،
+\cite{Christer1984}
+\begin{equation}
+K=\frac{1}{2}r_0^5\sum_{\ell,m}\left(\frac{\rho_1}{\ell}+\frac{\rho_2}{\ell+1}\right)\dot u_{\ell,m}^2
+\end{equation}
+که با حل معادله ناویر-استکس به دست می‌آید.
+
+
+
+
+
+
+
