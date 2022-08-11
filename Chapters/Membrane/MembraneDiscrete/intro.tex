@@ -1,19 +1,3 @@
-\setRL
-\clearpage
-\def \MemModel {\Mempath /MembraneModel}
-
-\section{
-چکیده
-}
-در بخش
-\ref{sec:cellmembrane}
-مروری کوتاهی بر تارخچه‌ی تحقیقات انجام شده در جهت کشف و بررسی ساختار غشای سلول‌های زنده در قرن‌های ۱۹ و ۲۰ میلادی شده‌است. در بخش
-\ref{sec:nuclearenvelope}
-ساختار بسته‌ی هسته به صورت مختصر توضیح داده شده‌است.
-
-\section{
-مقدمه
-}
 از آنجایی که ضخامت غشا از مرتبه‌ی چند نانومتر و اندازه‌ی آن حدود چند میکرون است می‌توانیم از مدل‌های الاستیک پوسته‌های نازک برای مطالعه رفتار مکانیکی آن استفاده کنیم. در این رژیم فرض می‌کنیم که غشا یک لایه‌ی نازک است که در تقریب مقیاس طولی بزرگ (چند میکرون) مساحت ثابتی دارد. توصیف پوسته‌های نازک را با بررسی انرژی خمشی و انرژی کششی یک محیط پیوسته آغاز خواهیم کرد. پس حل معادلات پیوسته، این معادلات را برای مجموعه نقاط در فضا که بر روی شبکه‌ی مثلثی قرار دارند حل می‌کنیم. سپس تغییرات انرژی در صورت ایجاد نقاط نقص بر روی شبکه را محاسبه خواهیم کرد. 
 
 
@@ -22,7 +6,7 @@
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=4in]{\Mempath/Pics/Membrane_fluctuations}
+\includegraphics[width=4in]{\MemDiscr/Pics/Membrane_fluctuations}
 \caption{
 مجموعه تصاویر پست سر هم از تغییر شکل یک غشای لیپیدی را با تصویر برداری فلورسانت در بازه‌های ۵ ثانیه‌ای نشان می‌دهد. خط مقیاس سفید رنگ اندازه‌ی ۵ میکرومتر را نشان می‌دهد. 
 \cite{ParthasarathyMembraneMeasurement}
@@ -42,34 +26,13 @@
 ب، تغییر شکل عنصر سطح به علت ایجاد کشش در سطح نشان می‌دهد. تغییر سطح با اختلاف مساحت عنصر سطح با حالت کشیده نشده توصیف می‌شود.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=4in]{\Mempath/Pics/surface elemnts.pages.pdf}
+\includegraphics[width=4in]{\MemDiscr/Pics/surface elemnts.pages.pdf}
 \caption{
 تغییر شکل عنصر سطحی بر اثر الف، خمش و ب، کشش.
 }
 \label{fig:elasticdeformation}
 \end{center}
 \end{figure}
-
-
-\section{
-انرژی آزاد غشا
-}
-\input{\MemModel/Stretching}
-\input{\MemModel/Bending}
-
-\section{
-انرژی آزاد یک شبکه‌ی مثلثی
-}
-\input{\MemModel/StretchingTriMesh}
-\input{\MemModel/BendingTriMesh}
-\section{
-تغییر انرژی آزاد با افزودن نقطه‌ی نقص به شبکه
-}
-\input{\MemModel/StretchingTriDisc}
-\input{\MemModel/BendingTriDisc}
-\input{\MemModel/GammaTriDisc}
-
-
 
 
 

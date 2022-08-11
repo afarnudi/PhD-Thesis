@@ -1,0 +1,58 @@
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=4.5in]{\MemDiscr /Pics/volumeTriple.pdf}
+\caption{
+حجم یک شبکه‌ی مثلثی با جمع روی ضرب سه گانه‌ی دو بردار مجاور مثلث‌های روی سطح آن و یک نقطه‌ی دیگری در فضا قابل محاسبه است.
+}
+\label{fig:volumeTriple}
+\end{center}
+\end{figure}
+
+
+در شبکه‌های مورد توجه ما، مثلث‌ها بدون همپوشانی سطح را کاشی می‌کنند. در نتیجه مساحت کل سطح با جمع مساحت تمام مثلث‌های روی سطح محاسبه می‌شود. با فرض اینکه هر مثلث دارای رئوس
+$ABC$
+مساحت آن برابر با نصف ضرب برداری دو ضلع مجاور آن است، مانند ضرب بردارهای 
+$\overrightarrow{BA}$
+و
+$\overrightarrow{CA}$
+در شکل 
+\ref{fig:volumeTriple}
+. در نتیجه مساحت کل را می‌توان به شکل زیر نوشت،
+\begin{equation}
+A =\sum_{tri}\frac{1}{2}|\overrightarrow{BA}||\overrightarrow{CA}|\sin(\theta_{BAC}).
+\label{eq:areaSum}
+\end{equation}
+در معادله‌ی فوق
+$\sum_{tri}$
+به معنی جمع روی تمام مثلث‌های شبکه‌است. 
+
+حجم هر هرم
+$v_i$
+با قاعده‌ی مثلثی
+$ABC$
+و راس
+$X$
+ با ضرب سه گانه‌ی بردارهای
+\begin{equation}
+v_i=\frac{1}{6}\overrightarrow{AB}\times\overrightarrow{AC}\cdot\overrightarrow{AX}.
+\label{eq:tripleProduct}
+\end{equation}
+برابر است (شکل 
+\ref{fig:volumeTriple}
+). در صورتی که بردارهای
+$\overrightarrow {AB}$
+و
+$\overrightarrow {AC}$
+را همیشه‌ طوری انتخاب کنیم که ضرب خارجی‌ آنها همیشه به سمت داخل هندسه‌ی بسته باشد، جمع روی 
+$v_i$
+همیشه برابر با حجم کل شبکه‌ و مستقل از انتخاب مختصات نقطه‌ی 
+$X$
+ خواهد بود،
+ \begin{equation}
+V= \sum_{tri} v_i
+\label{eq:volumeSum}
+\end{equation}
+در جمع فوق بسته به جهت بردار
+$\overrightarrow {AX}$
+حجم برخی هرم‌ها مثبت و برخی دیگر منفی خواهد بود ولی جمع حجم‌ها، حتی برای اشکال پیچیده، همیشه برابر حجم فضای محصور شبکه خواهد بود.
+

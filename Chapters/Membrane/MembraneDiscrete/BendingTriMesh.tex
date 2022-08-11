@@ -1,0 +1,251 @@
+\setRL
+%\pagenumbering{arabic} 
+
+
+
+\subsection{
+انرژي خمش متوسط
+}
+\subsubsection{
+روش ایتزیکسون
+}
+در بخش قبل نحوه‌ی محاسبه‌ی انرژی خمش به روش دو سطحی
+\LTRfootnote{dihedral}
+معرفی شد. این روش در اصل توسط نلسون و کانتور
+\cite{NelsonPRL1987}
+معرفی شده بود. گامپر و کرول در سال ۱۹۹۶ به طور مفصل این روش را نقد کرده‌اند
+\cite{Gompper1996}
+. این روش مشکلات زیادی دارد که در واقع خمش شکل را غلط پیشبینی می‌کند. مشکل اساسی این است که رابطه‌ی 
+$\epsilon_b$
+و 
+$\kappa$
+(معادله‌ی  
+\ref{eq:HelfrichCurvatureEnergy}
+) تابع شکل سطح است.  مثلا برای کره
+$\epsilon_b\approx\frac{\sqrt{3}}{2}\kappa$
+و برای استوانه
+$\epsilon_b\approx\sqrt{3}\kappa$
+است. پس نمی‌توان از این رابطه برای محاسبه‌ی سطحی که در حال تغییر شکل است و یا شکل خوش تعریفی ندارد استفاده کرد. 
+از طرف دیگر از آنجایی که این انرژی تنها میان یک جفت مثلث تعریف می‌شود و از هندسه‌ی اطرافش بی‌خبر است، نمی‌تواند انرژی نقاط زین اسبی را به درستی محاسبه کند. و در نهایت اندازه‌ی مثلث‌ها در اندازه‌ی خمش نقشی ندارند. این نکته از طرفی مهم است زیرا انرژی خمش مستقل از اندازه‌ی هندسی شکل است ولی در حالتی که مش مثلث‌های با اندازه‌های مختلف داشته باشد، یک جفت مثلث غول‌آسا و یک جفت مثلث ریز به یک می‌زان انرژی خمش خواهند داشت.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=4.5in]{\MemDiscr /Pics/tringlePairBoth}
+\caption{
+سمت چپ زاویه‌های 
+$\theta_1^{ij}$
+و
+$\theta_2^{ij}$
+را نشان می‌دهد که زاویه‌هایی است که در شبکه‌ی دوگان به ضلع
+$\ell_{ij}$
+نسبت داده می‌شود
+\cite{Meyer2003}
+. سمت راست جفت مثلثی همراه بردار‌های عمود بر سطوح آن،
+$n_\alpha$
+و
+$n_\beta$
+و زاویه‌ی دوسطحی میان آن دو
+$\phi_{ij}$
+نمایش داده شده ‌است.
+}
+\label{fig:trianglePairAngle}
+\end{center}
+\end{figure}
+
+
+خمش متوسط یک ناحیه روی مِش 
+$H=C_1+C_2$
+جمع خمش‌های اصلی در آن نقطه است. در این صورت می‌توان انرژی خمش را با جمع خمش میانگین در هر نقطه تعریف کرد،
+\begin{eqnarray}
+E_{b}=\frac{1}{2}\kappa\int dA \left[H-C_0\right]^2\equiv\frac{1}{2}\kappa\sum_i a_i \left[H_i-C_0\right]^2,
+\label{eq:bendingDiscretisation}
+\end{eqnarray}
+در اینجا 
+$H_i$
+خمش متوسط در هر نقطه 
+$v_i$
+است و 
+$a_i$
+سهم مساحتی است که هر نقطه روی سطح دارد. از هندسه‌ی دیفرانسیلی می‌دانیم که خمش متوسط در هر نقطه 
+$\vec r$
+که بردار عمود بر سطح 
+$\vec n$
+را دارد به شکل 
+$H=\vec n\cdot\Delta \vec R$
+تعریف می‌شود 
+\cite{Gompper1996}
+و 
+$\Delta$
+عملگر لاپلاس بلترامی 
+\LTRfootnote{Laplace–Beltrami}
+است. 
+
+ایتزیکسون
+\LTRfootnote{Itzykson}
+در سال ۱۹۸۶ لاپلاسین یک میدان اسکالر بر روی یک شبکه‌ی مثلثی تصادفی را به شکل زیر محاسبه کرد
+\cite{Itzykson1986}
+. در اینجا 
+$\ell_{ij}$
+طول ضلع تعریف شده میان نقاط 
+$i$
+و
+$j$
+است، 
+$\vec r_i$
+و
+$\vec r_j$
+بردار‌های مکان نمای این دو نقطه‌ است (شکل
+\ref{fig:trianglePairAngle}
+). 
+$\tilde\ell_{ij}$
+طول ضلع 
+$\ell_{ij}$
+در شبکه‌ی دوگانه‌ 
+\LTRfootnote{dual lattice}
+است و با استفاده از زوایا‌ی روبرو آن به شکل 
+\begin{eqnarray}
+\tilde\ell_{ij}=\frac{1}{2}\ell_{ij}(\cot\theta_1^{ij}+\cot\theta_2^{ij})
+\label{eq:dualLattice}
+\end{eqnarray}
+تعریف می‌شود.
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=9cm]{\MemDiscr /Pics/Voronoi_Barycentric}
+
+\caption{
+سمت چپ مساحت بریسنتریک (مرکز جرمی) و سمت راست مساحت وُرُنُوی برای یک پلاکت را نمایش می‌دهد.
+}
+\label{fig:voronoiBarycentric}
+\end{center}
+\end{figure}
+مساحت وُرُنُوی
+\LTRfootnote{Voronoi}
+یک نقطه به اندیس 
+$i$
+با استفاده از طول اضلاع در شبکه‌ی دوگانی قابل محاسبه است
+\begin{eqnarray}
+\sigma_i=\frac{1}{4}\sum_{j(i)}\tilde\ell_{ij}\ell_{ij}.
+\label{eq:voronoiArea}
+\end{eqnarray}
+. در معادله‌ی بالا جمع روی تمام اندیس‌های همسایه‌ی نقطه‌ی 
+$i$
+است. با توجه به این تعاریف در هر نقطه می‌توان خمش را به شکل زیر تعریف کرد،
+\begin{eqnarray}
+H_i=\frac{1}{2}\vec n\cdot\Delta \vec r\equiv\frac{1}{2\sigma_i}\vec n \cdot\left[\frac{\sum_{j(i)}\tilde\ell_{ji}}{\ell_{ij}}(\vec r_i-\vec r_j)\right],
+\label{eq:meanCurvatureDiscreteSingleVertex}
+\end{eqnarray}
+. تعریف بردار عمود در هر نقطه به شکل زیر تعریف می‌شود
+\cite{Thurrner1998NormalVec}
+\begin{eqnarray}
+\vec n_i=\frac{\sum_{tri(i)} \eta_{tri}^i~\vec n_{tri}^i}{|\sum_{tri(i)} \eta_{tri}^i~\vec n_{tri}^i|},
+\label{eq:noramlVector}
+\end{eqnarray}
+که جمع روی تمام مثلث‌های عضو پلاکت
+\LTRfootnote{placket}
+است (تمام مثلث‌هایی که نقطه‌ی 
+$i$
+بین آنها مشترک است). 
+$\eta_{tri}^i$
+و
+$\eta_{tri}^i$
+به ترتیب زاویه‌ی راس مثلث در نقطه‌ی 
+$i$
+و بردار عمود بر مثلث است. از آنجایی که در ۳ بُعد بردار عمود بر سطح و لاپلاسین هم‌جهت هستند
+\cite{Gompper1996}
+معادله‌ی 
+\ref{eq:ItzyksonPotential}
+تعریف صحیحی از خمش است. تعریف خمش در هر نقطه در صورتی که نیاز به  اضافه کردن خمش ذاتی به معادله خمش باشد، اهمیت دارد. 
+
+معادله‌ی
+\ref{eq:ItzyksonPotential}
+برای شبکه‌های مثلثی در نظر گرفته شده که مثلثی با زاویه‌ی منفرجه نداشته باشد و همچنین شکل و اندازه تمام مثلث‌ها تقریبا یکسان باشد
+\cite{Itzykson1986}
+. همانطور که گامپر و کرول هم اشاره کرده‌اند
+\cite{Gompper1996}
+در این روش داشتن زوایای منفرجه ناپایداری‌های عددی در محاسبات خمش (به خصوص در علامت پارامتر‌های 
+$\sigma_i$
+یا
+$\tilde\ell_{ij}$
+) ایجاد خواهد کرد. به این علت مهم، این روش تنها  در مطالعاتی به کار برده می‌شود  که مِش‌های  مثلثی  توزیع یکنواختی از نقاط داشته و توزیع طول اضلاع کنترل شده باشد تا تمام مثلث‌های تشکیل شده اندازه و شکل کم و بیش یکسان داشته باشند.
+
+
+
+\subsubsection{
+روش یولیشِر
+}
+۱۰ سال پس از ایتزیکسون، در سال ۱۹۹۶ فرنک یولیشِر 
+\cite{Julicher1996}
+روش دیگری برای تخمین خمش بر نقاط شبکه‌های مثلثی استفاده کرد. در روش یولیشِر خمش متوسط در هر نقطه با محاسبه‌ی  میانگین تصویر تانسور خمش برای هر دوسطحی (جفت مثلث‌) بر صفحه‌ی مماس بر پلاکت  تخمین زده می‌شود
+\cite{Ramakrishnan2011}
+مساحت بَرییسنتریک
+\LTRfootnote{Barycentric}
+(مرکز جرمی) سهم هر نقطه را در خمش تعیین می‌کند،
+\begin{eqnarray}
+E_{b}^{J}=2\kappa\sum_{i}\frac{1}{a_i}\left[\sum_{j(i)}\frac{1}{4}(\ell_{ij}\phi_{ij})\right]^2.
+\label{eq:JulicherPotential}
+\end{eqnarray}
+در معادله‌ی بالا 
+$\ell_{ij}$
+و
+$\phi_{ij}$
+طول ضلع و زاویه‌ی دوسطحی آن (شکل
+\ref{fig:trianglePairAngle}
+) است. با فرض اینکه توپولوژی سطح تغییر نکند، مشخصه‌ی اویلری سطح ثابت باشد، و سطح خمش ذاتی نداشته باشد، خمش ذاتی میانگین سطح با جمع زیر محاسبه می‌شود، 
+\begin{eqnarray}
+M=\frac{1}{2}\sum_{<i,j>)}\ell_{ij}\phi_{ij} = \frac{1}{4}\sum_i\sum_{j(i)}\ell_{ij}\phi_{ij}.
+\label{eq:JulicherTotalMeanCurvature}
+\end{eqnarray}
+مساحتی که به هر نقطه نسبت داده می‌شود،
+$a_i$
+مساحت بریسنتریک (مرکز جرمی) پلاکت است (شکل
+\ref{fig:voronoiBarycentric}
+) که برابر یک سوم مساحت تمام مثلث‌های پلاکت است، 
+\begin{eqnarray}
+a_i=\frac{1}{3}\sum_{tri (i)}a_{tri}.
+\label{eq:BarycentricArea}
+\end{eqnarray}
+در این مدل، در صورتی که خمش ذاتی در سطح وجود داشته باشد، خمش در هر نقطه به شکل،
+\begin{eqnarray}
+H_i^J=\vec n\cdot\frac{1}{4}\frac{1}{a_i}\sum_{j(i)}\ell_{ij}\phi_{ij},
+\label{eq:meanCurvatureDiscreteSingleVertexJulicher}
+\end{eqnarray}
+تعریف می‌شود. در اینجا تعریف بردار عمود بر سطح مطابق معادله‌ی
+\ref{eq:noramlVector}
+است. رابطه‌ی یولیشر را با یک فاکتورگیری ساده می‌توان مشابه با رابطه‌ی ایتزیکسون بازنویسی کرد،
+\begin{eqnarray}
+E_{b}^{J}=\frac{1}{2}\kappa\sum_{i}\frac{1}{a_i}\left[\sum_{j(i)}\frac{1}{2}(\ell_{ij}\phi_{ij})\right]^2.
+\label{eq:JulicherPotentialHalf}
+\end{eqnarray}
+در قسمت نتایج نشان خواهیم داد که اختلاف خمش میانگین محاسبه شده توسط ایتزیکسون و یولیشر در وزنی‌است که به هر پلاکت نسبت می‌دهند و برای عموم چیدمان‌ پلاکت‌ها و خمش سطح کوچک،
+\begin{eqnarray}
+\left[\sum_{j(i)}\frac{1}{2}(\ell_{ij}\phi_{ij})\right]^2\approx\left[\sum_{j(i)}\frac{\sigma_{ij}}{\ell_{ij}}(\vec r_i-\vec r_j)\right]^2.
+\label{eq:JulicherItzyksonNumerator}
+\end{eqnarray}
+
+
+\subsubsection{
+روش‌های ایتزیکسون-بریسنتریک و یولیشر-ورنوی
+}
+با توجه به رابطه‌ی 
+\ref{eq:JulicherItzyksonNumerator}
+با جابجایی وزن نسبت داده شده به هر پلاکت می‌توان دو نوع روش جدید برای محاسبه‌ی خمش در شبکه‌های مثلثی طراحی کرد. یکی محاسبه‌ی خمش به روش ایتزیکسون ولی با وزن بریسنتریک،
+\begin{eqnarray}
+E_{b}^{IB}=\frac{1}{2}\kappa\sum_{i}\frac{1}{a_i}\left[\sum_{j(i)}\frac{\sigma_{ij}}{\ell_{ij}}(\vec r_i-\vec r_j)\right]^2,
+\label{eq:ItzyksonBarycentricPotential}
+\end{eqnarray}
+و دیگری محاسبه‌ی خمش با روش یولیشر ولی با وزن ورنوی است،
+\begin{eqnarray}
+E_{b}^{JV}=\frac{1}{2}\kappa\sum_{i}\frac{1}{\sigma_i}\left[\sum_{j(i)}\frac{1}{2}(\ell_{ij}\phi_{ij})\right]^2.
+\label{eq:JulicherVoronoiPotential}
+\end{eqnarray}
+انگیزه‌ی اصلی برای پیشنهاد این دو روش جدید بررسی پایداری عددی روش‌های مختلف محاسبه‌ی خمش برای محاسبات دینامیک ملکولی است.  در بخش نتایج مفصل راجع به پایداری عددی این روش‌ها صحبت خواهد شد.
+
+
+
+
+
+
+
+
+ 

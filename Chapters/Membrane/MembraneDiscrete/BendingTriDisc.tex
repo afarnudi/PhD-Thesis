@@ -1,0 +1,150 @@
+
+برای اینکه جابجایی خارج از صفحه را توصیف کنیم علاوه بر میدان جابجایی 
+$u(r)=(u_1,u_2)$
+نیاز به تابع جدید 
+$f(r)$
+داریم که انحراف
+\LTRfootnote{deflection}
+ نقاط شبکه را توصیف می‌کند یعنی تغییرات نقطه‌ی 
+$(x_1,x_2,0)$
+را به نقطه‌ی 
+$(x_1+u_1,x_2+u_2,f)$
+نگاشت می‌کند. در نتیجه انرژي کل سیستم حاصل جمع انرژی کشسانی و انرژي خمشی خواهد بود. انرژی کشسانی همچنان طبق معادله‌ی
+\ref{eq:energylame}
+با این تفاوت که به جای تعریف کرنش در معادله‌ی 
+\ref{eq:simplestrain}
+از رابطه‌ی زیر استفاده می‌کنیم
+\begin{equation}
+u_{ij}=\frac{1}{2}(\partial_iu_j+\partial_ju_i+\partial_if\partial_jf)
+\label{eq:nonlinearstrain}
+\end{equation}
+در اینجا نیز همانند بخش قبلی از جملات مرتبه‌ی ۲ به بالای جابجایی صرف نظر کرده‌ایم. معمولا هنگام  مدل‌سازی صفحات تخت در حالت تغییر شکل کوچک همچنان استفاده از معدله‌ی 
+\ref{eq:simplestrain}
+رایج است که حاصل آن یک نظریه‌ی کاملا خطی است. در اینجا ما قصد داریم تغییر شکل‌هایی را بررسی کنیم که در آن $f$ مهم است و کمترین مرتبه‌ای که $f$ 
+تاثیر خود را نشان می‌دهد مرتبه‌ی دوم است، در نتیحه کرنش را به شکل  معادله‌ی 
+\ref{eq:nonlinearstrain}
+قابل قبول است. انرژی خمش را طبق نظریه‌ی هلفریش
+\cite{Helfrich1973}
+با خمش سطح $H$
+و خمش گاووسی $K$
+تعریف می‌کنیم، 
+\begin{equation}
+F_b=\int dS\left(\frac{1}{2}\kappa H^2+\kappa_GK\right)
+\end{equation}
+که در اینجا 
+$\kappa$
+سختی خمش، 
+$\kappa_G$
+سختی گاووسی، و 
+$dS$
+عنصر سطح است. خمش بر حسب 
+$f$
+ به شکل زیر محاسبه می‌شوند،
+\begin{equation}
+\begin{aligned}
+H&=\nabla\cdot\left[\frac{\nabla f}{\sqrt{1+|\nabla f|^2}}\right],\\
+K&=\frac{\det(\partial_i\partial_jf)}{\left(1+|\nabla f|^2\right)^2}
+\end{aligned}
+\end{equation}
+برای تغییر شکل‌های کوچک می‌توانی از تقریب زیر استفاده کنیم،
+\begin{equation}
+\begin{aligned}
+H&\approx\nabla^2f\\
+K&\approx \det(\partial_i\partial_jf)=-\frac{1}{2}\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l(\partial_if\partial_jf)
+\end{aligned}
+\end{equation}
+با جایگذاری روابط بالا می‌توانیم انرژي خمش را بازنویسی کنیم،
+\begin{equation}
+F_b\approx\frac{1}{2}\kappa\int d^2r(\nabla^2 f)^2+\frac{1}{2}\kappa_G\int d^2r\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l(\partial_if\partial_jf)
+\label{eq:bendingenergyequ}
+\end{equation}
+حالا با مشتق‌گیری نسبت به $u$ و $f$
+می‌توانیم مانند بخش قبل معادلاتی که به تعریف تنش می‌انجامد را تعریف کنیم
+\begin{equation}
+\begin{aligned}
+\kappa\nabla^4f&=\partial_i(\sigma_{ij}\partial_jf)\\
+\partial_i\sigma_{ij}&=0
+\end{aligned}
+\end{equation}
+که در بالا رابطه‌ی بین تانسور تنش و تانسور غیر خطی کرنی مشابه معادله‌ی 
+\ref{eq:stress}
+تعریف شده است. حالا مشابه مراحلی که منجر به معادله‌ی 
+\ref{eq:disclination}
+شد عمل کرده و به رابطه‌ی زیر می‌رسیم،
+
+\begin{equation}
+\frac{1}{Y}\nabla^4\chi-\frac{1}{2}\epsilon_{ik}\epsilon_{jl}=\sum_\alpha s_\alpha\delta(r-r_\alpha)+\sum_\beta b_i^\beta\epsilon_{ik}\partial_k\delta(r-r_\beta)
+\end{equation}
+و در نهایت می‌توانیم یک سیستم معادلا کامل بنویسیم،
+\begin{equation}
+\begin{aligned}
+&\kappa\nabla^4f+\epsilon_{ik}\epsilon_{jl}\partial_k\partial_l(\partial_i\chi\partial_jf)=0\\
+&\frac{1}{Y}\nabla^4\chi=s(r)-K(r)
+\end{aligned}
+\end{equation}
+و همانند قسمت قبل $s(r)$ چگالی نقص و 
+$k(r)$
+خمش گاووسی است. نقش خمش گاووسی به صورت کم کردن تنش در اینجا ظاهر می‌شود. از آنجایی که انتگرال خمش گاووسی به انتگرال روی محیط می‌تواند کاهش پیدا کند بر روی فیزیک روی سطح مسئله تاثیر نمی‌گذارد بلکه تاثیر خود را روی شرایط مرزی نشان می‌دهد. پس به قیود 
+$\sigma_{rr},\sigma_{r\phi}=0$
+باید قیود زیر را نیز اضافه کنیم،
+\begin{equation}
+\begin{aligned}
+&\frac{\kappa}{\kappa_G}\nabla^2f+\left[\frac{1}{r}\frac{\partial f}{\partial r}+\frac{1}{r^2}\frac{\partial^2 f}{\partial\phi^2}\right]=0\\
+&\frac{\kappa}{\kappa_G}\frac{\partial}{\partial r}\nabla^2f-\frac{1}{r}\frac{\partial}{\partial r}\frac{1}{r}\frac{\partial^2 f}{\partial\phi^2}=0
+\end{aligned}
+\end{equation}
+که بر روی مرز دایروی ارضاء می‌شوند. اگر بسط بالا را باز کنیم معادلات شکل زیر را به خود می‌گیرند،
+
+\begin{equation}
+\begin{aligned}
+&\kappa\nabla^4f=\frac{\partial^2\chi}{\partial y^2}\frac{\partial^2f}{\partial x^2}+\frac{\partial^2\chi}{\partial x^2}\frac{\partial^2f}{\partial y^2}-\frac{\partial^2\chi}{\partial x\partial y}\frac{\partial^2f}{\partial x\partial y},\\
+&\frac{1}{Y}\nabla^4\chi+\frac{\partial^2f}{\partial x^2}\frac{\partial^2f}{\partial y^2}-\left[\frac{\partial^2f}{\partial x\partial y}\right]^2=\sum_\alpha s_\alpha \delta(r-r_\alpha)+\sum_\beta b_i^\beta \epsilon_{ik}\partial_k\delta(r-r_\beta)
+\end{aligned}
+\end{equation}
+در صورتی که هیچ نقصی در شبکه وجود نداشته باشد و جملات شامل دلتای دیراک را برابر با صفر قرار دهیم همان معادله‌ی کارمن
+\LTRfootnote{Kármán}
+ را بدس می‌آوریم. این معدلات غیر خطی به راحتی قابل حل نیستند. سعی می‌کنیم این معادلات را برای حالت خیلی ساده شده‌ای که شامل یک نقص در مرکز شبکه‌ای که نسبت به مرکز تقارن دایره‌ای داشته باشد، حل کنیم. برای فواصل دور از نقطه‌ی نقص،‌ معادلات به شکل زیر در می‌آید،
+
+\begin{equation}
+\begin{aligned}
+&\kappa\nabla^4f=\frac{1}{r}\frac{d}{dr}\left[\frac{d\chi}{dr}\frac{df}{dr}\right],\\
+&\frac{1}{Y}\nabla^4\chi+\frac{1}{2r}\frac{d}{dr}\left[\frac{df}{dr}\right]^2=0
+\end{aligned}
+\end{equation}
+
+که گرادیان به شکل زیر در نظر گرفته شده،
+\begin{equation}
+\nabla^2=\frac{1}{r}\frac{d}{dr}r\frac{d}{dr}
+\end{equation}
+. حدس می‌زنیم جواب معادلات به شکل زیر باشد،
+
+
+\begin{equation}
+\begin{aligned}
+&\chi=-\kappa\ln\left[\frac{r}{a}\right]\\
+&f=\pm\left[\frac{s}{\pi}\right]^{\frac{1}{2}}r
+\end{aligned}
+\end{equation}
+. پس می‌توانیم بردار جابجایی را با کمک معادله‌ی 
+\ref{eq:nonlinearstrain}
+بنویسیم. 
+
+\begin{equation}
+\begin{aligned}
+&u_x=-\frac{s}{2\pi}y\phi-\frac{s}{2\pi}x+\frac{\kappa(1+\sigma)}{Y}\frac{x}{r^2}\\
+&u_y=\frac{s}{2\pi}x\phi-\frac{s}{2\pi}y+\frac{\kappa(1+\sigma)}{Y}\frac{y}{r^2}
+\end{aligned}
+\end{equation}
+که در اینجا
+$\frac{y}{x}=\tan\phi$
+. در نهایت با جایگذاری پاسخ حدسی در معادله‌ی
+\ref{eq:bendingenergyequ}
+به فرم انرژی زیر می‌رسیم.
+\begin{equation}
+E_{bending}= s\kappa\ln\left[\frac{R}{a}\right]
+\label{eq:bendingdiscenergy}
+\end{equation}
+
+
+
+
