@@ -6,6 +6,40 @@
 \subsection{
 انرژي خمش متوسط
 }
+
+
+خمش متوسط یک ناحیه روی مِش 
+$H=C_1+C_2$
+جمع خمش‌های اصلی در آن نقطه است. در این صورت می‌توان انرژی خمش را با جمع خمش میانگین در هر نقطه تعریف کرد،
+\begin{eqnarray}
+E_{b}=\frac{1}{2}\kappa\int dA \left[H-C_0\right]^2\equiv\frac{1}{2}\kappa\sum_i a_i \left[H_i-C_0\right]^2,
+\label{eq:bendingDiscretisation}
+\end{eqnarray}
+در اینجا 
+$H_i$
+، خمش متوسط در هر نقطه،  
+$v_i$
+است، 
+$C_0$
+عکس شعاع خمش،  و 
+$a_i$
+سهم مساحتی است که هر نقطه روی سطح دارد. شعاع خمش متوسط در هر نقطه را می‌توان بر اساس مساحت هر نقطه به شکل 
+$H_i=\frac{h_i}{a_i}$
+ در نظر گرفت، و معادله‌ی بالا را بازنویسی کرد،
+\begin{eqnarray}
+\begin{aligned}
+E_{b}&=\frac{1}{2}\kappa\sum_i a_i \left[\frac{h_i}{a_i}-C_0\right]^2\\
+&=\frac{1}{2}\kappa\sum_i a_i \left[\frac{h_i^2}{a_i^2}-2\frac{h_i}{a_i}C_0+C_0^2\right]\\
+&=\frac{1}{2}\kappa\sum_i \left[\frac{h_i^2}{a_i}-2h_iC_0+a_iC_0^2\right]
+\end{aligned}
+\label{eq:bendingDiscretisationSpontaneous}
+\end{eqnarray}
+در صورتی که خمش ذاتی برابر صفر باشد، 
+\begin{equation}
+E_{b}=\frac{1}{2}\kappa\sum_i \frac{h_i^2}{a_i}
+\end{equation}
+
+
 \subsubsection{
 روش ایتزیکسون
 }
@@ -52,21 +86,12 @@ $\phi_{ij}$
 \end{center}
 \end{figure}
 
+ایتزیکسون
+\LTRfootnote{Itzykson}
+در سال ۱۹۸۶ لاپلاسین میدان اسکالر بر روی یک شبکه‌ی مثلثی تصادفی را ب محاسبه کرد
+\cite{Itzykson1986}
 
-خمش متوسط یک ناحیه روی مِش 
-$H=C_1+C_2$
-جمع خمش‌های اصلی در آن نقطه است. در این صورت می‌توان انرژی خمش را با جمع خمش میانگین در هر نقطه تعریف کرد،
-\begin{eqnarray}
-E_{b}=\frac{1}{2}\kappa\int dA \left[H-C_0\right]^2\equiv\frac{1}{2}\kappa\sum_i a_i \left[H_i-C_0\right]^2,
-\label{eq:bendingDiscretisation}
-\end{eqnarray}
-در اینجا 
-$H_i$
-خمش متوسط در هر نقطه 
-$v_i$
-است و 
-$a_i$
-سهم مساحتی است که هر نقطه روی سطح دارد. از هندسه‌ی دیفرانسیلی می‌دانیم که خمش متوسط در هر نقطه 
+از طرفی طبق هندسه‌ی دیفرانسیلی  خمش متوسط در هر نقطه 
 $\vec r$
 که بردار عمود بر سطح 
 $\vec n$
@@ -80,11 +105,14 @@ $\Delta$
 \LTRfootnote{Laplace–Beltrami}
 است. 
 
-ایتزیکسون
-\LTRfootnote{Itzykson}
-در سال ۱۹۸۶ لاپلاسین یک میدان اسکالر بر روی یک شبکه‌ی مثلثی تصادفی را به شکل زیر محاسبه کرد
-\cite{Itzykson1986}
-. در اینجا 
+
+گامپر و کرول در سالت ۱۹۹۲ از رابطه‌ی ایتزیکسون برای محاسبه‌ی خمش بر روی یک شبکه‌ی مثلثی استفاده کردند،
+\begin{eqnarray}
+E_{b}^{I}=\frac{1}{2}\kappa\sum_{i}\frac{1}{\sigma_i}\left[\sum_{j(i)}\frac{\tilde\ell_{ji}}{\ell_{ij}}(\vec r_i-\vec r_j)\right]^2.
+\label{eq:ItzyksonPotential}
+\end{eqnarray}
+
+در اینجا 
 $\ell_{ij}$
 طول ضلع تعریف شده میان نقاط 
 $i$
@@ -132,7 +160,7 @@ $i$
 $i$
 است. با توجه به این تعاریف در هر نقطه می‌توان خمش را به شکل زیر تعریف کرد،
 \begin{eqnarray}
-H_i=\frac{1}{2}\vec n\cdot\Delta \vec r\equiv\frac{1}{2\sigma_i}\vec n \cdot\left[\frac{\sum_{j(i)}\tilde\ell_{ji}}{\ell_{ij}}(\vec r_i-\vec r_j)\right],
+H_i=\vec n\cdot\Delta \vec r\equiv\frac{1}{\sigma_i}\vec n \cdot\left[\frac{\sum_{j(i)}\tilde\ell_{ji}}{\ell_{ij}}(\vec r_i-\vec r_j)\right],
 \label{eq:meanCurvatureDiscreteSingleVertex}
 \end{eqnarray}
 . تعریف بردار عمود در هر نقطه به شکل زیر تعریف می‌شود

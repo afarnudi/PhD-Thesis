@@ -1,0 +1,77 @@
+یک مش ممکن است از نقاط با درجه‌های مختلفی تشکیل شده باشد. مثلا مش منظم از نقاط با درجات ۵ و ۶ ساخته شده و مش‌های تصادفی قالبا درجات ۵، ۶، و ۷ دارند. پتانسیل انحنا بر روی لیس رئوسی تعریف می‌شود که درجه‌ی یکسان دارند. در نتیجه به ازای هر درجه‌ی موجود در مش  لیست مجزایی از رئوس با آن درجه تشکیل داده می‌شود. سپس پتانسیل انحنا برای هر لیست درجه به طور مجزا تعریف می‌شود. نحوه‌ی محاسبه‌ی انحنا میان این پتانسیل‌ها یکسان بوده و تنها تعداد جملاتی که بر روی آن جمع زده می‌شود متفاوت است. در نتیجه برای هر لیست از رئوس درجه‌ی 
+$n$
+یک پتانسیل 
+$n+1$
+ذره‌ای نیاز است.
+
+
+پتانیسیل  انحنا برای مدل یولیشر به شکل زیر پیاده‌سازی شده،
+\begin{equation}
+U_b^J=\frac{3}{4}\kappa\sum_i\frac{\left[\sum_{j(i)}\ell_{ij}\phi_{ij}\right]^2}{\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'})}
+\end{equation}
+در اینجا تعریف پارامتر‌های 
+$\ell_{ij}$
+و
+$\phi_{ij}$
+مطابق شکل 
+\ref{fig:trianglePairAngle}
+است. در صورت معادله‌ی فوق جمع روی تمام رئوس همسایه نقطه‌ی 
+$i$
+است و در مخرج جمع روی تمام مثلث‌هایی است که نقطه‌ی 
+$i$
+میان رئوس آن‌هاست. باید توجه ویژه با انتخاب جهت زاویه‌ی دوسطحی کرد. زاویه‌ی دوسطح میان ۴ نقطه تعریف می‌شود و ترتیب دو نقطه‌ی میانی علامت زاویه‌ی دوسطحی را تغییر می‌دهد. برای کُره لیست نقاط دوسطحی باید طوری تنظیم شود که تمام زوایای دوسطحی روی کُره مثبت باشد.
+
+به شکل مشابه می‌توان پتانسیل انحنا را برای مدل ایتزیکسون، ایتزیکسون-برسنتریک، و یولیشر-ورنوی تعریف کرد،
+\begin{equation}
+U_b^I=\kappa\sum_i\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij})},
+\end{equation}
+
+\begin{equation}
+U_b^{IB}=\frac{3}{4}\kappa\sum_i\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'})},
+\end{equation}
+
+\begin{equation}
+U_b^{JV}=\kappa\sum_i\frac{\left[\sum_{j(i)}\ell_{ij}\phi_{ij}\right]^2}{\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij})}.
+\end{equation}
+
+در معادلات فوق فرض شده که سطح انحنای ذاتی ندارد. با استفاده از معادله‌ی 
+\ref{eq:bendingDiscretisationSpontaneous}
+می‌توان معادلات فوق را برای حالتی که خمش ذاتی 
+$C_0$
+وجود داشته باشد، بازنویسی کرد. برای یولیشر معادلات به شکل
+
+\begin{equation}
+\begin{aligned}
+U_b^J=\frac{1}{2}\kappa\sum_i&\frac{3}{2}\frac{\left[\sum_{j(i)}\ell_{ij}\phi_{ij}\right]^2}{\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'})}\\
+&-C_0\sum_{j(i)}\ell_{ij}\phi_{ij}\\
+&+\frac{1}{6}C_0^2\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'}),
+\end{aligned}
+\end{equation}
+برای ایتزیکسون،
+\begin{equation}
+\begin{aligned}
+U_b^I=\frac{1}{2}\kappa\sum_i&2\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij})}\\
+&-C_0\sqrt{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}\\
+&+\frac{1}{8}C_0^2\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij}),
+\end{aligned}
+\end{equation}
+برای ایتزیکسون-بریسنتریک،
+\begin{equation}
+\begin{aligned}
+U_b^{IB}=\frac{1}{2}\kappa\sum_i&\frac{3}{2}\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'})}\\
+&-C_0\sqrt{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}\\
+&+\frac{1}{6}C_0^2\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'}),
+\end{aligned}
+\end{equation}
+و در نهایت برای یولیشر-ورنوی به شکل
+\begin{equation}
+\begin{aligned}
+U_b^{JV}=\frac{1}{2}\kappa\sum_i&2\frac{\left[\sum_{j(i)}\ell_{ij}\phi_{ij}\right]^2}{\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij})}\\
+&-C_0\sum_{j(i)}\ell_{ij}\phi_{ij}\\
+&+\frac{1}{8}C_0^2\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij}),
+\end{aligned}
+\end{equation}
+
+قابل محاسبه‌ است.
+
+
