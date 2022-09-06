@@ -1,38 +1,40 @@
 %!TEX encoding = UTF-8 Unicode
 \documentclass[a4paper,12pt]{book}
 %\input{definitions}
+\usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage[top=3cm,right=2.5cm,bottom=3cm,left=2.5cm]{geometry}  
 \usepackage{fancyhdr}
 \usepackage{amssymb} %for complicated latex symbols
 \usepackage{amsmath}
+\usepackage{url}
 \pagestyle{plain}
 \usepackage{setspace}
 \usepackage[colorlinks,linkcolor=blue,citecolor=blue,pagebackref=false]{hyperref}
 \usepackage{xepersian}
-\settextfont[Scale=1]{XB Niloofar}
-\setlatintextfont[Scale=1]{Times New Roman}
-\setdigitfont[Scale=1]{XB Niloofar}
+\usepackage[Lenny]{fncychap}
+\settextfont[Scale=1.07]{XB Niloofar}
+\setlatintextfont[Scale=1.05]{Times New Roman}
+\setdigitfont[Scale=1.05]{XB Niloofar}
 \usepackage{cite}
+%\usepackage[numbers,square]{natbib}
 
 \lhead{\thepage}
 \chead{}
 \cfoot{}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
+\renewcommand\bibname{مراجع}
 
 \fancypagestyle{fpstyle}{%
 \fancyhead{} % get rid of headers
 \renewcommand{\headrulewidth}{0pt} % and the line
 }
-\setlatintextfont[Scale=.9]{Times New Roman}
 %\graphicspath{{Figs/}}
 
 \input{jeld-info}
 \usepackage{perpage} %the perpage package
-\usepackage{amsmath}
 \MakePerPage{footnote} %the perpage package command
-
 
 
 \begin{document}
@@ -108,7 +110,7 @@
 \clearpage
 \chapter{
 \centering{
-Dynamic Area Redistribution
+Redistribution Area Dynamic
 }
 }
 \include{\Mempath/MembraneMethod}
@@ -122,23 +124,33 @@ Dynamic Area Redistribution
 }
 \include{\Mempath/MembraneResults}
 
-
-
 \clearpage
 \clearpage
-%\include{Chapters/Membrane/Chapterhead_old}
-%\listoftables
-\chapter{فصل ۱}
-\include{chap1}
+\chapter{
+\centering{
+نتیجه‌گیری
+}
+}
+\include{\Mempath/Conclusion}
+
+
+
 %\clearpage
-%\chapter{
-%مدل‌سازی غشا، مدل‌های پیوسته و گسسته
-%}
+%\clearpage
+%%\include{Chapters/Membrane/Chapterhead_old}
+%%\listoftables
+%\chapter{فصل ۱}
+%\include{chap1}
+%%\clearpage
+%%\chapter{
+%%مدل‌سازی غشا، مدل‌های پیوسته و گسسته
+%%}
 
 
 
 
 \unsetRL
+
 \bibliography{reference} 
 
 \bibliographystyle{IEEEtran}
@@ -146,6 +158,5 @@ Dynamic Area Redistribution
 %\renewcommand{\refname}{whatever}
 %\renewcommand\refname{مراجع}
 
-%\printbibliography[title={Reference}]
 
 \end{document}

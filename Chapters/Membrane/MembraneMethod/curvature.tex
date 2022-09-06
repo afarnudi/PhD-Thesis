@@ -21,13 +21,13 @@ $i$
 $i$
 میان رئوس آن‌هاست. باید توجه ویژه با انتخاب جهت زاویه‌ی دوسطحی کرد. زاویه‌ی دوسطح میان ۴ نقطه تعریف می‌شود و ترتیب دو نقطه‌ی میانی علامت زاویه‌ی دوسطحی را تغییر می‌دهد. برای کُره لیست نقاط دوسطحی باید طوری تنظیم شود که تمام زوایای دوسطحی روی کُره مثبت باشد.
 
-به شکل مشابه می‌توان پتانسیل انحنا را برای مدل ایتزیکسون، ایتزیکسون-برسنتریک، و یولیشر-ورنوی تعریف کرد،
+به شکل مشابه می‌توان پتانسیل انحنا را برای مدل گامپر، گامپر-برسنتریک، و یولیشر-ورنوی تعریف کرد،
 \begin{equation}
-U_b^I=\kappa\sum_i\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij})},
+U_b^\text{GK}=\kappa\sum_i\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij})},
 \end{equation}
 
 \begin{equation}
-U_b^{IB}=\frac{3}{4}\kappa\sum_i\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'})},
+U_b^{GKB}=\frac{3}{4}\kappa\sum_i\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'})},
 \end{equation}
 
 \begin{equation}
@@ -47,18 +47,18 @@ U_b^J=\frac{1}{2}\kappa\sum_i&\frac{3}{2}\frac{\left[\sum_{j(i)}\ell_{ij}\phi_{i
 &+\frac{1}{6}C_0^2\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'}),
 \end{aligned}
 \end{equation}
-برای ایتزیکسون،
+برای گامپر،
 \begin{equation}
 \begin{aligned}
-U_b^I=\frac{1}{2}\kappa\sum_i&2\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij})}\\
+U_b^\text{GK}=\frac{1}{2}\kappa\sum_i&2\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij})}\\
 &-C_0\sqrt{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}\\
 &+\frac{1}{8}C_0^2\sum_{j(i)}\ell_{ij}^2(\cot\theta_1^{ij}+\cot\theta_2^{ij}),
 \end{aligned}
 \end{equation}
-برای ایتزیکسون-بریسنتریک،
+برای گامپر-بریسنتریک،
 \begin{equation}
 \begin{aligned}
-U_b^{IB}=\frac{1}{2}\kappa\sum_i&\frac{3}{2}\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'})}\\
+U_b^{GKB}=\frac{1}{2}\kappa\sum_i&\frac{3}{2}\frac{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}{\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'})}\\
 &-C_0\sqrt{\left[\sum_{j(i)}(\cot\theta_1^{ij}+\cot\theta_2^{ij})(\vec r_i-\vec r_j)\right]^2}\\
 &+\frac{1}{6}C_0^2\sum_{j,j'(i)}\ell_{ij}\ell_{ij'}\sin(\theta_{jij'}),
 \end{aligned}

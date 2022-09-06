@@ -1,0 +1,246 @@
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=14cm]{\MemRes/Pics/3DAnalysis_low}
+\caption{
+مقایسه‌ی افت و خیز سطح اندازه‌گیری شده از شبیه‌سازی غشا‌های جامد با دمای‌ موثر مختلف و تحلیل نظری.
+}
+\label{fig:3DAnalysis_low}
+\end{center}
+\end{figure}
+
+دامنه‌ی افت و خیز سطح غشای جامد طبق رابطه‌ی 
+\ref{eq:ulmSolidTri}
+تعیین می‌شود. با فرض اینکه اختلاف فشار داخل و خارج غشا صفر باشد،
+$\Delta P =0$
+می‌توان رفتار افت و خیز را به مقدار ۳ پارامتر شعاع غشا
+$r_0$
+مدول یانگ 
+$Y_{2D}$
+، و سختی خمش 
+$\kappa$
+بررسی کرد، 
+
+\begin{equation}
+\langle|u_{\ell,m}|^2\rangle=\frac{k_BT}{\kappa(\ell+2)^2(\ell-1)^2+Y_{2D}R^2\frac{3(\ell^2+\ell-2)}{3(\ell^2+\ell)-2}}
+\label{eq:ulmSolidTriP0}
+\end{equation}
+به علت وجود مدول یانگ، غشا‌های جامد شبکه‌هایی با توزیع بسیار منظمی از نقاط دارند (مش‌های تصادفی). عدد فاپِل فون کارمان
+\LTRfootnote{F\"oppl-von K\a'arm\a'an}
+$\gamma=Y_{2d}r_0^2/\kappa$
+ملاک خوبی برای نسبت انرژی کششی به خمشی در سیستم است (جزئیات بیشتر در بخش 
+\ref{sec:gammaTransition}
+). از آنجایی که مقیاس انرژی با دمای سیستم
+$k_BT$
+تعیین می‌شود، می‌توان دمای موثر برای بررسی غشاهای جامد به صورت
+\cite{gomppernelson2012}
+\begin{equation}
+T_{eff}=\frac{k_BT}{\kappa}\sqrt{\gamma}
+\label{eq:ulmSolidTriP0}
+\end{equation}
+
+تعریف کرد. به عنوان نتایج اولیه مش تصادفی با مدول یانگ
+$Y_{2D}=2.41\times10^{-3}k_BT~[\varepsilon/l^2]$
+، ضریب خمش
+$\kappa=35k_BT~[\varepsilon]$
+، و دمای 
+$k_BT=2.49~[\varepsilon]$
+آماده‌سازی شد. با تغییر شعاع می‌توان رفتار افت و خیز غشا‌ با دماهای موثر مختلف را بررسی کرد (شکل
+\ref{fig:3DAnalysis_low}
+). نقاط مربعی اندازه‌گیری افت و خیز سطحی مش‌های با 
+$N=1002$
+راس را نمایش می‌دهد. به علت محدودیت تعداد رئوس اندازه‌گیری مد‌های بزرگتر از 
+$\ell>13$
+برای این مش‌ها معنی ندارد. نقاط دایره‌ای پُر داده‌ی مش‌های با 
+$N=25,002$
+را نشان می‌دهد. این مش‌ها برای مطالعه‌ی رفتار خمش (مد‌های بالا) استفاده شده است. با تغییر شعاع مش، نسبت انرژی کششی 
+$Y_{2D}r_0^2$
+به انرژی خمش
+$\kappa$
+تغییر می‌کند. با توجه به رابطه‌ی
+\ref{eq:ulmSolidTriP0}
+رفتار توانی انرژی کشسانی از مرتبه‌ی 
+$\ell^0$
+است و رفتار توانی انرژی خمش از مرتبه‌ی
+$\ell^4$
+است. با تغییر اندازه‌ی شعاع رقابت میان این دو انرژی در مقیاس لوگاریتمی شکل
+\ref{fig:3DAnalysis_low}
+به وضوح دیده می‌شود. همانطور که در بخش 
+\ref{sec:youngMesh}
+بحث شد، مدول یانگ در غشا به شکل فنر‌های هارمونیک تعریف می‌شود. در صورتی که طول‌ اولیه‌فنر‌ها در سراسر مش یکسان باشد شاهد تغییر شکل مش در اعداد فاپل فون کارمان بالا خواهیم بود. اما با تعیین طول اولیه‌ی  اضلاع مش به عنوان طول اولیه‌ی فنرها (تغییر جنس فنر‌ها در محل نقاط نقص) می‌توان با این تغییر شکل مقابله کرد و در نتیجه همانطور که در شکل 
+\ref{fig:3DAnalysis_low}
+مشاهده می‌کنید اثری از تغییر شکل (تحریک مُدهای ۶ و ۱۳) در این غشا‌ها دیده نمی‌شود.
+
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=14cm]{\MemRes/Pics/3DAnalysis_resolutions}
+\caption{
+دامنه‌ی افت و خیز غشای جامد با درجه‌ی وضوح مختلف (تعداد نقاط روی  سطح) مش‌های تصادفی. 
+}
+\label{fig:3DAnalysis_resolutions}
+\end{center}
+\end{figure}
+
+جهت بررسی اثر وضوح مش (تعداد رئوس مش 
+$N_m$
+) اندازه‌گیری افت و خیز سطح غشا را با ثابت نگه داشتن مدول یانگ، ضریب سختی خمش، و شعاع مش را با مش‌های مختلف تصادفی تکرار کرده‌ایم. در شکل
+\ref{fig:3DAnalysis_resolutions}
+مشاهده می‌شود که وضوح مش بر رفتار مد‌های بلند یا رفتار خمش خود را نشان می‌دهد. در نتیجه جهت مطالعه‌ی این رفتار باید مش با تعداد رئوس مناسب انتخاب شود. 
+
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=12cm]{\MemRes/Pics/ResearchWeek2.pdf}
+\caption{
+بررسی اثر اختلاف فشار وارد بر غشای جامد.
+}
+\label{fig:presure}
+\end{center}
+\end{figure}
+
+در نهایت با قرار دادن ذرات گاز واندروالس درون غشا، صحت رابطه‌ی فشار با دامنه‌ی افت خیز نیز بررسی شده. در اینجا اندیس 
+$N_n$
+نشان دهنده‌ی تعداد ذرات گازی‌است. در معادله‌ی 
+\ref{eq:ulmSolidTri}
+\begin{equation}
+\langle|u_{\ell,m}|^2\rangle=\frac{k_BT}{\kappa(\ell+2)^2(\ell-1)^2-pR^3\left[1+\frac{1}{2}\ell(\ell+1)\right]+Y_{2D}R^2\frac{3(\ell^2+\ell-2)}{3(\ell^2+\ell)-2}}
+\end{equation}
+
+$p$
+اختلاف فشار بیرون و داخل غشا را نشان می‌دهد. در حالتی که فشار داخلی بیشتر باشد، علامت اختلاف فشار در رابطه‌ی فوق منفی‌ است. در شکل 
+\ref{fig:presure}
+اثر اختلاف فشار با افزایش تعداد ذرات نشان دا‌ده‌ شده‌است. با محاسبه‌ی اختلاف فشار توسط رابطه‌ی گاز واندروالس می‌توان دامنه‌ی افت و خیز غشای تحت فشار را محاسبه کرد. رفتار توانی فشار از مرتبه‌ی 
+$\ell^2$
+است. در نتیجه با افزایش فشار داخلی و افزودن رفتار میانی
+$\ell^2$
+خم نمایانگر دامنه‌ی افت و خیز یکنواخت‌تر دیده خواهد شد. در صورتی که تعداد ذرات در خارج از غشا بیشتر باشده، علامت 
+$p$
+مثبت خواهد بود.
+
+
+
+
+
+%\begin{figure}[htbp]
+%     \centering
+%     \begin{subfigure}[b]{0.4\textwidth}
+%         \centering
+%         \includegraphics[width=7cm]{\MemRes/Pics/snapShotstomato_disco}
+%         \caption{Firts subfigure.}
+%    	\label{fig:first}
+%     \end{subfigure}
+%%     \hfill
+%     \hspace{2cm}
+%     \begin{subfigure}[b]{0.4\textwidth}
+%         \centering
+%         \includegraphics[width=7cm]{\MemRes/Pics/snapShotliquid_disco}
+%         \caption{Second subfigure.}
+%    	\label{fig:second}
+%     \end{subfigure}
+%%     \caption{Three simple graphs}
+%%     \label{fig:three graphs}
+%\end{figure}
+
+%\begin{figure}[htbp]
+%\begin{center}
+%\includegraphics[width=10cm]{\MemRes/Pics/snapShotBending}
+%\caption{
+%شدت نوسانات هماهنگ‌های کروی سطح غشا با حجم کاهیده‌ی 
+%$\nu=0.977$.
+%خطوط پیش‌بینی شدت‌ نوسانات برای ضریب سختی‌های مختلف طبق معادله‌ی
+%\ref{eq:bendingFluctuations}
+%را نمایش می‌دهد. نقاط اندازه‌گیری افت و خیز حاصل از شبیه‌سازی با ضرایب سختی مختلف را نشان می‌دهد.
+%}
+%\label{fig:snapShotBending}
+%\end{center}
+%\end{figure}
+%
+%
+%
+%\begin{figure}[htbp]
+%\begin{center}
+%\includegraphics[width=10cm]{\MemRes/Pics/snapShotBendingSurface}
+%\caption{
+%شدت نوسانات هماهنگ‌های کروی سطح غشا با حجم کاهیده‌ی 
+%$\nu=0.977$.
+%خطوط پیش‌بینی شدت‌ نوسانات برای ضریب سختی‌های مختلف طبق معادله‌ی
+%\ref{eq:bendingFluctuations}
+%را نمایش می‌دهد. نقاط اندازه‌گیری افت و خیز حاصل از شبیه‌سازی با ضرایب سختی مختلف را نشان می‌دهد.
+%}
+%\label{fig:snapShotBendingSurface}
+%\end{center}
+%\end{figure}
+
+
+
+
+
+%\begin{figure}[htbp]
+%\begin{center}
+%\includegraphics[width=10cm]{\MemRes/Pics/snapShot}
+%\caption{
+%شدت نوسانات هماهنگ‌های کروی سطح غشا با حجم کاهیده‌ی 
+%$\nu=0.977$.
+%خطوط پیش‌بینی شدت‌ نوسانات برای ضریب سختی‌های مختلف طبق معادله‌ی
+%\ref{eq:bendingFluctuations}
+%را نمایش می‌دهد. نقاط اندازه‌گیری افت و خیز حاصل از شبیه‌سازی با ضرایب سختی مختلف را نشان می‌دهد.
+%}
+%\label{fig:snapShot}
+%\end{center}
+%\end{figure}
+
+%\begin{figure}[htbp]
+%     \centering
+%     \begin{subfigure}[b]{0.4\textwidth}
+%         \centering
+%         \includegraphics[width=8cm]{\MemRes/Pics/2DAnalysis_low}
+%         \caption{2d subfigure.}
+%    	\label{fig:first}
+%     \end{subfigure}
+%%     \hfill
+%     \hspace{1cm}
+%     \begin{subfigure}[b]{0.4\textwidth}
+%         \centering
+%         \includegraphics[width=8cm]{\MemRes/Pics/3DAnalysis_low}
+%         \caption{3d subfigure.}
+%    	\label{fig:second}
+%     \end{subfigure}
+%%     \caption{Three simple graphs}
+%%     \label{fig:three graphs}
+%\end{figure}
+
+
+
+%\begin{figure}[htbp]
+%\begin{center}
+%\includegraphics[width=10cm]{\MemRes/Pics/2DAnalysis_low}
+%\caption{
+%شدت نوسانات هماهنگ‌های کروی سطح غشا با حجم کاهیده‌ی 
+%$\nu=0.977$.
+%خطوط پیش‌بینی شدت‌ نوسانات برای ضریب سختی‌های مختلف طبق معادله‌ی
+%\ref{eq:bendingFluctuations}
+%را نمایش می‌دهد. نقاط اندازه‌گیری افت و خیز حاصل از شبیه‌سازی با ضرایب سختی مختلف را نشان می‌دهد.
+%}
+%\label{fig:2DAnalysis_low}
+%\end{center}
+%\end{figure}
+
+
+
+
+%\begin{figure}[htbp]
+%\begin{center}
+%\includegraphics[width=10cm]{\MemRes/Pics/AmpRatio}
+%\caption{
+%شدت نوسانات هماهنگ‌های کروی سطح غشا با حجم کاهیده‌ی 
+%$\nu=0.977$.
+%خطوط پیش‌بینی شدت‌ نوسانات برای ضریب سختی‌های مختلف طبق معادله‌ی
+%\ref{eq:bendingFluctuations}
+%را نمایش می‌دهد. نقاط اندازه‌گیری افت و خیز حاصل از شبیه‌سازی با ضرایب سختی مختلف را نشان می‌دهد.
+%}
+%\label{fig:AmpRatio}
+%\end{center}
+%\end{figure}
+
+
+
+
