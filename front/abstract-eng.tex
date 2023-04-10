@@ -1,0 +1,35 @@
+
+% -------------------------------------------------------
+%  English Abstract
+% -------------------------------------------------------
+
+
+\pagestyle{empty}
+
+\begin{latin}
+
+\begin{center}
+\textbf{Abstract}
+\end{center}
+\baselineskip=.8\baselineskip
+
+Lipid bilayers are one of nature’s solutions to confine and compartmentalize molecules and microorganisms.  Usually, the thickness of the membrane is very small compared to the length scale at which it is studied. Therefore it is convenient to represent it with a 2-dimensional surface that has a stretch, shear, and curvature energy. Triangulated surfaces are the most popular discretization method to study the mechanical behavior of vesicles and fluid membranes since their elastic and bending moduli can be rigorously defined. 
+
+Fluid membranes pose a particular challenge because they do not have a shear modulus. The dynamic triangulation algorithm is the state-of-the-art method developed to address this problem. In 1996, Gompper and Kroll calculated the curvature energy of dynamically triangulated surfaces with a uniform vertex distribution. In their method, the movement of mesh vertices was restricted to generate triangulated surfaces compatible with the curvature energy calculations. Since the meshed surface constantly changed, the Monte Carlo (MC) simulation method was adopted to implement the simulations. Unfortunately, this method is not compatible with Molecular Dynamics (MD) simulations.
+
+MD  simulations are the method of choice for atomistic or mildly coarse-grain membrane models. It is also suitable for integrating coarse-grained models of the various cell components into a unified model to mimic living cell behavior.  A second method for discretizing the bending curvature on a triangulated lattice was also introduced in 1996 by J\"ulicher. We show that  J\"ulicher's method has more dynamic stability for the conformation evolution of meshes with a random distribution of vertices. We also propose modifying  Gompper and Kroll's bending model to make it as dynamically stable as J\"ulicher's method for such meshes. This gives rise to a new MD compatible method, called dynamic area redistribution, that can be used to simulate the fluid behavior of vesicles on fixed networks. The dynamic area redistribution method can be fully implemented in MD, therefore, it can take advantage of the perks such as the ability to study fluctuations, systems in different hydrodynamic environments, and utilization of MD software packages.  
+
+%
+%
+% J\"ulicher estimated the bending at each vertex by taking the average of the curvature of its surrounding triangle pairs. As demonstrated by Ramakrishnan et al. , this can be achieved by calculating the local curvature tensor of all the edges protruding from a vertex and projecting them on the tangential plane at the vertex. Unlike Gompper and Kroll's method, there is no particular shape and size restriction on the triangles for calculating the surface curvature. We think  J\"ulichers method was not widely adopted because it did not offer an advantage over Gompper and Kroll's method. 
+% 
+%We show that  J\"ulicher's method to calculate the bending curvature of meshes has more dynamic stability for the conformation evolution of meshes with a random distribution of vertices. We also propose modifying  Gompper and Kroll's bending model to make it as dynamically stable as J\"ulicher's method for such meshes. This gives rise to a new MD compatible method, coined dynamic area redistribution (DAR), that can be used to simulate the fluid behavior of vesicles on fixed networks. We have used DAR with triangulated meshes since the setup of mechanical properties on such meshes is well defined. DAR can be fully implemented in MD, therefore, it can take advantage of the perks such as the ability to study fluctuations, systems in different hydrodynamic environments, and utilization of MD software packages.  
+
+
+
+
+
+\bigskip\noindent\textbf{Keywords}:
+Molecular Dynamics, Membrane, triangulated mesh, continuum models
+
+\end{latin}

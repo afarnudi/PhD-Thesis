@@ -1,0 +1,76 @@
+مشابه به روش انجام شده در مرجع 
+\cite{milnersafranPRA1987}
+انحنای سطحی به خمش ذاتی صفر به شکل زیر تعریف می‌شود،
+\begin{equation}
+H= C_1+C_2=\vec\nabla\cdot\vec n=\frac{2}{r}(1+\frac{r_0}{2r}{\cal L}^2g).
+\end{equation}
+برای 
+$g$
+های کوچک وارون شعاع را می‌توان با 
+$1/r\approx\frac{1}{r_0}(1-g)$
+تخمین زد. از آنجایی که چگالی نیرو بر روی سطح غشا به شکل 
+$-\kappa\nabla^2H$
+تعریف می‌شود، برای بدست آوردن رابطه‌ی مناسب کافی است که لاپلاسین جمله‌ی بالا را محاسبه کنیم،
+\begin{equation}
+\begin{aligned}
+\nabla^2H=\left[\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\right)-\frac{1}{r^2}{\cal L}^2\right]\left(\frac{2}{r}(1+\frac{r_0}{2r}{\cal L}^2g)\right).
+\label{eq:forceDensityDeriv}
+\end{aligned}
+\end{equation}
+مشتق‌های شعاعی جمله‌ی بالا به شکل نهایی زیر ساده خواهند شد،
+\begin{equation}
+\begin{aligned}
+\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial}{\partial r}\left(\frac{2}{r}(1+\frac{r_0}{2r}{\cal L}^2g)\right)\right)\\
+=\frac{-2}{r^2}\frac{\partial}{\partial r}\left(1+\frac{r_0}{r}{\cal L}^2g\right)\\
+=\frac{2r_0}{r^4}{\cal L}^2g.
+\end{aligned}
+\end{equation}
+مشتقات زاویه‌ای نیز به صورت زیر ساده می‌شوند،
+\begin{equation}
+\begin{aligned}
+-\frac{1}{r^2}{\cal L}^2\left(\frac{2}{r}(1+\frac{r_0}{2r}{\cal L}^2g)\right)\\
+=-\frac{r_0}{r^4}{\cal L}^2({\cal L}^2g).
+\end{aligned}
+\end{equation}
+با جاگذاری مشتقات، تعریف 
+\ref{eq:forceDensityDeriv}
+به شکل ساده‌تر زیر بازنویسی می‌شود،
+\begin{equation}
+\begin{aligned}
+\nabla^2H=\frac{r_0}{r^4}\left(2{\cal L}^2g-{\cal L}^2({\cal L}^2g)\right).
+\end{aligned}
+\end{equation}
+در نتیجه چگالی نیرو در هر زاویه‌ای بر روی سطح غشا به این صورت خواهد بود،
+\begin{equation}
+\begin{aligned}
+F(\theta,\phi)&=-\int\kappa\nabla^2H\frac{dA}{d\Omega}\\
+&=\kappa\frac{r_0}{r^4}\left(2{\cal L}^2g-{\cal L}^2({\cal L}^2g)\right)r^2\left(1+\frac{r_0^2}{2r^2}g{\cal L}^2g\right)\\
+&=\frac{\kappa r_0}{r^2}\left(2{\cal L}^2g-{\cal L}^2({\cal L}^2g)\right) + {\cal O}(g^3)\\
+\end{aligned}
+\end{equation}
+با پیاده‌سازی تبدیل فوریه کروی 
+$F(\theta,\phi)$
+نیروی ناشی از هر مد را می‌توان محاسبه کرد،
+\begin{equation}
+\begin{aligned}
+f_{\ell,m}&=\int F(\theta,\phi)Y_{\ell,m}^*(\theta,\phi)d\Omega\\
+f_{\ell,m}&=-\frac{\kappa}{r_0}u_{\ell,m}(\ell+2)(\ell+1)\ell(\ell-1)
+\label{eq:normal_force_lm}
+\end{aligned}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,77 +1,174 @@
-
-در این بخش به محاسبه‌ی زمان دوره‌ی تناوبی بسامد نوسان‌‌های هماهنگ‌های کروی برای یک غشای سیال‌گون می‌پردازیم. 
-در بخش 
-\ref{sec:bendingFluctuations}
-انرژی انحنای یک غشای بر اساس مُدهای نرمال آن (هماهنگ‌های کُروی) محاسبه شد. معادله‌ی لاگرانژ، دینامیک درجه‌های آزادی را به تغییرات انرژی درجات آزادی، 
-$q$
-مرتبط می‌کند،
-
-\begin{equation}
-\frac{d}{dt}\left(\frac{\partial K}{\partial \dot q}\right)=-\frac{\partial U}{\partial q}.
-\label{eq:LagrangeEquation}
-\end{equation}
-در معادله‌ی فوق
-$K$
-انرژی جنبشی،
-$U$
-انرژی پتانسیل سیستم مورد مطالعه‌است. این معادله مستقل از شکل معادله‌ی دینامیک سیستم بر قرار است. در صورتی که غشا در محیط خلا در حال نوسان باشد، معادله‌ی حرکت سیستم توسط معادله‌ی نیوتن تعیین می‌شود. در صورتی که غشا در محیط سیال در حال نوسان باشد، معادله‌ی حرکت با حل معادله‌ی ناویر-استوکس
-\LTRfootnote{Navier-Stokes }
-تعیین می‌شود. برای غشایی که در خلا حرکت می‌کند، انرژی جنبشی آن به سادگی با جمع روی انرژی جنبشی تکه‌های جرمی کوچک برای سطح آن محاسبه می‌شود،
+برای یافتن دینامیک سطح یک غشای نوسانگر در خلا، معادله‌ی نیوتن را برای نقاط روی سطح می‌نویسیم،
 \begin{equation}
 \begin{aligned}
-K&=\frac{1}{2}\rho_m\int\d\Omega~\dot r^2(\theta,\phi) dm=\frac{1}{2} \left\{\frac{\partial}{\partial t}\left[r_0(1+\sum_{\ell,m}u_{\ell,m}Y_{\ell,m})\right\}\right)^2\\
-&=\frac{1}{2} \rho_mr_0^2\int d\Omega\left[\sum_{\ell,m}\frac{\partial}{\partial t}u_{\ell,m}Y_{\ell,m}\right]^2\\
-&=\frac{1}{2} \rho_mr_0^2\sum_{\ell,m}\dot u_{\ell,m}^2
+\frac{M}{4\pi r_0^2}\frac{dA}{d\Omega}\ddot r(\theta,\phi,t)&=F(\theta,\phi)\\
+\frac{Mr_0}{4\pi}\sum_{\ell,m}\ddot u_{\ell,m,t}Y_{\ell,m}(\theta,\phi)&=F(\theta,\phi)\\
 \end{aligned}
-\label{eq:kineticEnergyNewton}
+\label{eq:NewtonEqRaw}
 \end{equation}
-در محاسبات فوق فرض شده که غشایی به جرم 
-$M$
-با چگالی یکنواخت در تمام جهت فضا 
-$\rho_m=M/4\pi$
-در حال حرکت است. حالا می‌توانیم معادله‌ی لاگرانژ را برای یک غشای در حال نوسان در خلا محاسبه کنیم،
+در معادله‌ی بالا
+$F(\theta,\phi)$
+نیرویی است که در زاویه‌ی فضایی مشخصی بر سطح غشا عمل می‌کند. با تبدیل فوریه‌ی کروی معادله‌ی فوق می‌توان معادلات دینامیک مد‌های سطح را محاسبه‌کرد. تبدیل فوریه‌ی سمت چپ معادله به شکل زیر محاسبه می‌شود،
 \begin{equation}
 \begin{aligned}
-\frac{d}{dt}\left(\frac{\partial}{\partial \dot u_{\ell,m}}\frac{1}{2}\frac{Mr_0^2}{4\pi}\sum_{\ell',m'}\dot u_{\ell',m'}^2\right)&=-\frac{\partial}{\partial u_{\ell,m}}\left[ 8\pi\kappa +\frac{1}{2}\kappa\sum_{\ell',m'}|u_{\ell',m'}|^2(\ell'+2)(\ell'+1)\ell'(\ell'-1)\right]\\
-\frac{Mr_0^2}{4\pi}\ddot u_{\ell,m}&=-\kappa u_{\ell,m}(\ell+2)(\ell+1)\ell(\ell-1)\\
-\ddot u_{\ell,m}&=-\frac{4\pi\kappa}{Mr_0^2}(\ell+2)(\ell+1)\ell(\ell-1)~u_{\ell,m}
+\frac{Mr_0}{4\pi}\int d\Omega Y_{\ell,m}^*(\Omega)\sum_{\ell',m'}\ddot u_{\ell',m'}(\Omega,t)Y_{\ell',m'}(\Omega)\\
+=\frac{Mr_0}{4\pi}\ddot u_{\ell,m}(t)
 \end{aligned}
-\label{eq:LagrangeNewton}
+\label{eq:NewtonEqLHS}
 \end{equation}
-که شکل معادله‌ی نوسانگر هارمونیک را دارد. در نتیجه بسامد زاویه‌ای هر مُد برابر با،
+می‌توان از معادله‌ی 
+\ref{eq:bendingFluctuations}
+برای محاسبه‌ی نیروهای ناشی از هر مد استفاده کرد،
 \begin{equation}
-\omega_{\ell,m}^2=\frac{4\pi\kappa}{Mr_0^2}(\ell+2)(\ell+1)\ell(\ell-1)
-\label{eq:Omegalm}
+\begin{aligned}
+f_{\ell,m}(t)&=-\frac{1}{r_0}\frac{\partial}{\partial u_{\ell,m}}E_b\\
+&=-\frac{\kappa}{r_0}u_{\ell,m}(t)(\ell+2)(\ell+1)\ell(\ell-1)
+\end{aligned}
+\label{eq:NormalModeForce}
 \end{equation}
-است. در نتیجه مقیاس زمانی برای نوسان هر مُد مشخص شده‌است. رابطه‌ی 
-$\omega_{\ell,m}$
+که با نتیجه‌ی محاسبات ما در معادله‌ی
+\ref{eq:normal_force_lm}
+یکسان است. در حالتی که خمش ذاتی سطح غیر صفر باشد، رابطه‌ی مفصل تری برای نیرو باید محاسبه شود. جزئیات این محاسبات در مرجع
+\cite{milnersafranPRA1987}
+شرح داده شده‌است.
+
+با برابر قرار دادن معدلات 
+\ref{eq:NewtonEqLHS}
 و
-$\ell$
-یک رابطه‌ی مستقیم است، یعنی مُدهای بالا بسامد بزرگتری خواهند داشت. با توجه به اینکه 
+\ref{eq:NormalModeForce}
+می‌توان شکل معادلات دینامیک مد‌ها را بدست آورد،
 \begin{equation}
-T=\frac{2\pi}{\omega}
+\begin{aligned} 
+\ddot u_{\ell,m}&=-\frac{4\pi\kappa}{Mr_0^2}u_{\ell,m}(t)(\ell+2)(\ell+1)\ell(\ell-1)\\
+\ddot u_{\ell,m}&=-\omega_{\ell,m}^2u_{\ell,m}
+\end{aligned}
+\label{eq:NewtonModes}
 \end{equation}
-
-کوچکترین مُد سیستم که تغییر شکل ایجاد می‌کند،
+در نتیجه فرکانس زاویه‌ای هر مد
+$\omega_{\ell,m}$
+به این شکل رفتار می‌کند،
+\begin{equation}
+\omega_{\ell,m}=\sqrt{\frac{4\pi\kappa}{Mr_0^2}(\ell+2)(\ell+1)\ell(\ell-1)}.
+\label{eq:NewtonModesFreq}
+\end{equation}
+از آنجایی که دوره‌ی تنواب هر مد 
+$\tau_{\ell,m}=2\pi/\omega_{\ell,m}$
+با فرکانس رابطه‌ی معکوس دارد، کوچک‌ترین عدد مد
 $\ell=2$
-طولانی ترین دوره‌ی تناوب را دارد و هر جه مُد بالاتر باشد، دوره‌ی تنواب سریع‌تری خواهد داشت.
-\begin{equation}
-T_{\ell,m}=\sqrt{\frac{M\pi r_0^2}{\kappa}\frac{1}{(\ell+2)(\ell+1)\ell(\ell-1)}}
-\end{equation}
-این نکته‌ی کلیدی در انتخاب قدم زمانی مناسب برای پیاده‌سازی محاسبات دینامیک ملکولی است.
+کند‌ترین مد را بیان می‌کند.
 
-جهت تکمیل کردن بحث، انرژی جنبشی سطح غشا بین دو سیال تراکم ناپذیر با چگالی 
-$\rho_1$
-(سیال داخل غشا) و 
-$\rho_2$
-شکل زیر را خواهد داشت،
+
+معادلات لانژون دینامیک قادر به توصیف دینامیک غشایی‌است که با اتلاف محیطی
+$\zeta$
+ناشی از در تماس بودن با حمام گرمایی
+$T$
+است،
+\begin{equation}
+\begin{aligned}
+m\ddot{x}+\zeta\dot{x}+kx&=F_{\eta}\\
+F_{\eta}&=\sqrt{2k_BT\zeta}\eta(t).
+\end{aligned}
+\label{eq:LangevinEq}
+\end{equation}
+در معادله‌ی بالا 
+$\eta(t)$
+یک فرایند وینر
+\LTRfootnote{Wiener process}
+با مشخصات زیر را بیان می‌کند.
+\begin{equation}
+\begin{aligned}
+\langle\eta(t)\rangle&=0\\
+\langle\eta(t)\eta(t')\rangle&=\delta(t-t').
+\end{aligned}
+\label{eq:Wiener}
+\end{equation}
+همانند عملکردمان در مورد معادلات نیوتن، می‌توان معادلات حرکت مد‌ها را برای معادلات لانژون محاسبه کرد،
+\begin{equation}
+\begin{aligned} 
+\frac{Mr_0}{4\pi}\ddot{u}_{\ell,m}+\frac{\zeta r_0}{4\pi}\dot{u}_{\ell,m}+\frac{Mr_0}{4\pi}\omega_{\ell,m}u_{\ell,m}&=F_{\eta}\\
+\ddot{u}_{\ell,m}+\gamma \dot{u}_{\ell,m}+\frac{k_{\ell,m}}{M}u_{\ell,m}&=\frac{4\pi}{Mr_0}F_{\eta}
+\end{aligned}
+\label{eq:LangevinMode}
+\end{equation}
+در معادلات فوق، 
+$k_{\ell,m}=M\omega_{\ell,m}^2$
+و جمله‌ی اتلاف را با 
+$\zeta=\gamma M$
+جایگزین کرده‌ایم. معادله‌ی 
+\ref{eq:LangevinMode}
+یک نوسانگر میرا با فرکانس
+$\omega_{\ell,m} ^{\prime}=\sqrt{\omega_{\ell,m}^{2}-\gamma^2/4}$
+را توصیف می‌کند. رفتار نوسانگر میرا به 
+$\omega_{\ell,m}^{\prime}$
+بستگی خواهد داشات. در صورتی که 
+$\omega_{\ell,m}^{\prime}$
+مقادیل حقیقی داشته باشد، رفتار نوسانگر زیرمیرا
+\LTRfootnote{under damped}
+است. در صورتی که 
+$\omega_{\ell,m}^\prime=0$
+شاهد میرایی بحرانی 
+\LTRfootnote{critically damped}
+خواهیم بود و در صورتی که 
+$\omega_{\ell,m}^{\prime}$
+مقادیر مختلط داشته باشد رفتار نوسانگر فوق میرا 
+\LTRfootnote{over damped}
+خواهد بود. با توجه به معدله‌ی
+\ref{eq:NewtonModesFreq}
+می‌توان عدد مدی که در آن رفتار میرایی بحرانی مشاهده می‌شود را محاسبه کرد،
+\begin{equation}
+\ell_{crit}\approx\frac{1}{2}\left(\frac{Mr_0^2}{\pi\kappa}\right)^\frac{1}{4}\sqrt\gamma
+\label{eq:criticalMode}
+\end{equation}
+در سیستمی با گامای مشخص، اعداد مد بزرگتر از مد بحرانی (موج‌های کوتاه‌تر) 
+$\ell>\ell_{crit}$
+رفتار زیر میرایی و موج‌های بلندتر روفتار فوق میرا خواهند داشت.
+
+
+رابطه‌ی خودهمبستگی
+\LTRfootnote{auto-correlation}
+دامنه‌ی مدها برای یک نوسانگر زیر میرا
+\begin{equation}
+\begin{aligned}
+\langle u_{\ell,m}&(t)u_{\ell,m}(0)\rangle=\langle |u_{\ell,m}|^2\rangle e^{-\frac{\gamma}{2}t}\left( \cos(\omega_{\ell,m}^\prime t)+\frac{\gamma}{2\omega_{\ell,m}^\prime}\sin(\omega_{\ell,m}^\prime t)\right)
+\end{aligned}
+\label{eq:autoUnderDamped}
+\end{equation}
+در این معادله، زمان واحلش سیستم 
+$1/\gamma$
+است. خودهمبستگی دامنه‌ی مدها برای یک غشای با میرایی بحرانی
+\begin{equation}
+\langle u_{\ell,m}(t)u_{\ell,m}(0)\rangle=\langle |u_{\ell,m}|^2\rangle e^{-\frac{\gamma}{2}t}\left(1+\frac{\gamma}{2}t\right)
+\label{eq:autoCriticallyDamped}
+\end{equation}
+
+و در نهاتی رابطه‌ی خودهمبستگی برای یک غشا با دینامیک فوق میرا
+\begin{equation}
+\begin{aligned}
+\langle u_{\ell,m}&(t)u_{\ell,m}(0)\rangle=\langle |u_{\ell,m}|^2\rangle e^{-\frac{\gamma}{2}t}\Bigl[\sinh(|\omega_{\ell,m}^\prime|t)+\frac{2}{\gamma}|\omega_{\ell,m}^\prime|\cosh(|\omega_{\ell,m}^\prime|t)\Bigr]
+\end{aligned}
+\label{eq:autoOverDamped}
+\end{equation}
+در صورتی که اتلاف در سیستم بسیار زیاد باشد، در معادله‌ی
+\ref{eq:LangevinEq}
+می‌توان از تاثیر جملات اینرسی صرف نظر کرد. معادلات حرکت در این حالت حدی با معادلات براونین توصیف می‌شوند،
+\begin{equation}
+\frac{r_0}{4\pi}\zeta \dot{u}_{\ell,m}(t)+\frac{r_0}{4\pi}k_{\ell,m}u_{\ell,m}(t)= F_{\eta}.
+\label{eq:BrowninaMode}
+\end{equation}
+رابطه‌ی خود همبستگی دامنه‌ی مد‌ها برای این نوع دینامیک به شکل 
+\begin{equation}
+\langle u_{\ell,m}(t)u_{\ell,m}(0)\rangle= \langle|u_{\ell,m}|^2\rangle e^{-t/\tau_\zeta}.
+\label{eq:BrowninaModeAuto}
+\end{equation}
+است. زمان واحلش سیستم در این حالت 
+$\zeta/k_{\ell,m}=\gamma/\omega_{\ell,m}^2$
+است که تابع نسبت سختی نیروی هماهنگ ساده و نیرو‌های اتلافی است.
+
+می‌توان از روش کلی پیاده شده در این بخش برای مطالعه‌ی دینامیک سطح غشای قوطه ور در یک شارع استفاده کرد. در چنین سیستمی نیرو‌های ناشی از انحنا، مانند این بخش، همچنان به خواص غشا وابسته است. اما سرعت نقاط روی سطح غشا کاملا توسط دینامیک شارع داخل و خارج غشا تعیین خواهد شد. تابع همبستگی مد‌های سطحی در این سیستم 
+\cite{milnersafranPRA1987}
+با محاسبه‌ی میدان سرعت بر سطح غشا با حل معادلات استوکس قابل محاسبه خواهد بود
 \cite{Christer1984}
-\begin{equation}
-K=\frac{1}{2}r_0^5\sum_{\ell,m}\left(\frac{\rho_1}{\ell}+\frac{\rho_2}{\ell+1}\right)\dot u_{\ell,m}^2
-\end{equation}
-که با حل معادله ناویر-استکس به دست می‌آید.
-
-
+.
 
 
 

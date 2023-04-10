@@ -1,61 +1,62 @@
-%!TEX encoding = UTF-8 Unicode
-\documentclass[a4paper,12pt]{book}
-%\input{definitions}
-\usepackage{subcaption}
-\usepackage{graphicx}
-\usepackage[top=3cm,right=2.5cm,bottom=3cm,left=2.5cm]{geometry}  
-\usepackage{fancyhdr}
-\usepackage{amssymb} %for complicated latex symbols
-\usepackage{amsmath}
-\usepackage{url}
-\pagestyle{plain}
-\usepackage{setspace}
-\usepackage[colorlinks,linkcolor=blue,citecolor=blue,pagebackref=false]{hyperref}
-\usepackage{xepersian}
-\usepackage[Lenny]{fncychap}
-\settextfont[Scale=1.07]{XB Niloofar}
-\setlatintextfont[Scale=1.05]{Times New Roman}
-\setdigitfont[Scale=1.05]{XB Niloofar}
-\usepackage{cite}
-%\usepackage[numbers,square]{natbib}
 
-\lhead{\thepage}
-\chead{}
-\cfoot{}
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-\renewcommand\bibname{مراجع}
+%--------------------------------------------------------------------------
+%
+%  M.Sc. Thesis
+%  [Put Your Thesis Title Here]
+%  By: [Put Your Name Here]
+%
+%--------------------------------------------------------------------------
 
-\fancypagestyle{fpstyle}{%
-\fancyhead{} % get rid of headers
-\renewcommand{\headrulewidth}{0pt} % and the line
-}
-%\graphicspath{{Figs/}}
+%--------------------------------------------------------------------------
+%
+%  LaTeX Thesis Template (v4)
+%  By: Hamid Zarrabi-Zadeh
+%
+%  Contributors:
+%      Ehsan Emamjomeh-Zadeh
+%      Omid Gheibi
+%
+%--------------------------------------------------------------------------
 
-\input{jeld-info}
-\usepackage{perpage} %the perpage package
-\MakePerPage{footnote} %the perpage package command
+ 
+\documentclass[oneside,a4paper,12pt]{book}
 
-
+\input{styles/common.tex}
+\input{styles/custom.tex}
+\usepackage{bm}% bold math
 \begin{document}
-%\onehalfspacing
-\doublespacing
-\cleardoublepage
-\pagenumbering{roman} 
-
-\include{cover-fa}
-\include{besm}
-\include{abstract-fa}
 
 
+% -------------------- Front Pages --------------------
 
-\tableofcontents
-\clearpage
-\listoffigures
+\include{front/info}
+\pagestyle{empty}
 
-%path variables:
+\include{front/template/title}
+%\input{front/template/besmellah.tex}‌  % بسم‌الله
+
+\include{front/template/signatures}  % تصویب‌نامه
+\include{front/template/declaration}  % اظهارنامه
+
+\pagestyle{plain}
+\pagenumbering{tartibi}
+
+\include{front/acknowledge}  % تقدیر و تشکر
+\include{front/abstract}
+\include{front/preface}
+
+
+% -------------------- Table of Contents --------------------
+
+\tableofcontents \newpage
+%\listoftables \newpage
+\listoffigures \newpage
+
+
+% -------------------- Chapters --------------------
+
+\pagenumbering{arabic}
 \def \Mempath {Chapters/Membrane}
-\pagenumbering{arabic} 
 
 \clearpage
 \clearpage
@@ -110,7 +111,7 @@
 \clearpage
 \chapter{
 \centering{
-Redistribution Area Dynamic
+روش دینامیک مش
 }
 }
 \include{\Mempath/MembraneMethod}
@@ -133,30 +134,30 @@ Redistribution Area Dynamic
 }
 \include{\Mempath/Conclusion}
 
-
-
-%\clearpage
-%\clearpage
-%%\include{Chapters/Membrane/Chapterhead_old}
-%%\listoftables
-%\chapter{فصل ۱}
-%\include{chap1}
-%%\clearpage
-%%\chapter{
-%%مدل‌سازی غشا، مدل‌های پیوسته و گسسته
-%%}
-
-
-
-
 \unsetRL
+% -------------------- Bibliography & Dictionary --------------------
 
-\bibliography{reference} 
+\include{bibs/bibs}
+%\include{front/dictionary}
+%\bibliography{reference} 
 
-\bibliographystyle{IEEEtran}
-%\renewcommand{\contentsname}{whatever}
-%\renewcommand{\refname}{whatever}
-%\renewcommand\refname{مراجع}
+%\bibliographystyle{IEEEtran}
 
+% -------------------- Appendices --------------------
+
+%\begin{appendix}
+%\include{chapters/appendix}
+%\end{appendix}
+
+
+% -------------------- English Pages --------------------
+
+%\newgeometry{left=3cm,right=2.5cm}
+
+\include{front/abstract-eng}
+\include{front/template/title-eng}
+
+
+% -------------------- The End! --------------------
 
 \end{document}
