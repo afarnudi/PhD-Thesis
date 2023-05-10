@@ -1,4 +1,4 @@
-\setRL
+%\setRL
 %\pagenumbering{arabic} 
 
 بعضی غشاها تنها از یک غشای دو‌-لایه‌ی لیپیدی تشکیل نشده‌اند. مانند غشای هسته‌ی سلول‌های پستانداران که معمولا از دو غشای لیپیدی دو لایه متصل به یک شبکه‌ی پلیمری دو بعدی الاستیک تشکیل شده‌است. در این بخش به مدل‌سازی انرژی شبکه‌های پلیمری الاستیک می‌پردازیم.
@@ -7,10 +7,9 @@
 %}
 اگر فرض کنیم جابجایی روی یک عنصر سطحی حاصل از کشیده‌ یا فشرده شدن سطح با بردار 
 $u$
-توصیف شود، با فرض خطی بودن عکس العمل ماده، انرژی پتانسیل حاصل از تغییر شکل سطح را می‌توان با معادله‌ی زیر بررسی کنیم.
-
+توصیف شود، با فرض خطی بودن عکس العمل ماده، انرژی پتانسیل حاصل از تغییر شکل سطح را می‌توان با معادله‌ی زیر بررسی کنیم،
 \begin{equation}
-E_{stretching}=\frac{1}{2}Y_{2D}A\varepsilon^2
+E_{stretching}=\frac{1}{2}Y_{2D}A\varepsilon^2.
 \end{equation}
 که اینجا 
 $Y_2D$
@@ -30,41 +29,39 @@ $u(r)=(u_1,u_2)$
 $r(x,y)$
 را به نقطه‌ی 
 $r+u$
-نگاشت می‌کند. اگر در شبکه نقص وجود نداشته باشد این نگاشت یک به یک خواهد بود. در صورتی که فرض کنیم که ماده مورد مطالعه یکنواخت و همسانگرد است، برای جابجایی‌های کوچک (رژیم خطی) قانون هوک را به شکل توان دوم تانسور کرنش نوشت
-\LTRfootnote{Cauchy, 1822; Lam ́e, 1852}
-،
+نگاشت می‌کند. اگر در شبکه نقص وجود نداشته باشد این نگاشت یک به یک خواهد بود. در صورتی که فرض کنیم که ماده مورد مطالعه یکنواخت و همسانگرد است، برای جابجایی‌های کوچک (رژیم خطی) قانون هوک را به شکل توان دوم تانسور کرنش\LTRfootnote{Cauchy, 1822; Lam ́e, 1852}
+نوشت،
 \begin{equation}
-E_s=\frac{1}{2}\int d^2r(2\mu u_{ij}^2+\lambda u_{kk}^2)
+E_s=\frac{1}{2}\int d^2r(2\mu u_{ij}^2+\lambda u_{kk}^2).
 \label{eq:energylame}
 \end{equation}
-که در اینجا $\lambda$
+در اینجا $\lambda$
 و $\mu$
-ثابت‌های لم
-\LTRfootnote{Lamé Coefficients}
+ثابت‌های لم\LTRfootnote{Lamé Coefficients}
 است. ما می‌دانیم که تانسور کرنش به شکل زیر تعریف می‌شود،
 \begin{equation}
-u_{ij}=\frac{1}{2}(\partial_i u_j+\partial_j u_i+\partial_i u_k\partial_j u_k)
+u_{ij}=\frac{1}{2}(\partial_i u_j+\partial_j u_i+\partial_i u_k\partial_j u_k).
 \end{equation}
-اما برای جابجایی کوچک از جمله‌ی غیر خطی صرف نظر می‌کنیم و تانسور کرنش را به این شکل تعریف می‌کنیم.
+اما برای جابجایی کوچک از جمله‌ی غیر خطی صرف نظر می‌کنیم و تانسور کرنش را به این شکل تعریف می‌کنیم،
 \begin{equation}
-u_{ij}=\frac{1}{2}(\partial_i u_j+\partial_j u_i)
+u_{ij}=\frac{1}{2}(\partial_i u_j+\partial_j u_i).
 \label{eq:simplestrain}
 \end{equation}
-می‌توانیم  از انرژی کششی گرادیان بگیریم و مقدار کمینه‌ی آن را بررسی کنیم، در نتیجه
+می‌توانیم  از انرژی کششی گرادیان بگیریم و مقدار کمینه‌ی آن را بررسی کنیم، در نتیجه،
 \begin{equation}
 \begin{aligned}
 &\partial_i\sigma_{ij}=0\\
-&\sigma_{ij}=2\mu u_{ij}+\lambda u_{kk}\delta_{ij}
+&\sigma_{ij}=2\mu u_{ij}+\lambda u_{kk}\delta_{ij}.
 \label{eq:stress}
 \end{aligned}
 \end{equation}
-که در این معادله 
+در این معادله 
 $\sigma_{ij}$
 تانسور تنش است. معادله‌ی 
 \ref{eq:stress}
 را به تنهایی می‌توان حل کرد ولی از آنجایی که دیورژانس تنش صفر است معمول است که این معادله را به شکل یک پتانسیل اسکالر بنویسیم،
 \begin{equation}
-\sigma_{xx}=\frac{\partial^2\chi}{\partial y^2},\quad\sigma_{yy}=\frac{\partial^2\chi}{\partial x^2},\quad\sigma_{xy}=\frac{\partial^2\chi}{\partial_x\partial_y} 
+\sigma_{xx}=\frac{\partial^2\chi}{\partial y^2},\quad\sigma_{yy}=\frac{\partial^2\chi}{\partial x^2},\quad\sigma_{xy}=\frac{\partial^2\chi}{\partial_x\partial_y}.
 \end{equation}
 انتخاب‌های خیلی زیادی می‌توانند معادله‌ی بالا را ارضاء خواهد کرد، ولی جواب‌هایی که به لحاظ فیزیک قابل قبول هستند باید بتوانند رابطه‌ی بین میدان جابجایی و 
 $\chi$
@@ -73,21 +70,19 @@ $\chi$
 \begin{aligned}
 \frac{1}{2}(\partial_iu_j+\partial_ju_i)&=u_{ij}\\
 &=\frac{1+\nu}{Y}\sigma_{ij}-\frac{\nu}{Y}\sigma_{ll}\sigma_{ij}\\
-&=\frac{1+\nu}{Y}\epsilon_{im}\epsilon_{jn}\partial_{m}\partial_{n}\chi-\frac{\nu}{Y}\nabla^2\chi\delta_{ij}
+&=\frac{1+\nu}{Y}\epsilon_{im}\epsilon_{jn}\partial_{m}\partial_{n}\chi-\frac{\nu}{Y}\nabla^2\chi\delta_{ij}.
 \label{eq:constraint}
 \end{aligned}
 \end{equation}
 در اینجا $Y$
 و $\nu$
-به ترتیب مدول ۲ بعدی یانگ
-\LTRfootnote{2D Young Modulus}
- و نسبت پواسون
-\LTRfootnote{Poisson ratio}
+به ترتیب مدول ۲ بعدی یانگ\LTRfootnote{2D Young Modulus}
+ و نسبت پواسون\LTRfootnote{Poisson ratio}
 است که بر حسب ضرایب لم به شکل زیر بیان می‌شوند،
 \begin{equation}
 \begin{aligned}
 Y&=\frac{4\mu(\mu+\lambda)}{2\mu+\lambda}\\
-\nu&=\frac{\lambda}{2\mu+\lambda}
+\nu&=\frac{\lambda}{2\mu+\lambda}.
 \label{eq:younglame}
 \end{aligned}
 \end{equation}
